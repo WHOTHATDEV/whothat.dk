@@ -18,8 +18,8 @@ var dist = "dist/"; // Distribution destination
 
 // FTP
 var host = 'vsrv59.vmc1.systemina.dk';
-// var user = 'ftp_slagelselift';
-// var password = 'ZtBWbf87';
+var user = 'ftp_slagelselift';
+// var password = '*';
 
 //////////////// SETUP END //////////////////////
 
@@ -101,11 +101,11 @@ gulp.task('default', ['sass', 'css' ] );
 gulp.task('watch', function(){
   gulp.watch(src + 'sass/*.sass' ,['sass']); // sass
   gulp.watch(src + 'sass/*/*.sass' ,['sass']); // sass_partials
-  gulp.watch(src + 'css/*.css' ,['css']); // css, postcss
-  gulp.watch(src + 'js/*.js' ,['js']); // Babel
-  gulp.watch(src + '*', ['html']);
-  gulp.watch(src + 'inc/*', ['php']);
-  gulp.watch(dist + '**' ,['deploy']); // FTP (Grap any file in dist an upload to server)
+  // gulp.watch(src + 'css/*.css' ,['css']); // css, postcss
+  // gulp.watch(src + 'js/*.js' ,['js']); // Babel
+  // gulp.watch(src + '*', ['html']);
+  // gulp.watch(src + 'inc/*', ['php']);
+  // gulp.watch(dist + '**' ,['deploy']); // FTP (Grap any file in dist an upload to server)
 });
 
 
