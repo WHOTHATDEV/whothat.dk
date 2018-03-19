@@ -1,0 +1,153 @@
+#navigation
+  position: relative
+
+
+.nav_shade
+  background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,0))
+  position: fixed
+  top: 5px
+  height: 100px
+  width: 100%
+  max-width: $viewport_controller
+  margin: 0 auto
+  z-index: 2
+
+.nav_bar
+  position: fixed
+  top: 5px
+  height: 100px
+  width: 100%
+  max-width: $viewport_controller
+  margin: 0 auto
+  z-index: 11
+
+  img
+    position: absolute
+    top: 30px
+    left: 50px
+
+  #bars
+
+    position: absolute
+    z-index: 100
+    right: 30px
+    top: 20px
+    display: inline-block
+    height: 35px
+    width: 35px
+    border-radius: 50%
+    border: solid 3px #fff
+    text-align: center
+
+    span
+      display: inline-block
+      background-color: #fff
+      $width: 18px
+      width: $width
+      height: 3px
+      position: absolute
+      left: 9px
+      top: 16px
+      $space: 7px
+      // transition: 1.2s ease-in-out
+      border-radius: 50px
+
+
+      &::before
+        content: ''
+        display: inline-block
+        background-color: #fff
+        width: $width
+        height: 3px
+        position: absolute
+        bottom: $space
+        left: 0px
+        transition: .3s ease-in-out
+        border-radius: 50px
+        // transition: bottom .3s ease-in-out
+
+      &::after
+        content: ''
+        display: inline-block
+        background-color: #fff
+        width: $width
+        height: 3px
+        position: absolute
+        top: $space
+        left: 0px
+        transition: .3s ease-in-out
+        border-radius: 50px
+        // transition: top .3s ease-in-out
+
+      &.x_animation
+        width: 0
+
+        &::before
+          bottom: 0
+          transition: transform .3s ease-in-out
+          transform: rotateZ(-45deg)
+
+        &::after
+          top: 0
+          transition: transform .3s ease-in-out
+          transform: rotateZ(45deg)
+
+    &:hover
+
+      span
+        &::before
+          width: 14px
+          left: 2px
+
+        &::after
+          width: 14px
+          left: 2px
+
+      .x_animation
+        &::before
+          width: 18px
+          left: 0px
+
+        &::after
+          width: 18px
+          left: 0px
+
+
+
+
+
+
+
+nav
+  position: fixed
+  top: 45px
+  height: 1px
+  width: 1px
+  right: calc(50vw - (1100px - 50px))
+  background-color: $wt
+  // display: none
+  z-index: 10
+  overflow: hidden
+  transition: 1.37s
+  border-radius: 50%
+
+
+  &.display
+    height: 8000px
+    width: 8000px
+    top: calc(-4000px + 45px)
+    right: calc(-4000px + (50vw - (1100px - 50px)))
+
+  #viewport
+    position: fixed
+    top: 0px
+    bottom: 0px
+    right: 0px
+    left: 0px
+
+
+
+  .primery
+
+
+  .cases

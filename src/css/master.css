@@ -1,0 +1,133 @@
+#navigation {
+  position: relative; }
+
+.nav_shade {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
+  position: fixed;
+  top: 5px;
+  height: 100px;
+  width: 100%;
+  max-width: 2200px;
+  margin: 0 auto;
+  z-index: 2; }
+
+.nav_bar {
+  position: fixed;
+  top: 5px;
+  height: 100px;
+  width: 100%;
+  max-width: 2200px;
+  margin: 0 auto;
+  z-index: 11; }
+  .nav_bar img {
+    position: absolute;
+    top: 30px;
+    left: 50px; }
+  .nav_bar #bars {
+    position: absolute;
+    z-index: 100;
+    right: 30px;
+    top: 20px;
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: solid 3px #fff;
+    text-align: center; }
+    .nav_bar #bars span {
+      display: inline-block;
+      background-color: #fff;
+      width: 18px;
+      height: 3px;
+      position: absolute;
+      left: 9px;
+      top: 16px;
+      border-radius: 50px; }
+      .nav_bar #bars span::before {
+        content: '';
+        display: inline-block;
+        background-color: #fff;
+        width: 18px;
+        height: 3px;
+        position: absolute;
+        bottom: 7px;
+        left: 0px;
+        transition: .3s ease-in-out;
+        border-radius: 50px; }
+      .nav_bar #bars span::after {
+        content: '';
+        display: inline-block;
+        background-color: #fff;
+        width: 18px;
+        height: 3px;
+        position: absolute;
+        top: 7px;
+        left: 0px;
+        transition: .3s ease-in-out;
+        border-radius: 50px; }
+      .nav_bar #bars span.x_animation {
+        width: 0; }
+        .nav_bar #bars span.x_animation::before {
+          bottom: 0;
+          transition: transform .3s ease-in-out;
+          transform: rotateZ(-45deg); }
+        .nav_bar #bars span.x_animation::after {
+          top: 0;
+          transition: transform .3s ease-in-out;
+          transform: rotateZ(45deg); }
+    .nav_bar #bars:hover span::before {
+      width: 14px;
+      left: 2px; }
+    .nav_bar #bars:hover span::after {
+      width: 14px;
+      left: 2px; }
+    .nav_bar #bars:hover .x_animation::before {
+      width: 18px;
+      left: 0px; }
+    .nav_bar #bars:hover .x_animation::after {
+      width: 18px;
+      left: 0px; }
+
+nav {
+  position: fixed;
+  top: 45px;
+  height: 1px;
+  width: 1px;
+  right: calc(50vw - (1100px - 50px));
+  background-color: #57a1a9;
+  z-index: 10;
+  overflow: hidden;
+  transition: 1.37s;
+  border-radius: 50%; }
+  nav.display {
+    height: 8000px;
+    width: 8000px;
+    top: calc(-4000px + 45px);
+    right: calc(-4000px + (50vw - (1100px - 50px))); }
+  nav #viewport {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px; }
+
+.body {
+  max-width: 2200px;
+  margin: 0 auto; }
+
+.page {
+  background-image: url("../assets/images/bg.jpg");
+  background-size: cover;
+  min-height: 1500px; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+html body {
+  margin: 0px;
+  border-top: 5px solid #57a1a9;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Encode Sans Expanded', sans-serif;
+  font-family: 'Merriweather', serif; }

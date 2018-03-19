@@ -1,4 +1,7 @@
+//__________________ IMPORT END __________________
 var gulp = require('gulp'); // Framework for gulp
+
+// var beep = require('beepbeep');
 var babel = require('gulp-babel'); // transpiles JavaScript to backwardscompatible js-code
 var sass = require('gulp-sass'); // compiles sass to css
 var postcss = require('gulp-postcss'); // handels css postprocessing
@@ -11,46 +14,54 @@ var gutil = require( 'gulp-util' );
 var ftp = require( 'vinyl-ftp' );
 
 
-//////////////// SETUP //////////////////////
+
+// var onError = function (err) {
+//     beep();
+//     gutil.log(gutil.colors.green(err));
+// };
+//__________________ IMPORT END __________________
+
+
+
+
+//__________________ SETUP __________________
 // Folders
 var src = "src/"; // Source destination
 var dist = "dist/"; // Distribution destination
 
 // FTP
 var host = 'vsrv59.vmc1.systemina.dk';
-var user = 'ftp_slagelselift';
-// var password = '*';
+var user = 'ftp_who2018';
+var password = 'I1OFfq378U';
 
-//////////////// SETUP END //////////////////////
-
-
+//__________________ SETUP END __________________
 
 
-////////////// TASKS /////////////////////////
-// CSS
+
+
+//__________________ TASKS __________________
+
 gulp.task('sass', function(){
     return gulp.src(src + 'sass/*.sass')
+      // .pipe(plumber({errorHandler: onError}))
       .pipe(plumber())
       .pipe(sass())
       .pipe(gulp.dest(src + 'css/'));
 });
-
 
 gulp.task('css', function () {
   var processors = [
     lost,
     rucksack(),
     cssnext,
-    // cssnano
+    cssnano
   ];
 
   return gulp.src(src + 'css/*.css')
     .pipe(plumber())
     .pipe(postcss(processors))
-    .pipe(gulp.dest(dist + "css")); // normal
-    // .pipe(gulp.dest(dist)); // wordpress
+    .pipe(gulp.dest(dist + "css"));
 });
-
 
 gulp.task('js', function(){
   return gulp.src(src + 'js/*.js')
@@ -71,12 +82,13 @@ gulp.task('php', function(){
     .pipe(gulp.dest(dist + 'inc' ));
 });
 
-gulp.task('composer', function(){
-  return gulp.src(src + 'composer/*')
-    .pipe(gulp.dest(dist + 'composer' ));
+gulp.task('config', function(){
+  return gulp.src(src + 'config/*')
+    .pipe(gulp.dest(dist + 'config' ));
 });
 
-// FTP tasks
+
+// // FTP tasks
 gulp.task( 'deploy', function () {
 
 
@@ -90,27 +102,38 @@ gulp.task( 'deploy', function () {
 
     return gulp.src( 'dist/**', { base: 'dist/', buffer: true } )
         .pipe(plumber())
-        .pipe( conn.newer( '/wp-content/themes/slql' ) ) // only upload newer files
-        .pipe( conn.dest( '/wp-content/themes/slql' ) );
+        .pipe( conn.newer( '/' ) ) // only upload newer files
+        .pipe( conn.dest( '/' ) );
 
 } );
-////////////// TASKS /////////////////////////
 
-// MASTER
+
+//__________________ TASKS END__________________
+
+
+
+
+//__________________ MASTER __________________
 gulp.task('default', ['sass', 'css' ] );
 gulp.task('watch', function(){
+
+
+
   gulp.watch(src + 'sass/*.sass' ,['sass']); // sass
   gulp.watch(src + 'sass/*/*.sass' ,['sass']); // sass_partials
-  // gulp.watch(src + 'css/*.css' ,['css']); // css, postcss
-  // gulp.watch(src + 'js/*.js' ,['js']); // Babel
-  // gulp.watch(src + '*', ['html']);
-  // gulp.watch(src + 'inc/*', ['php']);
+  gulp.watch(src + 'css/*.css' ,['css']); // css, postcss
+  gulp.watch(src + 'js/*.js' ,['js']); // Babel
+  gulp.watch(src + '*', ['html']);
+  gulp.watch(src + 'inc/*', ['php']);
+    gulp.watch(src + 'config/*', ['config']);
   // gulp.watch(dist + '**' ,['deploy']); // FTP (Grap any file in dist an upload to server)
 });
+//__________________ MASTER END __________________
 
 
 
 
+//__________________ NOTES __________________
 //  ___GULP SETUP___ STEP BY STEP
 
 // 1. - Open terminal and cd to project root
@@ -138,3 +161,4 @@ gulp.task('watch', function(){
   // - css autoprefixe
   // - css minify
   // - FTP uploade
+//__________________ NOTES END __________________

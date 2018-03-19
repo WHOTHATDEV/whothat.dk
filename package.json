@@ -21,6 +21,8 @@
     "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
+    "barba.js": "^1.0.0",
+    "beepbeep": "^1.2.1",
     "crlab-gulp-combine-media-queries": "^1.0.0",
     "cssnano": "^3.10.0",
     "gulp": "^3.9.1",
