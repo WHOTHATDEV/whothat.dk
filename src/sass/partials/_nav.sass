@@ -1,0 +1,207 @@
+
+.navigation
+  position: fixed
+  top: 0px
+  left: 0px
+  right: 0px
+  border-top: 5px solid #57a1a9
+  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.0))
+  height: 80px
+  z-index: 10
+
+  .viewport
+    position: relative
+
+    img.logo
+      vertical-align: middle
+      margin-left: 50px
+      margin-top: 30px
+      position: relative
+      z-index: 10000000
+
+
+
+
+
+
+
+
+.menu
+  position: absolute
+  top: 20px
+  right: 30px
+  height: 46px
+  width: 46px
+
+
+.menu-circle
+  background-color: #57a1a9
+  position: relative
+  top: -1357px
+  left: -1357px
+  width: 6000%
+  height: 6000%
+  position: absolute
+  border-radius: 50%
+  transition: all 0.5s ease-in
+  z-index: 1000
+  transform: scale(.00017)
+  opacity: 1
+
+// .menu:hover .menu-circle
+//   transform: scale(.06)
+//   animation-name: wobbel
+//   animation-delay: .3s
+//   animation-duration: 2s
+//   animation-iteration-count: infinite
+//   animation-direction: alternate
+//   animation-play-state: paused
+
+.menu.open .menu-circle
+  transform: scale(1)
+  opacity: 0
+
+.menu-link
+  width: 100%
+  height: 100%
+  position: absolute
+  z-index: 1002
+
+.menu-icon
+  position: absolute
+  width: 30px
+  height: 30px
+  margin: auto
+  left: 0
+  top: 0
+  right: 0
+  bottom: 1px
+  border: 2px solid #fff
+  border-radius: 50%
+
+.menu-line
+  background-color: #fff
+  height: 2px
+  width: 55%
+  border-radius: 3px
+  position: absolute
+  transition: all 0.25s ease-in-out
+  left: 7px
+
+.menu-line-1
+  top: 8px
+
+.menu-line-2
+  top: 14px
+
+.menu-line-3
+  top: 20px
+
+
+
+.menu.open .menu-line-1
+  transform: translateY(7px) translateY(-50%) rotate(-135deg)
+
+.menu.open .menu-line-2
+  opacity: 0
+
+.menu.open .menu-line-3
+  transform: translateY(-7px) translateY(50%) rotate(135deg)
+
+
+
+
+.menu-overlay
+  background-color: #57a1a9
+  color: #fff
+  // height: 100%
+  // width: 100%
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  opacity: .9
+  // visibility: hidden
+  display: none
+  text-align: center
+  // transition: opacity 0.2s ease-in-out
+  z-index: 1001
+
+
+  .content
+    max-width: 1200px
+    margin: 400px auto 0
+
+    .primery
+      text-align: right
+      font-size: responsive 1.5rem 2.5rem
+      font-range: 500px 1200px
+      border-right: #fff 2px solid
+      padding: 10px 60px
+      line-height: responsive 3rem 4rem
+      display: inline-block
+      margin: 0
+
+    .cases
+      font-size: responsive 1rem 1.5rem
+      font-range: 900px 1200px
+      line-height: 3rem
+      display: inline-block
+      columns: 2
+      vertical-align: top
+      margin: 0
+      margin-top: 50px
+      text-align: left
+
+      &:hover
+        color: #7fb4b9
+
+      li
+        transition: .2s ease-in-out
+        &:hover
+          color: #fff
+
+    .SoMe
+      padding: 0
+      margin-top: 200px
+
+
+      li
+        display: inline-block
+
+// .menu-overlay.open
+//   opacity: .9
+//   visibility: visible
+//   transition-delay: 0.03s
+//   overflow: auto
+
+
+
+
+@keyframes wobbel
+  from
+    transform: scale(.06)
+  to
+    transform: scale(.08)
+
+
+@media screen and (max-width: 830px)
+
+  .navigation
+    .content
+      margin-top: 100px !important
+
+    .primery
+      border: none !important
+      text-align: center !important
+
+    .cases
+      display: none !important
+
+    .SoMe
+        margin-top: 60px !important
+
+
+    .menu.open .menu-circle
+      transform: scale(.2) !important

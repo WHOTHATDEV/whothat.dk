@@ -1,9 +1,37 @@
-.body
-  max-width: $viewport_controller
-  margin: 0 auto
-  // background-color: red
 
-.page
-  background-image: url("../assets/images/bg.jpg")
-  background-size: cover
-  min-height: 1500px
+html
+  margin: 0
+  padding: 0
+
+body
+  margin: 0
+  padding: 0
+  background-color: #000
+  color: #fff
+  font-family: $mer
+   -ms-overflow-style: none
+   overflow: -moz-scrollbars-none
+
+  // overflow: hidden
+
+  &::-webkit-scrollbar
+    width: 0 !important
+
+  .viewport
+    max-width: 2000px
+    margin: 0 auto
+    min-height: 100px
+
+
+    .wrapper
+      max-width: 1200px
+      margin: 0 auto
+      background-color: blue
+      position: relative
+      min-height: 500px
+
+      section
+        min-height: 300px
+
+        &:last-of-type
+          margin-bottom: 80vh

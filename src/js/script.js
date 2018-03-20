@@ -1,39 +1,36 @@
-
-// Global vars
 var cheat = '';
 
-$('#bars').click(function(){
-    $('#menu').toggleClass('display');
-    $('#menu_animaton').toggleClass('x_animation');
-});
 
 
+$(function() {
 
-
-$( document ).ready(function() {
-
-
-
-
-
-  Barba.Pjax.start();
-
-
-
-
-
-
-  // cheat function
-  window.onkeypress = function(e){
-    cheat += e.key;
-    if (cheat.length > 5) {
-      cheat = cheat.substr(1);
+  $(".menu-link").click(function(e) {
+    e.preventDefault();
+    $(".menu").toggleClass("open");
+    $(".menu-overlay").toggleClass("open");
+    $('body').toggleClass("noscrool");
+    if ($(".menu-overlay").hasClass('open')) {
+      $(".menu-overlay").fadeIn(300);
+    }else {
+      $(".menu-overlay").fadeOut(500);
     }
-    if (cheat == 'iddqd') {
-      alert('Video flip');
-    }
-  };
+    // $(".menu-overlay").toggle('slow');
+    $('#main').toggleClass('frost');
+  });
 
 
+
+
+
+    // cheat function
+    window.onkeypress = function(e){
+      cheat += e.key;
+      if (cheat.length > 5) {
+        cheat = cheat.substr(1);
+      }
+      if (cheat == 'iddqd') {
+        alert('Video flip');
+      }
+    };
 
 });
