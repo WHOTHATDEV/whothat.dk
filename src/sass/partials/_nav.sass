@@ -1,16 +1,19 @@
 
+// header
 .navigation
+  user-select: none
   position: fixed
   top: 0px
   left: 0px
   right: 0px
   border-top: 5px solid #57a1a9
-  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.0))
+  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.0)) !important
   height: 80px
   z-index: 10
 
   .viewport
     position: relative
+    background-color: rgba(0,0,0,0)
 
     img.logo
       vertical-align: middle
@@ -23,9 +26,7 @@
 
 
 
-
-
-
+// menu open
 .menu
   position: absolute
   top: 20px
@@ -110,6 +111,32 @@
 
 
 
+#background
+  position: fixed
+  max-width: 100vw
+  width: $viewport
+  margin: 0 auto
+  top: 0px
+  bottom: 0px
+  display: none
+
+  #bg_image
+    filter: grayscale(100%)
+    width: 100%
+    position: absolute
+    top: 5px
+    left: 0
+    right: 0
+
+
+  &.open
+    display: block
+
+
+
+
+
+
 
 .menu-overlay
   background-color: #57a1a9
@@ -127,11 +154,13 @@
   text-align: center
   // transition: opacity 0.2s ease-in-out
   z-index: 1001
+  user-select: none
 
 
   .content
-    max-width: 1200px
+    max-width: $content
     margin: 400px auto 0
+    user-select: none
 
     .primery
       text-align: right
@@ -142,6 +171,26 @@
       line-height: responsive 3rem 4rem
       display: inline-block
       margin: 0
+      max-height: 0
+      opacity: 0
+      transition: .8s .3s ease-in-out
+
+
+      a
+        display: block
+        opacity: 0
+        transition: .3s ease-in-out
+
+        @for $i from 1 through 5
+          &:nth-of-type(#{$i})
+            transition-delay: 700ms + (250 * $i)
+
+      &.open
+        max-height: 400px
+        opacity: 1
+
+        a
+          opacity: 1
 
     .cases
       font-size: responsive 1rem 1.5rem
@@ -149,26 +198,59 @@
       line-height: 3rem
       display: inline-block
       columns: 2
+      column-gap: 0px
       vertical-align: top
       margin: 0
       margin-top: 50px
       text-align: left
 
-      &:hover
-        color: #7fb4b9
 
-      li
+
+      a
         transition: .2s ease-in-out
+        display: block
+        opacity: 0
+        transition: .3s ease-in-out
+
+        li
+          transition: .2s ease-in-out
+
+        @for $i from 1 through 15
+          &:nth-of-type(#{$i})
+            transition-delay: 2000ms + (90 * $i)
+
+
+      &.open
+
         &:hover
-          color: #fff
+
+          li
+            color: #7fb4b9
+
+
+        a
+          opacity: 1
+
+          &:hover
+            li
+              color: #fff
 
     .SoMe
       padding: 0
       margin-top: 200px
 
-
       li
         display: inline-block
+        opacity: 0
+
+        svg
+
+          path
+            // fill: #fff
+            stroke: #fff
+
+            // &:hover
+            //   fill: red
 
 // .menu-overlay.open
 //   opacity: .9
@@ -192,9 +274,16 @@
     .content
       margin-top: 100px !important
 
-    .primery
-      border: none !important
-      text-align: center !important
+      .primery
+        border: none !important
+        text-align: center !important
+
+        a
+
+          @for $i from 1 through 5
+            &:nth-of-type(#{$i})
+              transition-delay: 200ms + (250 * $i)
+
 
     .cases
       display: none !important

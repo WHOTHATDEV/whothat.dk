@@ -1,4 +1,6 @@
 <footer id="pagefooter">
+  <div class="wrapper">
+
 
   <img src="assets/images/footerlogo.png" alt="" class="logo">
 
@@ -11,12 +13,13 @@
   </ul>
 
   <ul class="SoMe">
-    <?php foreach ($SoMe as $key => $value): ?>
-      <a href="<?= $value ?>"><li><img src="assets/icons/<?= $key ?>.svg"  alt=""></li></a>
-    <?php endforeach; ?>
+
   </ul>
   <ul class="adr">
-    <li>vej</li>
-    <li>email</li>
+    <li><?= $adr ?></li>
+    <li><?= $post ?></li>
+    <li><?= $tel ?></li>
+    <li><?= $cvr ?></li>
   </ul>
+</div>
 </footer>

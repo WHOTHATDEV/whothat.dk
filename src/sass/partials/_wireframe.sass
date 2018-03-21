@@ -6,11 +6,14 @@ html
 body
   margin: 0
   padding: 0
-  background-color: #000
+  background-color: $dark_bg
   color: #fff
   font-family: $mer
-   -ms-overflow-style: none
-   overflow: -moz-scrollbars-none
+  -ms-overflow-style: none
+  overflow: -moz-scrollbars-none
+  @extend .stripes
+
+
 
   // overflow: hidden
 
@@ -18,17 +21,18 @@ body
     width: 0 !important
 
   .viewport
-    max-width: 2000px
+    max-width: $viewport
     margin: 0 auto
     min-height: 100px
+    background-color: $dark_bg
 
 
     .wrapper
-      max-width: 1200px
+      max-width: $content
       margin: 0 auto
-      background-color: blue
+      // background-color: blue
       position: relative
-      min-height: 500px
+      // min-height: 500px
 
       section
         min-height: 300px

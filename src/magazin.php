@@ -22,34 +22,33 @@
          <div class="barba-container">
         <!-- barba.js container start -->
 
+           <!-- content -->
+           <section id="header_section" class="magazin_header">
+             <img src="assets/images/b1.jpg" alt="">
+             <div class="wrapper">
 
-       <!-- content -->
-       <section id="header_section" class="forside_header">
-         <img src="assets/images/office.jpg" alt="">
-         <div class="wrapper">
+               <h1>magazin case</h1>
+               <h2>Yay</h2>
+             </div>
+           </section>
+           <section>
+             3 stk cases
+           </section>
+           <section>
+             6 ikoner
+           </section>
+           <section>
+             partner logoer
+           </section>
+           <section>
+             insta feed
+           </section>
+           <!-- content end -->
 
-           <h1>Et kreativt bureau</h1>
-           <h2>...Der tør tænke ud af boksen.</h2>
+        <!-- barba.js container end -->
          </div>
-       </section>
-       <section>
-         3 stk cases
-       </section>
-       <section>
-         6 ikoner
-       </section>
-       <section>
-         partner logoer
-       </section>
-       <section>
-         insta feed
-       </section>
-         <!-- content end -->
-
-       <!-- barba.js container end -->
-        </div>
-      </div>
-       <!-- barba.js container end -->
+       </div>
+        <!-- barba.js container end -->
 
 
 
