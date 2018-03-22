@@ -23,8 +23,12 @@
   src: url("../assets/webfonts/36107A_4_0.eot");
   src: url("../assets/webfonts/36107A_4_0.eot?#iefix") format("embedded-opentype"), url("../assets/webfonts/36107A_4_0.woff2") format("woff2"), url("../assets/webfonts/36107A_4_0.woff") format("woff"), url("../assets/webfonts/36107A_4_0.ttf") format("truetype"); }
 
-.stripes, body {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 11.11%, #000000 11.11%, #000000 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 61.11%, #000000 61.11%, #000000 100%);
+.stripes, .case_thumb, body {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 11.11%, #000000 11.11%, #000000 50%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 61.11%, #000000 61.11%, #000000 100%);
+  background-size: 12.73px 12.73px; }
+
+.stripes_under {
+  background: linear-gradient(135deg, white 11.11%, #000000 11.11%, #000000 50%, white 50%, white 61.11%, #000000 61.11%, #000000 100%);
   background-size: 12.73px 12.73px; }
 
 a {
@@ -34,11 +38,50 @@ a {
 ul {
   list-style: none; }
 
+#main {
+  transition: .2s; }
+
 .frost {
   filter: blur(5px); }
 
 .noscrool {
   overflow: hidden; }
+
+p {
+  font-family: "Encode Sans Expanded", sans-serif;
+  font-size: .9rem;
+  color: #aaaaaa;
+  line-height: 1.4rem;
+  margin-top: 0; }
+
+.case_thumb {
+  position: relative;
+  overflow: hidden; }
+  .case_thumb img {
+    opacity: .2;
+    filter: grayscale(100%);
+    transition: .9s ease-in-out; }
+  .case_thumb .txt {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px 30px;
+    font-family: "Encode Sans Expanded", sans-serif;
+    font-size: .7rem;
+    line-height: 1.5rem; }
+    .case_thumb .txt div {
+      display: inline-block; }
+    .case_thumb .txt .labels {
+      font-weight: 600;
+      margin-right: 20px; }
+  .case_thumb:hover img {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: scale(1.1); }
+
+.tall {
+  lost-column: 1/3 3 45px;
+  height: 600px; }
 
 h1 {
   color: #57a1a9;
@@ -52,6 +95,11 @@ h1 {
 h2 {
   font-size: 2.5rem;
   font-weight: 400; }
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 20px; }
 
 section:last-of-type {
   margin-bottom: 80vh; }
@@ -71,7 +119,7 @@ body {
   body::-webkit-scrollbar {
     width: 0 !important; }
   body .viewport {
-    max-width: 3000px;
+    max-width: 2700px;
     margin: 0 auto;
     min-height: 100px;
     background-color: #0c0c0c; }
@@ -177,7 +225,7 @@ body {
 #background {
   position: fixed;
   max-width: 100vw;
-  width: 3000px;
+  width: 2700px;
   margin: 0 auto;
   top: 0px;
   bottom: 0px;
@@ -338,7 +386,7 @@ body {
   top: 20vh;
   z-index: -1;
   text-align: center;
-  width: 3000px;
+  width: 2700px;
   max-width: 100vw;
   background-color: #000;
   padding-top: 150px; }
@@ -371,19 +419,53 @@ body {
       padding: 7px; }
 
 #header_section {
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: contain;
-  overflow: auto;
   background-color: #0c0c0c;
   text-align: center;
   width: 100%;
-  padding-bottom: 200px; }
+  padding-bottom: 200px;
+  position: relative; }
   #header_section img {
     width: 100%;
+    margin-top: 5px; }
+  #header_section .ontop {
     position: absolute;
-    top: 5px;
-    left: 0;
-    right: 0; }
-  #header_section h1 {
-    margin-top: 700px; }
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    #header_section .ontop h1 {
+      margin-top: 400px; }
+
+#forside_cases {
+  lost-utility: clearfix;
+  padding-bottom: 170px; }
+
+#ikoner {
+  lost-utility: clearfix;
+  background-color: #111111;
+  padding-top: 100px; }
+  #ikoner .ikon {
+    lost-column: 1/3;
+    text-align: center;
+    margin-bottom: 150px; }
+    #ikoner .ikon:hover h4 {
+      color: #57a1a9; }
+    #ikoner .ikon:hover p {
+      color: #fff; }
+
+#partner_logoer {
+  text-align: center;
+  padding: 150px 0; }
+  #partner_logoer img {
+    padding: 21px;
+    vertical-align: middle; }
+
+#insta {
+  padding: 100px 0 70px 0;
+  background-color: #111111; }
+  #insta #instafeed {
+    lost-utility: clearfix; }
+    #insta #instafeed .insta_thumb {
+      lost-column: 1/6 6 30px;
+      padding-bottom: 30px; }
+      #insta #instafeed .insta_thumb img {
+        width: 100%; }

@@ -4,7 +4,7 @@
 // Eksembel for at linke til forside.php skal der bare stå forside
 
   $cases = [
-    'Magasin Du Nord' => ['page' => 'magazin', 'img' => 'b1.jpg'],
+    'Magasin Du Nord' => ['page' => 'magasin', 'img' => 'b1.jpg'],
     'Just Eat' => ['page' => 'magazin', 'img' => 'b2.jpg'],
     'Addea' => ['page' => 'magazin', 'img' => 'b1.jpg'],
     'Raadhuskroen' => ['page' => 'magazin', 'img' => 'b2.jpg'],
