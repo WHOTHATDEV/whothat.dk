@@ -2,11 +2,11 @@
   <div class="viewport">
 
 
-    <a href="#"><img src="assets/images/whothat.png" alt="" class="logo"> </a>
+    <a href="whothat"><img src="assets/images/whothat.png" alt="" class="logo"> </a>
 
     <div class="menu">
       <span class="menu-circle"></span>
-      <a href="#" class="menu-link">
+      <a href="" class="menu-link">
         <span class="menu-icon">
           <span class="menu-line menu-line-1"></span>
           <span class="menu-line menu-line-2"></span>

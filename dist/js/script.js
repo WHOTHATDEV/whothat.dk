@@ -43,27 +43,38 @@ $(function () {
 
   var excluded = ['1709866722856281871', '1548434707375523010'];
   $.ajax({
-    url: "https://igpi.ga/explore/locations/1014271099/whothat/?__a=1&count=12",
+    url: "https://www.instagram.com/explore/locations/1014271099/whothat/?__a=1",
     success: function success(result) {
+      console.log(result);
       var ex = 0;
 
-      for (var i = 0; i < result.location.media.nodes.length; i++) {
+      for (var i = 0; i < result.graphql.location.edge_location_to_media.edges.length; i++) {
         // result.location.media.nodes[i].thumbnail_src
         // append
-        if (i > 11 + ex) {
+        if (i >= 12 + ex) {
           break;
         }
 
-        if (excluded.indexOf(result.location.media.nodes[i].id) > -1) {
+        if (excluded.indexOf(result.graphql.location.edge_location_to_media.edges[i].node.id) > -1) {
           ex++;
           continue;
         }
 
-        $("#instafeed").append("<div class='insta_thumb'><img src='" + result.location.media.nodes[i].thumbnail_src + "'></div>");
+        $("#instafeed").append("<a href='https://www.instagram.com/p/" + result.graphql.location.edge_location_to_media.edges[i].node.shortcode + "' target='_blank' class='insta_thumb'><div class=''><img src='" + result.graphql.location.edge_location_to_media.edges[i].node.thumbnail_src + "'></div></a>");
       }
 
       console.log(result);
     }
+  });
+  $('.video').on('ended', function () {
+    // $('.video').css("visibility", 'hidden');
+    this.play();
+  });
+  $(".profil").mouseover(function () {
+    $(this).children('video')[0].play(); // $('.video').css("visibility", 'visible');
+  });
+  $(".profil").mouseleave(function () {
+    $(this).children('video')[0].pause(); // $('.video').css("visibility", 'hidden');
   }); // cheat function
 
   window.onkeypress = function (e) {
@@ -74,11 +85,31 @@ $(function () {
     }
 
     if (cheat == 'iddqd') {
-      alert('Video flip');
+      $(".video").each(function () {
+        $(".profil").children('img').css('visibility', 'hidden'); // this.trigger('mouseover');
+
+        this.play();
+      });
     }
 
     if (cheat == 'idkfa') {
-      alert('show all for 30 sec');
+      alert('show all profiles for 30 sec');
+    }
+
+    if (cheat == '***') {
+      alert('Vis alles øgenavne');
+    }
+
+    if (cheat == '***') {
+      alert('Hack-ødelæg siden. Sort skræm, full screen og text over');
+    }
+
+    if (cheat == '***') {
+      alert('alle åne stillinger');
+    }
+
+    if (cheat == '***') {
+      alert('spring til side');
     }
   };
 });

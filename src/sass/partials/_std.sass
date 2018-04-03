@@ -17,7 +17,8 @@ ul
 
 p
   font-family: $enc
-  font-size: .9rem
+  font-size: responsive .7rem .9rem
+  font-range: 400px 1200px
   color: #aaaaaa
   line-height: 1.4rem
   margin-top: 0
@@ -26,12 +27,15 @@ p
   @extend .stripes
   position: relative
   overflow: hidden
+  margin-bottom: 45px
 
   img
     opacity: .2
+    margin-top: 0 !important
     filter: grayscale(100%)
-    transition: .9s ease-in-out
-    // transition: transform 4s ease-in-out
+    width: 100%
+    transition: .5s ease-in-out, transform .7s ease-out
+    display: block
 
   .txt
     position: absolute
@@ -39,7 +43,8 @@ p
     left: 0
     padding: 20px 30px
     font-family: $enc
-    font-size: .7rem
+    font-size: responsive .5rem .7rem
+    font-range: 900px 1200px
     line-height: 1.5rem
 
     div
@@ -54,26 +59,56 @@ p
       opacity: 1
       filter: grayscale(0%)
       transform: scale(1.1)
+      transition: .5s ease-in-out, transform 6s ease-in-out
 
+
+.row
+  lost-utility: clearfix
 
 .tall
   lost-column: 1/3 3 45px
-  height: 600px
 
+
+.full
+  lost-column: 1/1 1 0px
+
+
+.half
+  lost-column: 1/2 2 45px
+
+
+.rubrik
+  text-align: center
+  margin-bottom: 250px !important
+
+  h4
+    font-size: responsive 1rem 1.5rem !important
+    line-height: responsive 1.5rem 2.5rem
+    margin: 0 auto
+    max-width: 1000px
+
+  span
+    font-weight: 600
+    border-bottom: 3px solid $wt
 
 
 h1
   color: $wt
   font-family: $hand
-  font-size: 7rem
+  font-size: responsive 3rem 7rem
+  line-height: responsive 1rem 5rem
+  font-range: 400px 1200px
   font-weight: 400
-  line-height: 5rem
-  margin-bottom: 40px
+  margin-bottom: 60px
   font-variant-ligatures: no-contextual
 
 h2
-  font-size: 2.5rem
+  font-size: responsive 1rem 2.5rem !important
+  font-range: 400px 1200px
   font-weight: 400
+
+h3
+  font-family: $hand
 
 h4
   font-size: 1.25rem
@@ -81,8 +116,38 @@ h4
   margin-bottom: 20px
 
 
+.indledning
+  font-weight: 600
+  color: #fff
+  font-size: responsive .8rem 1rem
+
 
 section
 
   &:last-of-type
     margin-bottom: 80vh
+
+
+
+
+@media screen and (max-width: 900px)
+
+
+
+  h1
+    margin-bottom: 10px
+
+  h2
+    margin-top: 10px
+
+  .tall
+    lost-column: 1/1 1 0px
+    margin-bottom: 40px
+    height: 200px
+
+  .case_thumb
+
+
+    &:hover
+      img
+        transform: translateY(-200px)
