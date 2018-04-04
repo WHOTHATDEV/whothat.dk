@@ -9,7 +9,7 @@
     <a href="projekter"><li>Projekter</li></a>
     <a href="bureauet"><li>Bureauet</li></a>
     <a href="kontakt"><li>Kontakt</li></a>
-    <a href="kundelogin"><li>Kunde login</li></a>
+    <a href="login"><li>Kunde login</li></a>
   </ul>
 
   <ul class="SoMe">

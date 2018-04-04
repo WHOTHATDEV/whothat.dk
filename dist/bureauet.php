@@ -45,6 +45,7 @@ til store komplekse udviklingsopgaver.</h2>
 
 
     <?php foreach ($medarbejder as $key => $value): ?>
+      <?php if ($value['aktiv']): ?>
 
       <div class="profil">
         <video src="assets/videos/<?= $value['video'] ?>" class="video video_hide"></video><img src="assets/images/<?= $value['img'] ?>" alt="">
@@ -60,8 +61,16 @@ til store komplekse udviklingsopgaver.</h2>
       </footer>
 
       </div>
+      <?php endif; ?>
     <?php endforeach; ?>
-
+    <a href="mailto:job@whothat.dk">
+      <div class="sog_job">
+        <div class="content">
+          Er det dig og dine kompetencer vi mangler?
+  Send os cv og motiveret ansøgning på job@whothat.dk
+        </div>
+      </div>
+    </a>
   </div>
   <div class="gamle">
     <div class="profil">

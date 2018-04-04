@@ -33,6 +33,11 @@
   background: linear-gradient(135deg, white 11.11%, #000000 11.11%, #000000 50%, white 50%, white 61.11%, #000000 61.11%, #000000 100%);
   background-size: 12.73px 12.73px; }
 
+.stripes_transparant, #team a .sog_job {
+  background-color: #0c0c0c;
+  background: linear-gradient(135deg, #333333 11.11%, transparent 11.11%, transparent 50%, #333333 50%, #333333 61.11%, transparent 61.11%, transparent 100%);
+  background-size: 12.73px 12.73px; }
+
 a {
   text-decoration: none;
   color: inherit; }
@@ -144,16 +149,19 @@ section:last-of-type {
   margin-bottom: 80vh; }
 
 @media screen and (max-width: 900px) {
-  h1 {
-    margin-bottom: 10px; }
   h2 {
     margin-top: 10px; }
   .tall {
     lost-column: 1/1 1 0px;
     margin-bottom: 40px;
     height: 200px; }
-  .case_thumb:hover img {
+  .case_thumb.tall:hover img {
     transform: translateY(-200px); } }
+
+@media screen and (max-width: 700px) {
+  .half {
+    lost-column: 1/1 1 0px;
+    margin-bottom: 40px; } }
 
 html {
   margin: 0;
@@ -483,21 +491,17 @@ body {
   position: relative; }
   #header_section img {
     width: 100%;
-    margin-top: 5px; }
-  #header_section .ontop {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
-    #header_section .ontop h1 {
-      margin-top: 400px; }
-  #header_section #first_section {
-    margin-top: -50vw; }
-    #header_section #first_section h1 {
-      margin-bottom: 60px; }
-    #header_section #first_section h2 {
-      max-width: 810px;
-      margin: 0 auto; }
+    top: 5px;
+    left: 0;
+    right: 0; }
+  #header_section .ontop h1 {
+    margin-top: 400px; }
+  #header_section #first_section h1 {
+    margin-bottom: 60px; }
+  #header_section #first_section h2 {
+    max-width: 810px;
+    margin: 0 auto; }
 
 #forside_cases {
   lost-utility: clearfix;
@@ -534,6 +538,22 @@ body {
       #insta #instafeed .insta_thumb img {
         width: 100%; }
 
+@media screen and (max-width: 900px) {
+  #ikoner .ikon {
+    lost-column: 1/2; }
+  #insta #instafeed .insta_thumb {
+    lost-column: 1/4 4 30px; } }
+
+@media screen and (max-width: 700px) {
+  #insta #instafeed .insta_thumb {
+    lost-column: 1/3 3 30px; } }
+
+@media screen and (max-width: 530px) {
+  #ikoner .ikon {
+    lost-column: 1/1; }
+  #insta #instafeed .insta_thumb {
+    lost-column: 1/2 2 30px; } }
+
 .projekter .cases {
   lost-utility: clearfix;
   margin-top: 250px; }
@@ -560,7 +580,8 @@ body {
 
 #team {
   text-align: center;
-  margin-top: 250px; }
+  margin-top: 250px;
+  padding-bottom: 200px; }
   #team .aktive {
     lost-utility: clearfix; }
   #team .profil {
@@ -620,18 +641,132 @@ body {
         font-weight: 400;
         margin: 0;
         margin-top: 15px; }
+  #team a {
+    lost-column: 3/4; }
+    #team a .sog_job {
+      height: 400px;
+      lost-align: center;
+      transition: .2s ease-in-out;
+      border: 0px solid #57a1a9;
+      box-sizing: border-box; }
+      #team a .sog_job .content {
+        font-size: 1.5rem;
+        lost-column: 3/4;
+        transition: .2s ease-in-out; }
+      #team a .sog_job:hover {
+        border: 1px solid #57a1a9; }
+        #team a .sog_job:hover .content {
+          font-size: 1.52rem; }
   #team .gamle {
     display: none;
     lost-utility: clearfix; }
 
 @media screen and (max-width: 1100px) {
   #team .profil {
-    lost-column: 1/3 3 30px; } }
+    lost-column: 1/3 3 30px; }
+  #team .sog_job {
+    lost-column: 1/1; } }
 
 @media screen and (max-width: 760px) {
   #team .profil {
-    lost-column: 1/2 2 30px; } }
+    lost-column: 1/2 2 30px; }
+  #team .sog_job {
+    lost-column: 1/2; }
+  #dna .img {
+    display: block;
+    max-width: 95vw;
+    transform: translateY(-20px); }
+  #dna .text {
+    display: block;
+    margin-top: 30px;
+    width: 600px;
+    max-width: 95vw; } }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 460px) {
   #team .profil {
-    lost-column: 1/1 1 30px; } }
+    lost-column: 1/1 1 30px; }
+  #team .sog_job {
+    lost-column: 1/1; } }
+
+.biline {
+  display: block;
+  font-size: responsive .7rem 1.5rem;
+  line-height: responsive 3rem 4rem; }
+
+.adresse {
+  text-align: center;
+  font-size: responsive 1rem 1.25rem;
+  line-height: 2rem;
+  margin-top: 200px !important; }
+
+.disclaimer {
+  margin: 0 auto;
+  line-height: 1.5rem;
+  margin-top: 100px;
+  color: #7a7a7a;
+  font-family: "Encode Sans Expanded", sans-serif;
+  font-size: responsive .7rem .9rem;
+  margin-bottom: 200px;
+  max-width: 400px; }
+
+.dot {
+  background-color: #57a1a9;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 29vw;
+  left: 49.6vw;
+  animation-name: dot;
+  animation-duration: 1s;
+  animation-play-state: running;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; }
+
+@keyframes dot {
+  0% {
+    box-shadow: 0px 0px 0px 0px rgba(87, 161, 169, 0.3), 0px 0px 0px 20px rgba(87, 161, 169, 0.3); }
+  100% {
+    box-shadow: 0px 0px 0px 20px rgba(87, 161, 169, 0.3), 0px 0px 0px 20px rgba(87, 161, 169, 0.3); } }
+
+@media screen and (min-width: 1600px) {
+  .dot {
+    background-color: #57a1a9;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 29vw;
+    left: 49.6vw;
+    animation-name: dot;
+    animation-duration: 1s;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; } }
+
+.login form {
+  text-align: center; }
+  .login form button {
+    border: none;
+    border-radius: 5px;
+    background-color: #57a1a9;
+    box-shadow: 0px 4px 0px 0px #437a81;
+    font-family: "Merriweather", serif;
+    font-size: 1.2rem;
+    color: #fff;
+    padding: 10px 50px;
+    display: inline-block;
+    margin-top: 30px;
+    font-weight: 600; }
+  .login form .inp {
+    border-radius: 5px;
+    overflow: hidden;
+    width: 370px;
+    margin: 15px auto; }
+    .login form .inp input {
+      border: none;
+      background-color: #fff;
+      width: 100%;
+      font-size: 1.25rem;
+      padding: 15px 30px;
+      font-family: "Merriweather", serif; }

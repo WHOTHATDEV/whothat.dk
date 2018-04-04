@@ -15,135 +15,140 @@ include 'start.php' ?>
 
 
 
-    <div class="cases">
-      <div class="case_thumb full">
-        <a href="#">
+  </div>
+</section>
 
-          <img src="assets/images/full.jpg" alt="">
-          <div class="txt">
-            <div class="labels">
-              Kunde
-              <br>
-              Projekt
-            </div>
-            <div class="">
-              <br>
-            </div>
-          </div>
-        </a>
-      </div>
+<section>
 
-      <div class="row">
-        <div class="case_thumb half">
-          <a href="#"></a>
-          <img src="assets/images/arkk_small.jpg" alt="">
-          <div class="txt">
-              <div class="labels">
-                Kunde
-                <br>
-                Projekt
-              </div>
-              <div class="">
-                <br>
-              </div>
-          </div>
-        </div>
+  <div class="cases wrapper">
+    <div class="case_thumb full">
+      <a href="#">
 
-
-        <div class="case_thumb half">
-          <a href="#"></a>
-          <img src="assets/images/arkk_small.jpg" alt="">
-          <div class="txt">
-              <div class="labels">
-                Kunde
-                <br>
-                Projekt
-              </div>
-              <div class="">
-                <br>
-              </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="case_thumb full">
-        <a href="#"></a>
         <img src="assets/images/full.jpg" alt="">
         <div class="txt">
-            <div class="labels">
-              Kunde
-              <br>
-              Projekt
-            </div>
-            <div class="">
-              <br>
-            </div>
+          <div class="labels">
+            Kunde
+            <br>
+            Projekt
+          </div>
+          <div class="">
+            <br>
+          </div>
         </div>
-      </div>
+      </a>
+    </div>
 
-      <div class="case_thumb full">
+    <div class="row">
+      <div class="case_thumb half">
         <a href="#"></a>
-        <img src="assets/images/full.jpg" alt="">
+        <img src="assets/images/arkk_small.jpg" alt="">
         <div class="txt">
-            <div class="labels">
-              Kunde
-              <br>
-              Projekt
-            </div>
-            <div class="">
-              <br>
-            </div>
+          <div class="labels">
+            Kunde
+            <br>
+            Projekt
+          </div>
+          <div class="">
+            <br>
+          </div>
         </div>
       </div>
 
-      <div class="row">
-        <div class="case_thumb tall">
-          <a href="#"></a>
-          <img src="assets/images/ark_thumb.jpg" alt="">
-          <div class="txt">
-              <div class="labels">
-                Kunde
-                <br>
-                Projekt
-              </div>
-              <div class="">
-                <br>
-              </div>
+
+      <div class="case_thumb half">
+        <a href="#"></a>
+        <img src="assets/images/arkk_small.jpg" alt="">
+        <div class="txt">
+          <div class="labels">
+            Kunde
+            <br>
+            Projekt
+          </div>
+          <div class="">
+            <br>
           </div>
         </div>
+      </div>
+    </div>
 
-        <div class="case_thumb tall">
-          <a href="#"></a>
-          <img src="assets/images/ark_thumb.jpg" alt="">
-          <div class="txt">
-              <div class="labels">
-                Kunde
-                <br>
-                Projekt
-              </div>
-              <div class="">
-                <br>
-              </div>
+    <div class="case_thumb full">
+      <a href="#"></a>
+      <img src="assets/images/full.jpg" alt="">
+      <div class="txt">
+        <div class="labels">
+          Kunde
+          <br>
+          Projekt
+        </div>
+        <div class="">
+          <br>
+        </div>
+      </div>
+    </div>
+
+    <div class="case_thumb full">
+      <a href="#"></a>
+      <img src="assets/images/full.jpg" alt="">
+      <div class="txt">
+        <div class="labels">
+          Kunde
+          <br>
+          Projekt
+        </div>
+        <div class="">
+          <br>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="case_thumb tall">
+        <a href="#"></a>
+        <img src="assets/images/ark_thumb.jpg" alt="">
+        <div class="txt">
+          <div class="labels">
+            Kunde
+            <br>
+            Projekt
+          </div>
+          <div class="">
+            <br>
           </div>
         </div>
+      </div>
 
-        <div class="case_thumb tall">
-          <a href="#"></a>
-          <img src="assets/images/ark_thumb.jpg" alt="">
-          <div class="txt">
-              <div class="labels">
-                Kunde
-                <br>
-                Projekt
-              </div>
-              <div class="">
-                <br>
-              </div>
+      <div class="case_thumb tall">
+        <a href="#"></a>
+        <img src="assets/images/ark_thumb.jpg" alt="">
+        <div class="txt">
+          <div class="labels">
+            Kunde
+            <br>
+            Projekt
+          </div>
+          <div class="">
+            <br>
+          </div>
+        </div>
+      </div>
+
+      <div class="case_thumb tall">
+        <a href="#"></a>
+        <img src="assets/images/ark_thumb.jpg" alt="">
+        <div class="txt">
+          <div class="labels">
+            Kunde
+            <br>
+            Projekt
+          </div>
+          <div class="">
+            <br>
           </div>
         </div>
       </div>
     </div>
   </div>
+
 </section>
 
 

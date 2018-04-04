@@ -14,6 +14,9 @@ $striped: linear-gradient(135deg, rgba(51, 51, 51, 1) 11.11%, #000000 11.11%, #0
 $striped_bg: linear-gradient(135deg, rgba(255,255,255, 1) 11.11%, #000000 11.11%, #000000 50%, rgba(255,255,255, 1) 50%, rgba(255,255,255, 1) 61.11%, #000000 61.11%, #000000 100%)
 
 
+$striped_tp: linear-gradient(135deg, rgba(51, 51, 51, 1) 11.11%, rgba(0, 0, 0, 0) 11.11%, rgba(0, 0, 0, 0) 50%, rgba(51, 51, 51, 1) 50%, rgba(51, 51, 51, 1) 61.11%, rgba(0, 0, 0, 0) 61.11%, rgba(0, 0, 0, 0) 100%)
+
+
 
 .stripes
   background-color: $dark_bg
@@ -24,6 +27,13 @@ $striped_bg: linear-gradient(135deg, rgba(255,255,255, 1) 11.11%, #000000 11.11%
   background-color: $dark_bg
   background: $striped_bg
   background-size: 12.73px 12.73px
+
+.stripes_transparant
+  background-color: $dark_bg
+  background: $striped_tp
+  background-size: 12.73px 12.73px
+
+
 
 
 // @mixin border-radius($radius) {

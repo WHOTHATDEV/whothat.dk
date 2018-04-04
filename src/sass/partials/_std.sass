@@ -132,10 +132,8 @@ section
 
 @media screen and (max-width: 900px)
 
-
-
-  h1
-    margin-bottom: 10px
+  // h1
+    // margin-bottom: 10px
 
   h2
     margin-top: 10px
@@ -145,9 +143,26 @@ section
     margin-bottom: 40px
     height: 200px
 
-  .case_thumb
+  .case_thumb.tall
 
 
     &:hover
       img
         transform: translateY(-200px)
+
+
+
+
+
+@media screen and (max-width: 700px)
+
+  .half
+    lost-column: 1/1 1 0px
+    margin-bottom: 40px
+
+  // .case_thumb.tall
+  //
+  //
+  //   &:hover
+  //     img
+  //       transform: translateY(-200px)
