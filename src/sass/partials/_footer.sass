@@ -1,37 +1,63 @@
 #pagefooter
   position: fixed
   bottom: 0
-  top: 20vh
+  top: 0
   z-index: -1
   text-align: center
   width: $viewport
   max-width: 100vw
   background-color: #000
-  padding-top: 150px
+
+  .positioner
+    position: absolute
+    bottom: 0
+    right: 0
+    left: 0
+
 
   .logo
-    margin-bottom: 110px
+    margin-bottom: 90px
     max-width: 90%
 
   .primery
+    margin: 0 auto
     padding: 0
     font-size: 1.5rem
     line-height: 3rem
-    margin-bottom: 110px
+    margin-bottom: 100px
+    width: 300px
 
-    li
-      width: 400px
-      margin: 0 auto
+    a
 
-      &:hover
-        color: $wt
+      li
+        margin: 0 auto
+
+        &:hover
+          color: $wt
 
   .SoMe
     padding: 0
     margin-bottom: 100px
 
-    li
-      display: inline-block
+    a
+
+      li
+        display: inline-block
+        padding: 7px
+
+        svg
+          height: 35px
+
+          path
+            fill: #fff
+
+      &:hover
+        li
+          svg
+
+            path
+              fill: $wt
+
 
   .adr
     margin-bottom: 40px
@@ -43,3 +69,47 @@
     li
       display: inline-block
       padding: 7px
+
+
+
+
+@media screen and (max-height: 900px)
+
+  #pagefooter
+
+    .wrapper
+
+  .logo
+    margin-bottom: 30px !important
+
+  .primery
+    margin-bottom: 30px !important
+
+  .SoMe
+    margin-bottom: 30px !important
+
+
+  .adr
+    margin-bottom: 10px !important
+
+
+@media screen and (max-height: 670px)
+
+  .logo
+    margin-bottom: 60px !important
+
+  #pagefooter
+
+    .positioner
+      height: 70vh
+      display: flex
+      flex-direction: column
+      justify-content: center
+
+
+
+    .primery
+      display: none !important
+
+  .SoMe
+    margin-bottom: 30px !important

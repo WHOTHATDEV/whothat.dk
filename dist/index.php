@@ -75,7 +75,7 @@ include 'start.php' ?>
         <div class="wrapper">
 
           <?php foreach ($ikon as $key => $value): ?>
-            <div class="ikon"><h4><?= $value['titel'] ?></h4><p><?= $value['text'] ?></p></div>
+            <div class="ikon"><?php include 'assets/icons/'.$value['ikon']; ?> <h4><?= $value['titel'] ?></h4><p><?= $value['text'] ?></p></div>
           <?php endforeach; ?>
 
         </div>

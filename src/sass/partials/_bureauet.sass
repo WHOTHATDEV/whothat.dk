@@ -10,6 +10,8 @@
     max-width: 60vw
     overflow: hidden
 
+    img
+      max-width: 100vw
 
   .text
     display: inline-block
@@ -43,7 +45,6 @@
     &:hover
 
       img
-        // visibility: hidden
         opacity: 0
         transform: scale(1.2)
 
@@ -112,15 +113,20 @@
         margin: 0
         margin-top: 15px
 
-  a
+  a.sog
     lost-column: 3/4
+    padding: 17.3% 0px
+    box-sizing: border-box
+    @extend .stripes_transparant
+    border: 0px solid $wt
+
+
+
 
     .sog_job
-      @extend .stripes_transparant
-      height: 400px
+      // height: 400px
       lost-align: center
       transition: .2s ease-in-out
-      border: 0px solid $wt
       box-sizing: border-box
 
       .content
@@ -128,12 +134,12 @@
         lost-column: 3/4
         transition: .2s ease-in-out
 
-      &:hover
-        border: 1px solid $wt
+    &:hover
+      border: 1px solid $wt
 
 
-        .content
-          font-size: 1.52rem
+      .content
+        font-size: 1.52rem
 
 
 
@@ -145,14 +151,15 @@
 @media screen and (max-width: 1100px)
 
   #team
+    margin-top: 10vw
 
     .profil
       lost-column: 1/3 3 30px
 
 
-    .sog_job
-      lost-column: 1/1
-
+    a.sog
+      lost-column: 1/1 !important
+      padding: 25% 0px
 
 
 
@@ -160,16 +167,17 @@
 
   #team
 
+
+
     .profil
       lost-column: 1/2 2 30px
 
-    .sog_job
-      lost-column: 1/2
-
+    a.sog
+      lost-column: 1/2 !important
+      padding: 35.4% 0px
 
 
   #dna
-    // background-color: $light_bg
 
     .img
       display: block
@@ -179,6 +187,7 @@
 
     .text
       display: block
+      box-sizing: border-box
       margin-top: 30px
       width: 600px
       max-width: 95vw
@@ -193,5 +202,6 @@
     .profil
       lost-column: 1/1 1 30px
 
-    .sog_job
-      lost-column: 1/1
+    a.sog
+      lost-column: 1/1 !important
+      padding: 75% 0px

@@ -16,13 +16,16 @@ og contentplanlægning</h2>
 <section class="wrapper login">
   <form class="" action="index.html" method="post">
     <div class="inp">
-      <input type="text" name="" value="">
+      <span><img src="assets/icons/profil.png" alt=""> </span><input type="text" name="user" value="">
     </div>
     <div class="inp">
-      <input type="password" name="" value="">
+      <span><img src="assets/icons/lock.png" alt=""></span><input type="password" name="pw" value="">
     </div>
     <button type="button" name="button">Log ind</button>
   </form>
+
+  <div class="login_disclaimer">Kundeområde gælder kun WHOTHAT’s kunder.
+  Har du glemt dit login så kontakt os på 53 884 888</div>
 </section>
 
 

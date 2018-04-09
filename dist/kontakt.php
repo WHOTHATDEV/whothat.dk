@@ -1,4 +1,5 @@
 <?php
+header("Content-Encoding: none");
 // variabler til metatags
 $page = ''; // sidens navn
 include 'start.php' ?>

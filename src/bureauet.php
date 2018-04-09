@@ -48,7 +48,7 @@ til store komplekse udviklingsopgaver.</h2>
       <?php if ($value['aktiv']): ?>
 
       <div class="profil">
-        <video src="assets/videos/<?= $value['video'] ?>" class="video video_hide"></video><img src="assets/images/<?= $value['img'] ?>" alt="">
+        <video src="assets/videos/<?= $value['video'] ?>" class="video video_hide" muted></video><img src="assets/images/<?= $value['img'] ?>" alt="">
       <footer>
         <div class="title_card">
           <div class="t">
@@ -63,7 +63,8 @@ til store komplekse udviklingsopgaver.</h2>
       </div>
       <?php endif; ?>
     <?php endforeach; ?>
-    <a href="mailto:job@whothat.dk">
+    <a href="mailto:job@whothat.dk" class="sog">
+
       <div class="sog_job">
         <div class="content">
           Er det dig og dine kompetencer vi mangler?

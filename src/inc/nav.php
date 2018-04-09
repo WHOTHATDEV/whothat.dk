@@ -15,15 +15,15 @@
       </a>
     </div>
 
-    <div id="background"><img src="" alt="" id="bg_image"></div>
+    <div id="background"><div class="ldBar"></div><img src="" alt="" id="bg_image"></div>
     <div class="menu-overlay">
       <div class="content">
         <ul class="primery">
-          <a href="whothat"><li>Forside</li></a>
-          <a href="projekter"><li>Projekter</li></a>
-          <a href="bureauet"><li>Bureauet</li></a>
-          <a href="kontakt"><li>Kontakt</li></a>
-          <a href="login"><li>Kunde login</li></a>
+          <a href="whothat"><li class="case_link" data-img="office.jpg">Forside</li></a>
+          <a href="projekter"><li class="case_link" data-img="projekter.jpg">Projekter</li></a>
+          <a href="bureauet"><li class="case_link" data-img="bureauet.jpg">Bureauet</li></a>
+          <a href="kontakt"><li class="case_link" data-img="kontakt.jpg">Kontakt</li></a>
+          <a href="login"><li class="case_link" data-img="login.jpg">Kunde login</li></a>
         </ul>
 
         <ul class="cases">
