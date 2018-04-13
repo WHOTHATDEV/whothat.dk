@@ -2,6 +2,29 @@
 
 var cheat = '';
 $(function () {
+
+
+  // typed
+  var typed = new Typed('.type', {
+    strings: [
+      'Slaggerly Hills',
+      'Slan Diego',
+      'Slan Fransisco',
+      'Slantiago',
+      'Slão Paulo',
+      'Sunshine City',
+      'Slycity',
+      'Slago slago'
+    ],
+    typeSpeed: 60,
+    backDelay: 1200,
+    loop: true,
+    backSpeed: 30,
+    shuffle: true
+});
+
+
+
   // page transistion
   var transEffect = Barba.BaseTransition.extend({
     start: function start() {
@@ -64,6 +87,14 @@ $(function () {
   };
 
   Barba.Pjax.start(); // page transistion end
+
+
+
+
+
+
+
+
 
   $(".menu-link").click(function (e) {
     e.preventDefault();

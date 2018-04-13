@@ -179,7 +179,9 @@ body {
   font-family: "Merriweather", serif;
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
   body::-webkit-scrollbar {
     width: 0 !important; }
   body .viewport {

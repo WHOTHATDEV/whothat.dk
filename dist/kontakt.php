@@ -9,7 +9,7 @@ include 'start.php' ?>
   <div class="dot"></div>
   <div class="wrapper" id="first_section">
     <h1>Kig forbi</h1>
-    <h2>Straight outta <span id="click_city"><?= $slagelse_navne[array_rand($slagelse_navne)] ?></span> <span class="biline">(eller bare slagelse om man vil...)</span></h2>
+    <h2>Straight outta <span id="click_city" class="type"></span> <span class="biline">(eller bare slagelse om man vil...)</span></h2>
   </div>
 </section>
 

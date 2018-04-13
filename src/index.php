@@ -74,9 +74,21 @@ include 'start.php' ?>
        <section id="ikoner">
         <div class="wrapper">
 
-          <?php foreach ($ikon as $key => $value): ?>
-            <div class="ikon"><?php include 'assets/icons/'.$value['ikon']; ?> <h4><?= $value['titel'] ?></h4><p><?= $value['text'] ?></p></div>
-          <?php endforeach; ?>
+
+            <div class="ikon"><?php include 'assets/icons/'.$ikon[0]['ikon']; ?> <h4><?= $ikon[0]['titel'] ?></h4><p><?= $ikon[0]['text'] ?></p></div>
+
+            <div class="ikon"><?php include 'assets/icons/'.$ikon[1]['ikon']; ?> <h4><?= $ikon[1]['titel'] ?></h4><p><?= $ikon[1]['text'] ?></p></div>
+
+            <div class="ikon"><?php include 'assets/icons/'.$ikon[2]['ikon']; ?> <h4><?= $ikon[2]['titel'] ?></h4><p><?= $ikon[2]['text'] ?></p></div>
+
+            <div class="ikon"><?php include 'assets/icons/'.$ikon[3]['ikon']; ?> <h4><?= $ikon[3]['titel'] ?></h4><p><?= $ikon[3]['text'] ?></p></div>
+
+            <div class="ikon"><?php include 'assets/icons/'.$ikon[4]['ikon']; ?> <h4><?= $ikon[4]['titel'] ?></h4><p><?= $ikon[4]['text'] ?></p></div>
+
+            <!-- <div class="ikon"><?php include 'assets/icons/'.$ikon[4]['ikon']; ?> <h4><?= $ikon[4]['titel'] ?></h4><p><?= $ikon[4]['text'] ?></p></div> -->
+
+            <div class="ikon"><?php include 'assets/icons/'.$ikon[5]['ikon']; ?> <h4><?= $ikon[5]['titel'] ?></h4><p><?= $ikon[5]['text'] ?></p></div>
+
 
         </div>
        </section>

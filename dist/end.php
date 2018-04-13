@@ -19,9 +19,9 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script>
 
-<script src="js/script.js">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.6/typed.min.js"></script>
 
-</script>
+<script src="js/script.js"></script>
 
 <script type="text/javascript">
 // console.log(XMLHttpRequest.prototype.);
