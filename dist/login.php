@@ -5,7 +5,7 @@ include 'start.php' ?>
 
 
 <section id="header_section">
-  <img src="assets/images/login.jpg" alt="">
+  <img src="assets/images/login.png" alt="">
   <div class="wrapper" id="first_section">
     <h1>Kundeområde</h1>
     <h2>Få overblik over aktuelle kampagner

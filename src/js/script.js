@@ -1,8 +1,135 @@
 var cheat = '';
 
 
+function init_page(){
 
+
+  // ______________Nav hover  handler______________
+  var frame = 1;
+  $('.case_link').hover(function(){
+    var imageUrl = "assets/images/" + $(this).data('img');
+    $('#bg').fadeIn(200);
+    if (frame == 1) {
+
+      $('#bg_image').attr("src",imageUrl);
+      $('#bg_image').fadeIn(200);
+      $('#bg_image2').fadeOut(200);
+
+      frame = 2;
+    }else {
+
+      $('#bg_image2').attr("src",imageUrl);
+      $('#bg_image2').fadeIn(200);
+      $('#bg_image').fadeOut(200);
+
+
+      frame = 1;
+    }
+  }, function(){
+
+  });
+
+  $('.con').hover(function(){
+
+  }, function(){
+    $('#bg').fadeOut(200);
+    setTimeout(function () {
+      $('#bg_image').attr("src", '');
+      $('#bg_image2').attr("src",'');
+    }, 300);
+    frame = 1;
+  });
+  // Nav hover  handler end
+
+
+  // ______________insta feed______________
+  var excluded = ['1709866722856281871', '1548434707375523010'];
+
+  $.ajax({
+    url: "https://www.instagram.com/explore/locations/1014271099/whothat/?__a=1",
+    success : function(result){
+
+      console.log(result);
+
+      var ex = 0;
+
+      for (var i = 0; i < (result.graphql.location.edge_location_to_media.edges.length); i++) {
+        // result.location.media.nodes[i].thumbnail_src
+        // append
+
+        if (i >= (12+ex)) { break;}
+        if (excluded.indexOf(result.graphql.location.edge_location_to_media.edges[i].node.id) > -1) { ex++; continue; }
+
+        $("#instafeed").append("<a href='https://www.instagram.com/p/" + result.graphql.location.edge_location_to_media.edges[i].node.shortcode + "' target='_blank' class='insta_thumb'><div class='f'><div class='ol'></div><img src='" + result.graphql.location.edge_location_to_media.edges[i].node.thumbnail_src + "'></div></a>");
+
+
+      }
+      console.log(result);
+
+
+    }});
+  // insta feed end
+
+
+  // ______________kontaktside typed.js effekt på subheading______________
+  if ($(".type")[0]){
+    var typed = new Typed('.type', {
+      strings: [
+        'Slaggerly Hills',
+        'Slan Diego',
+        'Slan Fransisco',
+        'Slantiago',
+        'Slão Paulo',
+        'Sunshine City',
+        'Slycity',
+        'Slago slago'
+      ],
+      typeSpeed: 60,
+      backDelay: 1200,
+      loop: true,
+      backSpeed: 30,
+      shuffle: true
+    });
+  }
+  // kontaktside typed.js effekt på subheading end
+
+
+  // ______________Video hover______________
+  $('.video').on('ended',function(){
+    // $('.video').css("visibility", 'hidden');
+  this.play();
+  });
+
+
+  $(".img").mouseover(
+  function(){
+    $(this).children('video')[0].play();
+    // $('.video').css("visibility", 'visible');
+  }
+  );
+
+  $(".img").mouseleave(
+  function(){
+    $(this).children('video')[0].pause();
+    // $('.video').css("visibility", 'hidden');
+  }
+  );
+  // Video hover end
+
+}  // Init function end
+
+
+
+
+
+
+
+
+
+// on erady function
 $(function() {
+
+
 
 
   // page transistion
@@ -10,69 +137,32 @@ $(function() {
     start: function() {
       this.newContainerLoading.then(val => this.fadein($(this.newContainer)));
       $('.ldBar').addClass('load');
-
-      // Barba.addEventListener("progress", function(evt){
-      //      if (evt.lengthComputable) {
-      //          var percentComplete = evt.loaded / evt.total;
-      //          // Do something with download progress
-      //          console.log(percentComplete);
-      //      }
-      //  }, false);
     },
 
     fadein: function(nc){
+      window.scrollTo(0, 0);
       nc.hide();
       var t = this;
-      $('.menu-overlay').removeClass('open');
-      $('.menu-overlay').fadeOut(600);
-      $('#main').removeClass('frost');
       $(".menu").removeClass("open");
-      $("#background").removeClass("open");
+      $(".inner_nav").fadeOut(500);
       $('body').removeClass("noscrool");
-      $(this.oldContainer).fadeOut(400).promise().done(() => {
+      $('.primery').removeClass('open');
+      $('.cases').removeClass('open');
+      $('.SoMe').removeClass('open');
+      $('.ldBar').addClass('load');  // loadbar animation init (NOT WORKING)
+      $(this.oldContainer).fadeOut(0).promise().done(() => {
         nc.css('visibility', 'visible');
         nc.fadeIn(300, function(){
 
-          $('#background').fadeOut(300);
+          $('#bg').fadeOut(300);
 
           setTimeout(function () {
+            $("#nav_controler").removeClass("open");
             $('#bg_image').attr("src", '');
             $('.ldBar').removeClass('load');
           }, 400);
 
-          $('.case_link').hover(function(){
-
-            var imageUrl = "assets/images/" + $(this).data('img');
-            $('#background').fadeIn(0);
-            $('#bg_image').attr("src", imageUrl );
-
-            console.log(imageUrl);
-          }, function(){
-            // $('#background').fadeOut(0);
-            //   $('#bg_image').attr("src", '');
-          });
-
-
-          $('.video').on('ended',function(){
-            // $('.video').css("visibility", 'hidden');
-            this.play();
-          });
-
-          $(".profil").mouseover(
-            function(){
-              $(this).children('video')[0].play();
-              // $('.video').css("visibility", 'visible');
-            }
-          );
-
-          $(".profil").mouseleave(
-            function(){
-              $(this).children('video')[0].pause();
-              // $('.video').css("visibility", 'hidden');
-            }
-          );
-
-
+          init_page();
 
           t.done();
         });
@@ -80,8 +170,49 @@ $(function() {
     }
   });
 
+
+
+  var Nonnav = Barba.BaseTransition.extend({
+    start: function() {
+      this.newContainerLoading.then(val => this.fadein($(this.newContainer)));
+      $('.ldBar').addClass('load');
+    },
+
+    fadein: function(nc){
+      nc.hide();
+      var t = this;
+      // $('.ldBar').addClass('load');  // loadbar animation init (NOT WORKING)
+      $(this.oldContainer).fadeOut(400).promise().done(() => {
+        window.scrollTo(0, 0);
+        nc.css('visibility', 'visible');
+        nc.fadeIn(300, function(){
+
+          init_page();
+
+          t.done();
+        });
+      });
+    }
+  });
+
+
+Barba.Dispatcher.on('linkClicked', function(el, e) {
+    // ShowOverlay(e.clientX, e.clientY);
+    console.log(e);
+    if (e.target.className == 'case_link') {
+      window.trans = 'a';
+    }else {
+      window.trans = 'b';
+    }
+  });
+
   Barba.Pjax.getTransition = function(){
+    console.log(window.trans);
+    if (window.trans == 'a') {
       return transEffect;
+    }else {
+      return Nonnav;
+    }
   };
 
   Barba.Pjax.start();
@@ -91,35 +222,25 @@ $(function() {
   $(".menu-link").click(function(e) {
     e.preventDefault();
     $(".menu").toggleClass("open");
-    $(".menu-overlay").toggleClass("open");
-    // $('#background').toggleClass("open");
+    $(".inner_nav").fadeIn(1000);
     $('body').toggleClass("noscrool");
-    if ($(".menu-overlay").hasClass('open')) {
-      $(".menu-overlay").fadeIn(300);
+    if ($(".menu").hasClass('open')) {
+      $("#nav_controler").addClass("open");
       $('.primery').addClass('open');
       $('.cases').addClass('open');
-      // menu animatioon
-
-
+      $('.SoMe').addClass('open');
     }else {
-      $(".menu-overlay").fadeOut(500);
+      $(".inner_nav").fadeOut(500);
+      $('#bg').fadeOut(100);
       $('.primery').removeClass('open');
       $('.cases').removeClass('open');
-      $('#background').fadeOut(300);
-      $('#bg_image').attr("src", '');
-    }
-    // $(".menu-overlay").toggle('slow');
-    $('#main').toggleClass('frost');
-  });
-
-
-  $('.case_link').hover(function(){
-    var imageUrl = "assets/images/" + $(this).data('img');
-    $('#background').fadeIn(200);
-    $('#bg_image').attr("src",imageUrl);
-  }, function(){
-    // $('#background').fadeOut(0);
+      $('.SoMe').removeClass('open');
+      setTimeout(function () {
+        $("#nav_controler").removeClass("open");
+      }, 600);
     //   $('#bg_image').attr("src", '');
+    }
+    // $('#main').toggleClass('frost');
   });
 
 
@@ -127,71 +248,7 @@ $(function() {
 
 
 
-    // insta feed
-    var excluded = ['1709866722856281871', '1548434707375523010'];
-
-    $.ajax({
-      url: "https://www.instagram.com/explore/locations/1014271099/whothat/?__a=1",
-      success : function(result){
-
-        console.log(result);
-
-
-
-        var ex = 0;
-
-        for (var i = 0; i < (result.graphql.location.edge_location_to_media.edges.length); i++) {
-          // result.location.media.nodes[i].thumbnail_src
-          // append
-
-          if (i >= (12+ex)) { break;}
-          if (excluded.indexOf(result.graphql.location.edge_location_to_media.edges[i].node.id) > -1) { ex++; continue; }
-
-          $("#instafeed").append("<a href='https://www.instagram.com/p/" + result.graphql.location.edge_location_to_media.edges[i].node.shortcode + "' target='_blank' class='insta_thumb'><div class=''><img src='" + result.graphql.location.edge_location_to_media.edges[i].node.thumbnail_src + "'></div></a>");
-
-
-        }
-        console.log(result);
-
-
-      }});
-
-
-
-
-      $('.video').on('ended',function(){
-        // $('.video').css("visibility", 'hidden');
-this.play();
-      });
-
-
-    $(".profil").mouseover(
-      function(){
-        $(this).children('video')[0].play();
-        // $('.video').css("visibility", 'visible');
-      }
-    );
-
-    $(".profil").mouseleave(
-      function(){
-        $(this).children('video')[0].pause();
-        // $('.video').css("visibility", 'hidden');
-      }
-    );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+init_page();
 
 
 
@@ -207,7 +264,7 @@ this.play();
       if (cheat == 'iddqd') {
         $(".video").each(
           function(){
-            $(".profil").children('img').css('visibility', 'hidden')
+            $(".img").children('img').css('visibility', 'hidden')
               // this.trigger('mouseover');
               this.play();
           }

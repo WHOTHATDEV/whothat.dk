@@ -7,6 +7,7 @@
      <!-- menu -->
      <?php include 'inc/nav.php'; ?>
      <!-- menu end -->
+     
      <div class="viewport" id="main">
 
        <!-- barba.js container start -->

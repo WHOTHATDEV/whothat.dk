@@ -1,4 +1,11 @@
 
+.forside_header#header_section
+  img
+    opacity: 1 !important
+
+
+
+
 
 #forside_cases
   lost-utility: clearfix
@@ -48,8 +55,83 @@
       lost-column: 1/6 6 30px
       padding-bottom: 30px
 
+      // pointer-events: none
+
+      &:hover
+
+        div.f
+          pointer-events: none
+
+          div.ol
+            opacity: .8
+            top: 0% !important
+            bottom: 100%
+            transition: .3s, bottom .3s .3s
+
+
+        img
+          opacity: 1 !important
+          filter: none !important
+          transform: scale(1.1)
+          transition: .3s ease-in-out
+
+
+      div.f
+        position: relative
+        overflow: hidden
+
+
+        div.ol
+          background-color: $wt
+          position: absolute
+          top: 100%
+          bottom: 0
+          left: 0
+          right: 0
+          transition: .3s
+          z-index: 20
+          font-family: $enc
+          // line-height: 300px
+          // vertical-align: bottom
+          text-align: center
+          color: #fff
+          overflow: hidden
+          transition: 0s , bottom 0s
+
+
+
+
       img
         width: 100%
+        display: block
+        transition: .3s ease-out
+
+    &:hover
+      .insta_thumb
+        div.f
+          // background-color: $dark_wt
+          // background-color: #000
+
+          img
+            opacity: .4
+            filter: grayscale(100%)
+
+
+                //
+                //
+                //         // background-color: $wt
+                //         // position: absolute
+                //         // top: 0
+                //         // bottom: 0
+                //         // left: 0
+                //         // right: 0
+                //
+                //
+                //
+                //       &:hover
+                //         opacity: 1
+                //         filter: none
+
 
 
 

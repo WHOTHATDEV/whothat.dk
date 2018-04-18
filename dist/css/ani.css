@@ -1,0 +1,471 @@
+
+
+
+@keyframes socialanimation{
+  0%{
+		fill: #ffffff;
+		transform: scale(1);
+    }
+  10%{
+		fill: #57a1a9;
+    }
+  20%{
+		fill: #57a1a9;
+		transform: scale(1.1) translateY(-9px);
+    }
+  40%{
+		fill: #ffffff;
+    }
+  60%{
+		fill: #ffffff;
+		transform: scale(1);
+    }
+  100%{
+		fill: #ffffff;
+		transform: scale(1) translateY(0px);
+}
+}
+@keyframes annonceanimation{
+  0%{
+		fill: #ffffff;
+		transform: scale(1);
+    }
+  10%{
+		fill: #57a1a9;
+    }
+  20%{
+		fill: #57a1a9;
+		transform: scale(1.1);
+    }
+  30%{
+		fill: #ffffff;
+    }
+  60%{
+		fill: #ffffff;
+		transform: scale(1);
+    }
+  100%{
+		fill: #ffffff;
+		transform: scale(1);
+}
+}
+
+@keyframes banneranimation{
+  0%{
+		fill: #ffffff;
+		transform: scale(1);
+    }
+  10%{
+		fill: #57a1a9;
+}
+  20%{
+		fill: #57a1a9;
+		transform: scale(1.1);
+    }
+  40%{
+		fill: #ffffff;
+}
+  60%{
+		fill: #ffffff;
+		transform: scale(1);
+    }
+  100%{
+		fill: #ffffff;
+		transform: scale(1);
+}}
+
+
+@keyframes uxanimation{
+  0%{
+		fill: #ffffff;
+		transform: scale(1);
+}
+
+  10%{
+		fill: #57a1a9;
+    }
+  20%{
+		fill: #57a1a9;
+		transform: scale(1.15);
+    }
+  40%{
+		fill: #ffffff;
+    }
+  60%{
+		fill: #ffffff;
+		transform: scale(1);
+    }
+  100%{
+		fill: #ffffff;
+		transform: scale(1);
+}}
+
+@keyframes brandanimation{
+    0%{
+  		fill: #ffffff;
+  		transform: scale(1);
+      }
+    10%{
+  		fill: #57a1a9;
+      }
+    20%{
+  		fill: #57a1a9;
+  		transform: scale(1.1);
+      }
+    40%{
+  		fill: #ffffff;
+      }
+    60%{
+  		fill: #ffffff;
+  		transform: scale(1);
+      }
+    100%{
+  		fill: #ffffff;
+  		transform: scale(1);
+  }
+}
+@keyframes webudviklinganimation{
+    0%{
+  		fill: #ffffff;
+  		transform: scale(1);
+  }
+    10%{
+  		fill: #57a1a9;
+  }
+    20%{
+  		fill: #57a1a9;
+  		transform: scale(1.1);
+  }
+    40%{
+  		fill: #ffffff;
+  }
+    60%{
+  		fill: #ffffff;
+  		transform: scale(1);
+  }
+    100%{
+  		fill: #ffffff;
+  		transform: scale(1);
+  }
+}
+
+.ikon svg{
+  transition: .4s;
+}
+
+.ikon:hover svg{
+  transform: scale(1.3);
+  transition: .4s ease-out;
+}
+
+.ikon h4, .ikon p{
+  transition: .3s;
+}
+
+.moving_parts{
+  animation-fill-mode: forwards;;
+  animation-duration: 2s;;
+  animation-iteration-count: infinite;;
+  transform-origin: 180px 180px;;
+  transition-timing-function: cubic-bezier(0.460, 0.195, 0.000, 0.990);;
+}
+/*          social animation          */
+
+
+#icon_circle_01,
+#icon_circle_02,
+#icon_circle_03 {
+  animation-duration: 1.75s;;
+}
+
+#icon_circle_01{
+	fill: #57a1a9;
+}
+
+.ikon:hover #icon_circle_01{
+    animation-name: socialanimation;
+}
+
+.ikon:hover #icon_circle_02{
+    animation-name: socialanimation;
+    animation-delay: 0.2s;
+}
+
+
+.ikon:hover #icon_circle_03{
+    animation-name: socialanimation;
+    animation-delay: 0.4s;
+}
+
+
+/*          annonce animation          */
+
+
+#annonce_circle_small{
+   fill: #57a1a9;
+}
+
+
+.ikon:hover #annonce_circle_small{
+    animation-name: annonceanimation;
+}
+
+.ikon:hover #annonce_circle_medium{
+    animation-name: annonceanimation;
+    animation-delay: 0.2s;
+}
+
+
+.ikon:hover #annonce_circle_big{
+    animation-name: annonceanimation;
+    animation-delay: 0.4s;
+}
+
+
+/*          banner animation          */
+
+#icon_banner_top,
+#icon_banner_top_mobile,
+#icon_banner_middle,
+#icon_banner_middle_mobile,
+#icon_banner_bottom,
+#icon_banner_bottom_mobile{
+    animation-duration: 3s;
+}
+
+
+
+
+#icon_banner_top{
+    fill: #57a1a9;
+}
+
+#icon_banner_top{
+    transform-origin: 180px 130px;
+}
+
+#icon_banner_middle{
+    transform-origin: 130px 163px;
+}
+
+#icon_banner_bottom{
+    transform-origin: 220px 165px;
+}
+
+#icon_banner_top_mobile{
+    transform-origin: 255px 221px;
+}
+
+#icon_banner_middle_mobile{
+    transform-origin: 254px 252px;
+}
+
+#icon_banner_bottom_mobile{
+    transform-origin: 257px 281px;
+}
+
+
+
+.ikon:hover #icon_banner_top{
+    animation-name: banneranimation;
+}
+
+.ikon:hover #icon_banner_top_mobile{
+    animation-name: banneranimation;
+    animation-delay: 0.1s;
+}
+
+.ikon:hover #icon_banner_middle{
+   animation-name: banneranimation;
+    animation-delay: 0.4s;
+}
+
+.ikon:hover #icon_banner_middle_mobile{
+   animation-name: banneranimation;
+    animation-delay: 0.5s;
+}
+
+
+.ikon:hover #icon_banner_bottom{
+    animation-name: banneranimation;
+    animation-delay: 0.8s;
+}
+
+.ikon:hover #icon_banner_bottom_mobile{
+    animation-name: banneranimation;
+    animation-delay: 0.9s;
+}
+
+
+
+/*          UX animation          */
+#icon_ux_line_1,
+#icon_ux_line_2,
+#icon_ux_line_3,
+#icon_ux_line_4{
+    animation-duration: 2.66s;
+}
+
+
+#icon_ux_line_1{
+   fill: #57a1a9;
+}
+
+#icon_ux_line_1{
+    transform-origin: 90px 240px;
+}
+
+#icon_ux_line_2{
+    transform-origin: 174px 265px;
+}
+
+#icon_ux_line_3{
+    transform-origin: 140px 321px;
+}
+
+#icon_ux_line_4{
+    transform-origin: 60px 330px;
+}
+
+
+.ikon:hover #icon_ux_line_1{
+    animation-name: uxanimation;
+}
+
+.ikon:hover #icon_ux_line_2{
+    animation-name: uxanimation;
+    animation-delay: 0.2s;
+}
+
+.ikon:hover #icon_ux_line_3{
+    animation-name: uxanimation;
+    animation-delay: 0.4s;
+}
+
+.ikon:hover #icon_ux_line_4{
+    animation-name: uxanimation;
+    animation-delay: 0.6s;
+}
+
+
+
+/*          annonce animation          */
+#icon_brand_upper_1,
+#icon_brand_upper_2,
+#icon_brand_lower_1,
+#icon_brand_lower_2,
+#icon_brand_lower_3{
+}
+
+#icon_brand_upper_1{
+   fill: #57a1a9;
+    transform-origin: 208px 140px;
+}
+
+#icon_brand_upper_2{
+   transform-origin: 180px 180px;
+}
+
+#icon_brand_lower_1{
+    transform-origin: 315px 203px;
+}
+
+#icon_brand_lower_2{
+   transform-origin: 265px 226px;
+}
+
+#icon_brand_lower_3{
+   transform-origin: 140px 300px;
+}
+
+
+.ikon:hover #icon_brand_lower_1{
+    animation-name: brandanimation;
+}
+
+.ikon:hover #icon_brand_upper_2{
+    animation-name: brandanimation;
+    animation-delay: 0.2s;
+}
+
+
+.ikon:hover #icon_brand_lower_3{
+    animation-name: brandanimation;
+    animation-delay: 0.4s;
+}
+
+.ikon:hover #icon_brand_upper_1{
+    animation-name: brandanimation;
+    animation-delay: 0.6s;
+}
+.ikon:hover #icon_brand_lower_2{
+    animation-name: brandanimation;
+    animation-delay: 0.8s;
+}
+
+
+/*          webudvikling animation          */
+
+#icon_webudvikling_4,
+#icon_webudvikling_5,
+#icon_webudvikling_6,
+#icon_webudvikling_3,
+#icon_webudvikling_2,
+#icon_webudvikling_1{
+    animation-duration: .5s;
+    animation-iteration-count: 2
+}
+
+#icon_webudvikling_4{
+    fill: #57a1a9;
+    transform-origin: 128px 171px;
+}
+
+#icon_webudvikling_5{
+    transform-origin: 188px 190px;
+}
+
+#icon_webudvikling_6{
+    transform-origin: 175px 206px;
+}
+
+#icon_webudvikling_3{
+    transform-origin: 224px 169px;
+}
+
+#icon_webudvikling_2{
+    transform-origin: 110px 189px;
+}
+
+#icon_webudvikling_1{
+    transform-origin: 239px 201px;
+}
+
+.ikon:hover #icon_webudvikling_4{
+    animation-name: webudviklinganimation;
+}
+
+.ikon:hover #icon_webudvikling_1{
+    animation-name: webudviklinganimation;
+    animation-delay: 0.2s;
+}
+
+.ikon:hover #icon_webudvikling_5{
+    animation-name: webudviklinganimation;
+    animation-delay: 0.4s;
+}
+
+.ikon:hover #icon_webudvikling_2{
+    animation-name: webudviklinganimation;
+    animation-delay: 0.6s;
+}
+
+.ikon:hover #icon_webudvikling_3{
+    animation-name: webudviklinganimation;
+    animation-delay: 0.8s;
+}
+
+
+.ikon svg{
+  overflow: visible !important;
+}

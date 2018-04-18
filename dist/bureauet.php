@@ -6,7 +6,7 @@ include 'config/personale.php';
 include 'start.php' ?>
 
 <section id="header_section">
-  <img src="assets/images/bureauet.jpg" alt="">
+  <img src="assets/images/bureauet.png" alt="">
   <div class="wrapper" id="first_section">
 
     <h1>Hmm Whothat?</h1>
@@ -48,36 +48,85 @@ til store komplekse udviklingsopgaver.</h2>
       <?php if ($value['aktiv']): ?>
 
       <div class="profil">
-        <video src="assets/videos/<?= $value['video'] ?>" class="video video_hide" muted></video><img src="assets/images/<?= $value['img'] ?>" alt="">
-      <footer>
-        <div class="title_card">
-          <div class="t">
-
-            <h3><?= $value['navn'] ?></h3>
-            <h4><?= $value['titel'] ?></h4>
-            <h6><a href="mailto:<?= $value['email'] ?>"><?= $value['email'] ?></a></h6>
-          </div>
+        <div class="title">
+          <h4><?= $value['titel'] ?></h4>
         </div>
-      </footer>
+        <div class="img">
+
+        <video src="assets/videos/<?= $value['video'] ?>" class="video video_hide" muted></video>
+        <img src="assets/images/<?= $value['img'] ?>" alt="">
+        <footer>
+          <div class="title_card">
+            <div class="t">
+
+              <h3><?= $value['navn'] ?></h3>
+              <h6><a href="mailto:<?= $value['email'] ?>"><?= $value['email'] ?></a></h6>
+              <div class="somerow">
+                <?php if (isset($value['fb'])): ?>
+                  <a href="<?= $value['fb'] ?>" target="_blank"><?php include "assets/icons/fb.svg" ?></a>
+                <?php endif; ?>
+                <?php if (isset($value['insta'])): ?>
+                  <a href="<?= $value['insta'] ?>" target="_blank"><?php include "assets/icons/insta.svg" ?></a>
+                <?php endif; ?>
+                <?php if (isset($value['in'])): ?>
+                  <a href="<?= $value['in'] ?>" target="_blank"><?php include "assets/icons/in.svg" ?></a>
+                <?php endif; ?>
+                <?php if (isset($value['v'])): ?>
+                  <a href="<?= $value['v'] ?>" target="_blank"><?php include "assets/icons/v.svg" ?></a>
+                <?php endif; ?>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
 
       </div>
       <?php endif; ?>
     <?php endforeach; ?>
-    <a href="mailto:job@whothat.dk" class="sog">
 
-      <div class="sog_job">
+
+    <div class="profil">
+      <a href="mailto:job@whothat.dk" class="sog">
+      <div class="title">
+        <h4>Stilling</h4>
+      </div>
+      <div class="img sog_job">
+
         <div class="content">
+        <h3>Dig her?</h3>
           Er det dig og dine kompetencer vi mangler?
-  Send os cv og motiveret ansøgning på job@whothat.dk
+          <br>
+          <br>
+          Send os cv og motiveret ansøgning på job@whothat.dk
         </div>
+
       </div>
     </a>
-  </div>
-  <div class="gamle">
-    <div class="profil">
-
     </div>
+
+
+
+
   </div>
+
+
+    <!-- <div class="profil">
+
+      <div class="img">
+
+      </div>
+    </div> -->
+
+    <!-- <div class="profil">
+
+      </div> -->
+
+    <!-- </div> -->
+
+      <!-- <div class="sog_job">
+      </div> -->
+
+
 </section>
 
 

@@ -7,11 +7,11 @@
         <img src="assets/images/footerlogo.png" alt="" class="logo">
 
         <ul class="primery">
-          <a href="whothat"><li>Forside</li></a>
-          <a href="projekter"><li>Projekter</li></a>
-          <a href="bureauet"><li>Bureauet</li></a>
-          <a href="kontakt"><li>Kontakt</li></a>
-          <a href="login"><li>Kunde login</li></a>
+          <a href="whothat"><li><span class="ani_whothat footer_ani">Forside</span></li></a>
+          <a href="projekter" class="ani_projekter footer_ani"><li><span class="ani_projekter footer_ani">Projekter</span></li></a>
+          <a href="bureauet" class="ani_bureauet footer_ani"><li><span class="ani_bureauet footer_ani">Bureauet</span></li></a>
+          <a href="kontakt" class="ani_kontakt footer_ani"><li><span class="ani_kontakt footer_ani">Kontakt</span></li></a>
+          <a href="login" class="ani_login footer_ani"><li><span class="ani_login footer_ani">Kunde login</span></li></a>
         </ul>
 
         <ul class="SoMe">

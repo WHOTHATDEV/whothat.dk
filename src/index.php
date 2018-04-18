@@ -6,7 +6,7 @@ include 'start.php' ?>
 
        <!-- content -->
        <section id="header_section" class="forside_header">
-         <img src="assets/images/office.jpg" alt="">
+         <img src="assets/images/frontpage.png" alt="">
          <div class="ontop">
            <div class="wrapper">
 

@@ -32,8 +32,8 @@
       li
         margin: 0 auto
 
-        &:hover
-          color: $wt
+        // &:hover
+        //   color: $wt
 
   .SoMe
     padding: 0
@@ -47,6 +47,7 @@
 
         svg
           height: 35px
+          transition: .3s
 
           path
             fill: #fff
@@ -54,9 +55,10 @@
       &:hover
         li
           svg
-
+            transform: scale(1.2)
             path
               fill: $wt
+              transition: .3s
 
 
   .adr

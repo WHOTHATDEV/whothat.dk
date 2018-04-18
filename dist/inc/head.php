@@ -4,6 +4,7 @@
   <title>WHOTHAT <?= ($page != '')? " - $page" : '' ;?></title>
   <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded:300,700|Merriweather:400,700,900" rel="stylesheet">
   <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="css/ani.css">
 
 
 </head>

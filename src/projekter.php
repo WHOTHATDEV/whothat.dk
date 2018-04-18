@@ -6,7 +6,7 @@ include 'start.php' ?>
 
 
 <section id="header_section" class="projekter">
-  <img src="assets/images/projekter.jpg" alt="">
+  <img src="assets/images/projekter.png" alt="">
 
   <div class="wrapper" id="first_section">
 
