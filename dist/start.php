@@ -1,4 +1,8 @@
-<?php   include 'inc/assets.php'; ?>
+
+<?php
+
+// include 'inc/cach.php';
+include 'inc/assets.php'; ?>
  <!DOCTYPE html>
  <html lang="en" dir="ltr">
    <?php include 'inc/head.php'; ?>
@@ -7,7 +11,7 @@
      <!-- menu -->
      <?php include 'inc/nav.php'; ?>
      <!-- menu end -->
-     
+
      <div class="viewport" id="main">
 
        <!-- barba.js container start -->

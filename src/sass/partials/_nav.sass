@@ -15,16 +15,14 @@
   .viewport
     position: relative
     background-color: rgba(0,0,0,0)
-
-    height: 300px
     overflow: hidden
-
-    &.open
-      height: 100vh
+    pointer-events: none
+    height: 100vh
 
     .page_logo
       // width: 1px
       display: inline-block
+      pointer-events: all
 
       svg
         vertical-align: middle
@@ -61,7 +59,9 @@
   right: 30px
   height: 46px
   width: 46px
-  
+  pointer-events: all
+
+
 
 
 .menu.open .menu-circle
@@ -85,6 +85,7 @@
   bottom: 1px
   border: 2px solid #fff
   border-radius: 50%
+  pointer-events: all
 
 .menu-line
   background-color: #fff
@@ -139,6 +140,7 @@
   z-index: 11
   user-select: none
   display: none
+  pointer-events: all
 
   // &.open
   //   display: block
@@ -173,6 +175,7 @@
 
       &.open
         max-height: 400px
+
 
         a
           opacity: 1
@@ -339,8 +342,8 @@
 
 
 .menu.open .n_nav
-  width: 500vw
-  height: 500vw
+  width: 415vw !important
+  height: 415vw !important
   transition: .7s ease-in
 
 
@@ -356,3 +359,80 @@
 
   to
     box-shadow: 0px 0px 0px 10px $wt
+
+
+@media screen and (max-width: 800px)
+
+  .inner_nav .con .primery
+    padding-right: 40px
+
+@media screen and (max-width: 750px)
+
+  .inner_nav
+    .con
+      .primery
+        border: none !important
+        text-align: center !important
+        padding-right: 60px
+
+      .cases
+        display: none !important
+
+      .SoMe
+        margin-top: 30px !important
+        padding: 0
+
+        li
+          padding: 10px
+          a
+            svg
+              height: 40px
+
+
+  //
+  // .navigation
+  //   .content
+  //     margin-top: 100px !important
+//         a
+//
+//           @for $i from 1 through 5
+//             &:nth-of-type(#{$i})
+//               transition-delay: 200ms + (250 * $i)
+//
+//
+//
+//
+//
+//     .menu.open .menu-circle
+//       transform: scale(.2) !important
+//
+//
+@media screen and (max-width: 600px)
+
+  .n_nav
+    transition: 1s ease-in-out
+
+
+  .navigation
+    height: 80px
+
+    .viewport
+
+      .page_logo
+
+        svg
+
+          margin-left: 15px
+          margin-top: 25px
+
+  .menu
+    top: 10px
+    right: 15px
+
+
+
+@media screen and (min-width: $viewport)
+  .menu.open .n_nav
+    width: 6000px !important
+    height: 6000px !important
+    transition: 1.2s ease-in

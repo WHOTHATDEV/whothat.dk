@@ -14,12 +14,14 @@
 
 </div>
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.6/typed.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typeit@5.9.0/dist/typeit.min.js" /></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-visible/1.2.0/jquery.visible.js"></script>
 
 <script src="js/script.js"></script>
 
@@ -56,3 +58,7 @@
 </script>
 </body>
 </html>
+
+<?php
+  // include 'inc/cach_end.php'; 
+?>

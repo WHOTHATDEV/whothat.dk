@@ -224,12 +224,12 @@ body {
   .navigation .viewport {
     position: relative;
     background-color: transparent;
-    height: 300px;
-    overflow: hidden; }
-    .navigation .viewport.open {
-      height: 100vh; }
+    overflow: hidden;
+    pointer-events: none;
+    height: 100vh; }
     .navigation .viewport .page_logo {
-      display: inline-block; }
+      display: inline-block;
+      pointer-events: all; }
       .navigation .viewport .page_logo svg {
         vertical-align: middle;
         margin-left: 50px;
@@ -252,7 +252,8 @@ body {
   top: 20px;
   right: 30px;
   height: 46px;
-  width: 46px; }
+  width: 46px;
+  pointer-events: all; }
 
 .menu.open .menu-circle {
   transform: scale(1);
@@ -274,7 +275,8 @@ body {
   right: 0;
   bottom: 1px;
   border: 2px solid #fff;
-  border-radius: 50%; }
+  border-radius: 50%;
+  pointer-events: all; }
 
 .menu-line {
   background-color: #fff;
@@ -324,7 +326,8 @@ body {
   right: 0px;
   z-index: 11;
   user-select: none;
-  display: none; }
+  display: none;
+  pointer-events: all; }
   .inner_nav .con {
     margin: calc(50vh -200px) auto;
     max-width: 1200px;
@@ -507,8 +510,8 @@ body {
     width: 100%; }
 
 .menu.open .n_nav {
-  width: 500vw;
-  height: 500vw;
+  width: 415vw !important;
+  height: 415vw !important;
   transition: .7s ease-in; }
 
 #bg {
@@ -519,6 +522,43 @@ body {
     box-shadow: 0px 0px 0px 0px #57a1a9; }
   to {
     box-shadow: 0px 0px 0px 10px #57a1a9; } }
+
+@media screen and (max-width: 800px) {
+  .inner_nav .con .primery {
+    padding-right: 40px; } }
+
+@media screen and (max-width: 750px) {
+  .inner_nav .con .primery {
+    border: none !important;
+    text-align: center !important;
+    padding-right: 60px; }
+  .inner_nav .con .cases {
+    display: none !important; }
+  .inner_nav .con .SoMe {
+    margin-top: 30px !important;
+    padding: 0; }
+    .inner_nav .con .SoMe li {
+      padding: 10px; }
+      .inner_nav .con .SoMe li a svg {
+        height: 40px; } }
+
+@media screen and (max-width: 600px) {
+  .n_nav {
+    transition: 1s ease-in-out; }
+  .navigation {
+    height: 80px; }
+    .navigation .viewport .page_logo svg {
+      margin-left: 15px;
+      margin-top: 25px; }
+  .menu {
+    top: 10px;
+    right: 15px; } }
+
+@media screen and (min-width: 2560px) {
+  .menu.open .n_nav {
+    width: 6000px !important;
+    height: 6000px !important;
+    transition: 1.2s ease-in; } }
 
 #pagefooter {
   position: fixed;
@@ -600,6 +640,7 @@ body {
   text-align: center;
   width: 100%;
   padding-bottom: 200px;
+  padding-top: 60px;
   position: relative; }
   #header_section img {
     width: 100%;
@@ -618,7 +659,7 @@ body {
 
 @media screen and (max-width: 2700px) {
   #header_section .ontop h1 {
-    margin-top: 35vw; } }
+    margin-top: 25vw; } }
 
 @media screen and (max-width: 1200px) {
   #header_section {
@@ -644,9 +685,9 @@ body {
     #ikoner .ikon svg {
       height: 75px;
       fill: #fff; }
-    #ikoner .ikon:hover h4 {
+    #ikoner .ikon:hover h4, #ikoner .ikon.run_ani h4 {
       color: #57a1a9; }
-    #ikoner .ikon:hover p {
+    #ikoner .ikon:hover p, #ikoner .ikon.run_ani p {
       color: #fff; }
 
 #partner_logoer {
@@ -715,7 +756,12 @@ body {
   #ikoner .ikon {
     lost-column: 1/1; }
   #insta #instafeed .insta_thumb {
-    lost-column: 1/2 2 30px; } }
+    lost-column: 1/2 2 30px; }
+  #partner_logoer {
+    padding: 150px 0; }
+    #partner_logoer img {
+      padding: 10px 15px;
+      transform: scale(0.65); } }
 
 .projekter .cases {
   lost-utility: clearfix;
@@ -759,6 +805,29 @@ body {
     #team .profil:nth-last-of-type(odd) {
       float: right;
       margin-top: -390px; }
+    #team .profil .green_filter {
+      position: absolute;
+      top: 0;
+      bottom: 0%;
+      left: 0;
+      right: 0;
+      background-color: #57a1a9;
+      z-index: 3;
+      opacity: .8;
+      transition: .4s .4s ease-in; }
+      #team .profil .green_filter.slidein {
+        bottom: 100% !important; }
+    #team .profil .blockgin_out {
+      position: absolute;
+      top: 0;
+      bottom: 0%;
+      left: 0;
+      right: 0;
+      background-color: #0c0c0c;
+      z-index: 4;
+      transition: .4s ease-in; }
+      #team .profil .blockgin_out.slidein {
+        bottom: 100% !important; }
     #team .profil .title {
       position: absolute;
       bottom: 100%;
@@ -823,32 +892,47 @@ body {
         bottom: 0px;
         right: 0px;
         left: 0px;
+        top: 50%;
         z-index: 2;
         background-color: red;
         padding: 15px;
-        background: linear-gradient(transparent, rgba(0, 0, 0, 0.8)); }
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+        overflow: hidden; }
         #team .profil .img footer .title_card {
           text-align: center;
-          overflow: hidden; }
+          overflow: hidden;
+          position: absolute;
+          bottom: 15px;
+          left: 0;
+          right: 0;
+          top: 0; }
           #team .profil .img footer .title_card .t {
+            padding-bottom: 5px;
+            position: absolute;
+            left: 0;
+            right: 0;
             transition: .4s;
-            transform: translateY(55px); }
+            bottom: -55px; }
             #team .profil .img footer .title_card .t .somerow {
               height: 30px;
               margin-top: 30px; }
             #team .profil .img footer .title_card .t a {
               padding: 0 10px; }
               #team .profil .img footer .title_card .t a svg {
+                transition: .3s ease-out;
                 height: 30px; }
                 #team .profil .img footer .title_card .t a svg path {
                   fill: #fff; }
-              #team .profil .img footer .title_card .t a:hover svg path {
-                fill: #57a1a9; }
+              #team .profil .img footer .title_card .t a:hover svg {
+                transform: scale(1.1); }
+                #team .profil .img footer .title_card .t a:hover svg path {
+                  fill: #57a1a9; }
           #team .profil .img footer .title_card h3 {
             font-size: 2.7rem;
             margin: 0;
             font-weight: 400;
-            line-height: 2.5rem; }
+            margin-bottom: -15px;
+            margin-top: 70px; }
           #team .profil .img footer .title_card h4 {
             font-family: "Encode Sans Expanded", sans-serif;
             color: #57a1a9;
@@ -861,13 +945,13 @@ body {
             color: #57a1a9;
             font-weight: 600;
             margin: 0;
-            margin-top: 15px;
+            margin-top: 5px;
             margin-bottom: 10px; }
-      #team .profil .img:hover img {
+      #team .profil .img:hover img, #team .profil .img.run_vid img {
         opacity: 0;
         transform: scale(1.2); }
-      #team .profil .img:hover footer .title_card .t {
-        transform: translateY(0px); }
+      #team .profil .img:hover footer .title_card .t, #team .profil .img.run_vid footer .title_card .t {
+        bottom: 0px; }
 
 @media screen and (max-width: 1101px) {
   #team {
@@ -936,6 +1020,9 @@ body {
 #team {
   margin-top: 100px; }
 
+#header_section.kontakt_page img {
+  opacity: .6; }
+
 .biline {
   display: block;
   font-size: responsive .7rem 1.5rem;
@@ -963,8 +1050,9 @@ body {
   height: 20px;
   border-radius: 50%;
   position: absolute;
-  top: 29vw;
-  left: 49.6vw;
+  top: 22vw;
+  left: 50%;
+  transform: translate(-50%, -50%);
   animation-name: dot;
   animation-duration: 1s;
   animation-play-state: running;
@@ -979,8 +1067,7 @@ body {
 
 @media screen and (min-width: 2560px) {
   .dot {
-    top: 785px;
-    left: 49.8%; } }
+    top: 555px; } }
 
 .login form {
   text-align: center; }
@@ -1004,12 +1091,17 @@ body {
     position: relative; }
     .login form .inp input {
       border: none;
+      border-radius: 0;
+      -moz-border-radius: 0;
+      -webkit-border-radius: 0;
+      appearance: none;
       background-color: #fff;
       width: 85%;
       font-size: 1.25rem;
       padding: 10px 30px;
       font-family: "Merriweather", serif;
       box-sizing: border-box;
+      margin: 0;
       margin-left: 15%; }
       .login form .inp input:-webkit-autofill {
         -webkit-box-shadow: 0 0 0 30px white inset; }
@@ -1094,3 +1186,9 @@ body {
 
 .reveal {
   transition: 0.5s cubic-bezier(0.36, -0.92, 0.93, 0.28); }
+
+@media (hover: none), (hover: on-demand) {
+  .menu:hover .n_nav {
+    height: 0px;
+    width: 0px;
+    animation-play-state: paused; } }

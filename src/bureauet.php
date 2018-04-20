@@ -11,7 +11,7 @@ include 'start.php' ?>
 
     <h1>Hmm Whothat?</h1>
     <h2>Fra ordlyden i et Facebookopslag
-til store komplekse udviklingsopgaver.</h2>
+      til store komplekse udviklingsopgaver.</h2>
   </div>
 </section>
 
@@ -48,12 +48,16 @@ til store komplekse udviklingsopgaver.</h2>
       <?php if ($value['aktiv']): ?>
 
       <div class="profil">
+
+        <div class="blockgin_out"></div>
+        <div class="green_filter"></div>
+
         <div class="title">
           <h4><?= $value['titel'] ?></h4>
         </div>
         <div class="img">
 
-        <video src="assets/videos/<?= $value['video'] ?>" class="video video_hide" muted></video>
+        <video src="assets/videos/<?= $value['video'] ?>" class="video video_hide" muted preload autoplay></video>
         <img src="assets/images/<?= $value['img'] ?>" alt="">
         <footer>
           <div class="title_card">
@@ -86,6 +90,8 @@ til store komplekse udviklingsopgaver.</h2>
 
 
     <div class="profil">
+      <div class="blockgin_out"></div>
+      <div class="green_filter"></div>
       <a href="mailto:job@whothat.dk" class="sog">
       <div class="title">
         <h4>Stilling</h4>
@@ -93,7 +99,7 @@ til store komplekse udviklingsopgaver.</h2>
       <div class="img sog_job">
 
         <div class="content">
-        <h3>Dig her?</h3>
+
           Er det dig og dine kompetencer vi mangler?
           <br>
           <br>

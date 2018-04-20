@@ -110,7 +110,56 @@
       }
     20%{
   		fill: #57a1a9;
-  		transform: scale(1.1);
+  		/* transform: scale(1.1); */
+      }
+    40%{
+  		fill: #ffffff;
+      }
+    60%{
+  		fill: #ffffff;
+  		transform: scale(1);
+      }
+    100%{
+  		fill: #ffffff;
+  		transform: scale(1);
+  }
+}
+
+@keyframes brandanimation2{
+    0%{
+  		fill: #ffffff;
+  		transform: scale(1);
+      }
+    10%{
+  		fill: #437a81;
+      }
+    20%{
+  		fill: #437a81;
+  		/* transform: scale(1.1); */
+      }
+    40%{
+  		fill: #ffffff;
+      }
+    60%{
+  		fill: #ffffff;
+  		transform: scale(1);
+      }
+    100%{
+  		fill: #ffffff;
+  		transform: scale(1);
+  }
+}
+@keyframes brandanimation3{
+    0%{
+  		fill: #ffffff;
+  		transform: scale(1);
+      }
+    10%{
+  		fill: #2E555A;
+      }
+    20%{
+  		fill: #2E555A;
+  		/* transform: scale(1.1); */
       }
     40%{
   		fill: #ffffff;
@@ -134,7 +183,7 @@
   }
     20%{
   		fill: #57a1a9;
-  		transform: scale(1.1);
+  		/* transform: scale(1.1); */
   }
     40%{
   		fill: #ffffff;
@@ -153,7 +202,7 @@
   transition: .4s;
 }
 
-.ikon:hover svg{
+.ikon:hover svg, .ikon.run_ani svg{
   transform: scale(1.3);
   transition: .4s ease-out;
 }
@@ -163,11 +212,11 @@
 }
 
 .moving_parts{
-  animation-fill-mode: forwards;;
-  animation-duration: 2s;;
-  animation-iteration-count: infinite;;
-  transform-origin: 180px 180px;;
-  transition-timing-function: cubic-bezier(0.460, 0.195, 0.000, 0.990);;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: 180px 180px;
+  transition-timing-function: cubic-bezier(0.460, 0.195, 0.000, 0.990);
 }
 /*          social animation          */
 
@@ -175,24 +224,24 @@
 #icon_circle_01,
 #icon_circle_02,
 #icon_circle_03 {
-  animation-duration: 1.75s;;
+  animation-duration: 1.75s;
 }
 
 #icon_circle_01{
 	fill: #57a1a9;
 }
 
-.ikon:hover #icon_circle_01{
+.ikon:hover #icon_circle_01, .ikon.run_ani #icon_circle_01{
     animation-name: socialanimation;
 }
 
-.ikon:hover #icon_circle_02{
+.ikon:hover #icon_circle_02, .ikon.run_ani #icon_circle_02{
     animation-name: socialanimation;
     animation-delay: 0.2s;
 }
 
 
-.ikon:hover #icon_circle_03{
+.ikon:hover #icon_circle_03, .ikon.run_ani #icon_circle_03{
     animation-name: socialanimation;
     animation-delay: 0.4s;
 }
@@ -206,17 +255,17 @@
 }
 
 
-.ikon:hover #annonce_circle_small{
+., .ikon.run_ani #annonce_circle_small, .ikon.run_ani #annonce_circle_small{
     animation-name: annonceanimation;
 }
 
-.ikon:hover #annonce_circle_medium{
+.ikon:hover #annonce_circle_medium, .ikon.run_ani #annonce_circle_medium{
     animation-name: annonceanimation;
     animation-delay: 0.2s;
 }
 
 
-.ikon:hover #annonce_circle_big{
+.ikon:hover #annonce_circle_big, .ikon.run_ani #annonce_circle_big{
     animation-name: annonceanimation;
     animation-delay: 0.4s;
 }
@@ -266,32 +315,32 @@
 
 
 
-.ikon:hover #icon_banner_top{
+.ikon:hover #icon_banner_top, .ikon.run_ani #icon_banner_top{
     animation-name: banneranimation;
 }
 
-.ikon:hover #icon_banner_top_mobile{
+.ikon:hover #icon_banner_top_mobile, .ikon.run_ani #icon_banner_top_mobile{
     animation-name: banneranimation;
     animation-delay: 0.1s;
 }
 
-.ikon:hover #icon_banner_middle{
+.ikon:hover #icon_banner_middle, .ikon.run_ani #icon_banner_middle{
    animation-name: banneranimation;
     animation-delay: 0.4s;
 }
 
-.ikon:hover #icon_banner_middle_mobile{
+.ikon:hover #icon_banner_middle_mobile, .ikon.run_ani #icon_banner_middle_mobile{
    animation-name: banneranimation;
     animation-delay: 0.5s;
 }
 
 
-.ikon:hover #icon_banner_bottom{
+.ikon:hover #icon_banner_bottom, .ikon.run_ani #icon_banner_bottom{
     animation-name: banneranimation;
     animation-delay: 0.8s;
 }
 
-.ikon:hover #icon_banner_bottom_mobile{
+.ikon:hover #icon_banner_bottom_mobile, .ikon.run_ani #icon_banner_bottom_mobile{
     animation-name: banneranimation;
     animation-delay: 0.9s;
 }
@@ -328,21 +377,21 @@
 }
 
 
-.ikon:hover #icon_ux_line_1{
+.ikon:hover #icon_ux_line_1, .ikon.run_ani #icon_ux_line_1{
     animation-name: uxanimation;
 }
 
-.ikon:hover #icon_ux_line_2{
+.ikon:hover #icon_ux_line_2, .ikon.run_ani #icon_ux_line_2{
     animation-name: uxanimation;
     animation-delay: 0.2s;
 }
 
-.ikon:hover #icon_ux_line_3{
+.ikon:hover #icon_ux_line_3, .ikon.run_ani #icon_ux_line_3{
     animation-name: uxanimation;
     animation-delay: 0.4s;
 }
 
-.ikon:hover #icon_ux_line_4{
+.ikon:hover #icon_ux_line_4, .ikon.run_ani #icon_ux_line_4{
     animation-name: uxanimation;
     animation-delay: 0.6s;
 }
@@ -358,49 +407,50 @@
 }
 
 #icon_brand_upper_1{
-   fill: #57a1a9;
-    transform-origin: 208px 140px;
+  fill: #57a1a9;
+  /* transform-origin: 208px 140px; */
 }
 
 #icon_brand_upper_2{
-   transform-origin: 180px 180px;
+   /* transform-origin: 180px 180px; */
 }
 
 #icon_brand_lower_1{
-    transform-origin: 315px 203px;
+    /* transform-origin: 315px 203px; */
 }
 
 #icon_brand_lower_2{
-   transform-origin: 265px 226px;
+   /* transform-origin: 265px 226px; */
 }
 
 #icon_brand_lower_3{
-   transform-origin: 140px 300px;
+   /* transform-origin: 140px 300px; */
 }
 
 
-.ikon:hover #icon_brand_lower_1{
-    animation-name: brandanimation;
-}
-
-.ikon:hover #icon_brand_upper_2{
-    animation-name: brandanimation;
-    animation-delay: 0.2s;
-}
-
-
-.ikon:hover #icon_brand_lower_3{
+.ikon:hover #icon_brand_lower_1, .ikon.run_ani #icon_brand_lower_1{
     animation-name: brandanimation;
     animation-delay: 0.4s;
 }
 
-.ikon:hover #icon_brand_upper_1{
-    animation-name: brandanimation;
-    animation-delay: 0.6s;
+.ikon:hover #icon_brand_upper_2, .ikon.run_ani #icon_brand_upper_2{
+    animation-name: brandanimation2;
+    animation-delay: 0.2s;
 }
-.ikon:hover #icon_brand_lower_2{
-    animation-name: brandanimation;
+
+
+.ikon:hover #icon_brand_lower_3, .ikon.run_ani #icon_brand_lower_3{
+    animation-name: brandanimation3;
     animation-delay: 0.8s;
+}
+
+.ikon:hover #icon_brand_upper_1, .ikon.run_ani #icon_brand_upper_1{
+    animation-name: brandanimation;
+    animation-delay: 0.0s;
+}
+.ikon:hover #icon_brand_lower_2, .ikon.run_ani #icon_brand_lower_2{
+    animation-name: brandanimation2;
+    animation-delay: 0.6s;
 }
 
 
@@ -441,26 +491,26 @@
     transform-origin: 239px 201px;
 }
 
-.ikon:hover #icon_webudvikling_4{
+.ikon:hover #icon_webudvikling_4, .ikon.run_ani #icon_webudvikling_4{
     animation-name: webudviklinganimation;
 }
 
-.ikon:hover #icon_webudvikling_1{
+.ikon:hover #icon_webudvikling_1, .ikon.run_ani #icon_webudvikling_1{
     animation-name: webudviklinganimation;
     animation-delay: 0.2s;
 }
 
-.ikon:hover #icon_webudvikling_5{
+.ikon:hover #icon_webudvikling_5, .ikon.run_ani #icon_webudvikling_5{
     animation-name: webudviklinganimation;
     animation-delay: 0.4s;
 }
 
-.ikon:hover #icon_webudvikling_2{
+.ikon:hover #icon_webudvikling_2, .ikon.run_ani #icon_webudvikling_2{
     animation-name: webudviklinganimation;
     animation-delay: 0.6s;
 }
 
-.ikon:hover #icon_webudvikling_3{
+.ikon:hover #icon_webudvikling_3, .ikon.run_ani #icon_webudvikling_3{
     animation-name: webudviklinganimation;
     animation-delay: 0.8s;
 }
