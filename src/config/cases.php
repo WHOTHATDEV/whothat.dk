@@ -4,13 +4,13 @@
 // Eksembel for at linke til forside.php skal der bare stå forside
 
   $cases = [
-    'Magasin Du Nord' => [
-      'page' => 'magasin',
-      'img' => 'b1.jpg'
+    'Stockholm Waterfront' => [
+      'page' => 'waterfront',
+      'img' => 'waterfront.png'
     ],
-    'Just Eat' => [
-      'page' => 'magazin',
-       'img' => 'b2.jpg'
+    'Arkk' => [
+      'page' => 'arkk',
+       'img' => 'arkk.png'
     ],
     'Addea' => [
       'page' => 'magazin',

@@ -87,6 +87,11 @@ gulp.task('config', function(){
     .pipe(gulp.dest(dist + 'config' ));
 });
 
+gulp.task('case', function(){
+  return gulp.src(src + 'case/*')
+    .pipe(gulp.dest(dist + 'case' ));
+});
+
 
 // // FTP tasks
 gulp.task( 'deploy', function () {
@@ -125,6 +130,7 @@ gulp.task('watch', function(){
   gulp.watch(src + 'js/*.js' ,['js']); // Babel
   gulp.watch(src + '*', ['html']);
   gulp.watch(src + 'inc/*', ['php']);
+  gulp.watch(src + 'case/*', ['case']);
     gulp.watch(src + 'config/*', ['config']);
   // gulp.watch(dist + '**' ,['deploy']); // FTP (Grap any file in dist an upload to server)
 });

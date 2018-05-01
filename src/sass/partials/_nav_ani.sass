@@ -1,0 +1,76 @@
+
+.nav_ani
+  position: relative
+  overflow: hidden
+  // color: #fff
+  // transition: .2s
+  // transition-delay: 3s
+
+  &:hover
+    transition: .3s
+    color: #222
+    color: $wt
+    // font-size: 1.7rem
+    // transform: scale(1.2)
+
+    &::after
+      width: 100%
+      transition-delay: .4s
+      transition-duration: .5s
+      // transition-delay: 2s
+
+    &::before
+      left: 100%
+      right: 0%
+
+
+
+  &::after
+    color: #fff
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    width: 0px
+    overflow: hidden
+    line-height: 3.2rem
+    // font-size: 1.7rem
+    z-index: 3
+    transition-duration: 1s
+
+  &::before
+    content: ''
+    position: absolute
+    left: 0%
+    right: 100%
+    top: 40%
+    bottom: 40%
+    background-color: $wt
+    background-color: #fff
+    transition: 1s
+    transition: right .3s, left .2s .3s
+    // overflow: hidden
+    // z-index: 2
+
+
+
+.ani_whothat
+  &::after
+    content: 'Forside'
+
+.ani_projekter
+  &::after
+    content: 'Projekter'
+
+.ani_bureauet
+  &::after
+    content: 'Bureauet'
+
+.ani_kontakt
+  &::after
+    content: 'Kontakt'
+
+.ani_login
+  &::after
+    content: 'Kunde login'
+    white-space: nowrap

@@ -2,10 +2,11 @@
 <?php
 
 // include 'inc/cach.php';
+$sitepath = "http://localhost/xampp_projects/whothat.dk/dist/";
 include 'inc/assets.php'; ?>
  <!DOCTYPE html>
  <html lang="en" dir="ltr">
-   <?php include 'inc/head.php'; ?>
+   <?php include  'inc/head.php'; ?>
    <body>
 
      <!-- menu -->

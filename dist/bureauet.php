@@ -57,14 +57,17 @@ include 'start.php' ?>
         </div>
         <div class="img">
 
-        <video src="assets/videos/<?= $value['video'] ?>" class="video video_hide" muted preload autoplay></video>
+        <video src="assets/videos/<?= $value['video'] ?>" class="video video_hide" muted preload autoplay playsinline></video>
         <img src="assets/images/<?= $value['img'] ?>" alt="">
+        <div class="gradient">
+
+        </div>
         <footer>
           <div class="title_card">
             <div class="t">
 
               <h3><?= $value['navn'] ?></h3>
-              <h6><a href="mailto:<?= $value['email'] ?>"><?= $value['email'] ?></a></h6>
+              <h6><a href="mailto:<?= $value['email'] ?>"><?= $value['email'] ?></a><?php if(isset($value['tlf'])){ ?><a href="tel:<?= $value['tlf'] ?>"><?= $value['tlf'] ?></a><?php }?></h6>
               <div class="somerow">
                 <?php if (isset($value['fb'])): ?>
                   <a href="<?= $value['fb'] ?>" target="_blank"><?php include "assets/icons/fb.svg" ?></a>

@@ -7,7 +7,7 @@
 
 
   <!-- footer  -->
-  <?php include 'inc/footer.php'; ?>
+<?php include 'inc/footer.php'; ?>
   <!-- footer  end -->
 
 
@@ -23,7 +23,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-visible/1.2.0/jquery.visible.js"></script>
 
-<script src="js/script.js"></script>
+<script src="<?= $sitepath ?>js/script.js"></script>
 
 <script type="text/javascript">
 // console.log(XMLHttpRequest.prototype.);
@@ -60,5 +60,5 @@
 </html>
 
 <?php
-  // include 'inc/cach_end.php'; 
+  // include 'inc/cach_end.php';
 ?>

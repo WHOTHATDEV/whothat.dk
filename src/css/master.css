@@ -33,7 +33,7 @@
   background: linear-gradient(135deg, white 11.11%, #000000 11.11%, #000000 50%, white 50%, white 61.11%, #000000 61.11%, #000000 100%);
   background-size: 12.73px 12.73px; }
 
-.stripes_transparant, #team .profil .sog_job {
+.stripes_transparant, #team .profil .sog_job, .case_headsection .live_link, .arkk .stripe_breaker {
   background-color: #0c0c0c;
   background: linear-gradient(135deg, rgba(51, 51, 51, 0.3) 11.11%, transparent 11.11%, transparent 50%, rgba(51, 51, 51, 0.3) 50%, rgba(51, 51, 51, 0.3) 61.11%, transparent 61.11%, transparent 100%);
   background-size: 12.73px 12.73px; }
@@ -314,7 +314,7 @@ body {
   width: 0px;
   height: 0px;
   overflow: hidden;
-  transition: .5s ease-out;
+  transition: .5s ease-in;
   border-radius: 50%;
   z-index: 6; }
 
@@ -338,7 +338,7 @@ body {
       font-size: responsive 1.5rem 2.5rem;
       font-range: 500px 1200px;
       border-right: #fff 2px solid;
-      padding: 10px 60px;
+      padding: 0;
       line-height: responsive 3rem 4rem;
       display: inline-block;
       margin: 0;
@@ -350,7 +350,12 @@ body {
         opacity: 0;
         transition: .2s ease-in-out; }
         .inner_nav .con .primery a li {
-          transition: .15s ease-out; }
+          transition: .15s ease-out;
+          padding: 0px 60px; }
+        .inner_nav .con .primery a:first-of-type li {
+          padding-top: 10px; }
+        .inner_nav .con .primery a:last-of-type li {
+          padding-bottom: 10px; }
       .inner_nav .con .primery.open {
         max-height: 400px; }
         .inner_nav .con .primery.open a {
@@ -383,14 +388,16 @@ body {
       vertical-align: top;
       margin: 0;
       margin-top: 50px;
-      text-align: left; }
+      text-align: left;
+      padding: 0; }
       .inner_nav .con .cases a {
         visibility: hidden;
         transition: .2s ease-in-out;
         display: block;
         opacity: 0; }
         .inner_nav .con .cases a li {
-          transition: .15s ease-out; }
+          transition: .15s ease-out;
+          padding-left: 40px; }
       .inner_nav .con .cases:hover li {
         color: #7fb4b9; }
       .inner_nav .con .cases a:hover li {
@@ -428,6 +435,8 @@ body {
           transition-delay: 3260ms; }
         .inner_nav .con .cases.open a:nth-of-type(15) {
           transition-delay: 3350ms; }
+    .inner_nav .con .hov_exit {
+      display: inline-block; }
     .inner_nav .con .SoMe {
       margin-top: 100px; }
       .inner_nav .con .SoMe li {
@@ -510,8 +519,6 @@ body {
     width: 100%; }
 
 .menu.open .n_nav {
-  width: 415vw !important;
-  height: 415vw !important;
   transition: .7s ease-in; }
 
 #bg {
@@ -544,7 +551,7 @@ body {
 
 @media screen and (max-width: 600px) {
   .n_nav {
-    transition: 1s ease-in-out; }
+    transition: .7s ease-out; }
   .navigation {
     height: 80px; }
     .navigation .viewport .page_logo svg {
@@ -558,7 +565,7 @@ body {
   .menu.open .n_nav {
     width: 6000px !important;
     height: 6000px !important;
-    transition: 1.2s ease-in; } }
+    transition: 1.2s ease-out; } }
 
 #pagefooter {
   position: fixed;
@@ -787,7 +794,8 @@ body {
       font-size: responsive 3rem 5rem;
       line-height: responsive 3rem 5rem;
       margin-top: 0;
-      white-space: nowrap; }
+      white-space: nowrap;
+      margin-bottom: 5vw; }
 
 #team {
   text-align: center;
@@ -887,6 +895,16 @@ body {
         bottom: 0;
         right: 0;
         left: 0; }
+      #team .profil .img .gradient {
+        transition: .3s;
+        opacity: 0;
+        background: linear-gradient(transparent, black);
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        left: 0px;
+        top: 50%;
+        z-index: 2; }
       #team .profil .img footer {
         position: absolute;
         bottom: 0px;
@@ -894,7 +912,6 @@ body {
         left: 0px;
         top: 50%;
         z-index: 2;
-        background-color: red;
         padding: 15px;
         background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
         overflow: hidden; }
@@ -941,7 +958,7 @@ body {
             margin: 0; }
           #team .profil .img footer .title_card h6 {
             font-family: "Encode Sans Expanded", sans-serif;
-            font-size: .9rem;
+            font-size: responsive .7rem .9rem;
             color: #57a1a9;
             font-weight: 600;
             margin: 0;
@@ -950,6 +967,8 @@ body {
       #team .profil .img:hover img, #team .profil .img.run_vid img {
         opacity: 0;
         transform: scale(1.2); }
+      #team .profil .img:hover .gradient, #team .profil .img.run_vid .gradient {
+        opacity: 1; }
       #team .profil .img:hover footer .title_card .t, #team .profil .img.run_vid footer .title_card .t {
         bottom: 0px; }
 
@@ -964,7 +983,8 @@ body {
         font-size: 2.2rem !important;
         margin: 0;
         font-weight: 400;
-        line-height: 2.5rem; }
+        line-height: 2.5rem;
+        margin-bottom: 5px !important; }
       #team .profil .sog_job {
         height: 450px !important; }
         #team .profil .sog_job .content {
@@ -1015,10 +1035,11 @@ body {
     box-sizing: border-box;
     margin-top: 30px;
     width: 600px;
-    max-width: 95vw; } }
-
-#team {
-  margin-top: 100px; }
+    max-width: 95vw; }
+  #team {
+    margin-top: 100px; }
+    #team .aktive .profil .img footer .title_card .t .somerow a {
+      padding: 0 5px; } }
 
 #header_section.kontakt_page img {
   opacity: .6; }
@@ -1123,6 +1144,307 @@ body {
   max-width: 400px;
   margin: 120px auto; }
 
+.case_headsection h1 {
+  line-height: 6.5rem !important;
+  margin-top: 50px !important;
+  margin-bottom: 40px !important; }
+
+.case_headsection h2 {
+  font-size: 2.2rem;
+  margin-bottom: 60px !important; }
+
+.case_headsection .hashtags {
+  font-family: "Encode Sans Expanded", sans-serif;
+  text-transform: uppercase;
+  font-size: .8rem;
+  color: #ddd;
+  margin-bottom: 10px; }
+  .case_headsection .hashtags span {
+    padding: 0 10px; }
+
+.case_headsection .live_link {
+  text-align: center;
+  padding: 50px;
+  font-size: 2rem;
+  margin-bottom: 80px; }
+
+.case_headsection .partner_logo {
+  text-align: center; }
+  .case_headsection .partner_logo img {
+    display: inline-block;
+    padding: 30px;
+    position: static !important;
+    width: auto !important;
+    opacity: 1 !important;
+    vertical-align: middle; }
+
+.case_headsection .text {
+  background-color: #111111;
+  margin-bottom: 50px;
+  text-align: left;
+  padding: 70px  100px; }
+  .case_headsection .text .phone {
+    display: inline-block;
+    margin-right: 60px;
+    vertical-align: top;
+    position: relative;
+    margin-top: -110px; }
+    .case_headsection .text .phone img {
+      position: relative !important;
+      width: auto !important;
+      z-index: 3;
+      opacity: 1 !important; }
+    .case_headsection .text .phone .showcase {
+      position: absolute;
+      top: 4%;
+      bottom: 2%;
+      left: 4%;
+      right: 4%;
+      z-index: 2;
+      border-radius: 25px;
+      overflow: hidden; }
+      .case_headsection .text .phone .showcase img {
+        position: relative !important;
+        top: 0 !important;
+        width: 100% !important; }
+  .case_headsection .text .body {
+    display: inline-block;
+    vertical-align: top; }
+    .case_headsection .text .body h2 {
+      color: #57a1a9;
+      margin-bottom: 30px !important;
+      margin-top: 0px !important; }
+    .case_headsection .text .body p {
+      max-width: 550px; }
+    .case_headsection .text .body .text_rubrik {
+      color: #fff;
+      font-weight: 600; }
+
+.arkk .banner {
+  position: relative; }
+  .arkk .banner img {
+    width: 100% !important;
+    position: static !important;
+    opacity: 1 !important; }
+  .arkk .banner .row {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .arkk .banner .row .banners iframe {
+      overflow: hidden;
+      border: none;
+      padding: 30px; }
+
+.arkk .stripe_breaker {
+  margin-top: 30px;
+  padding: 12px;
+  margin-bottom: 100px; }
+
+.arkk .devices .phone {
+  position: relative;
+  display: inline-block;
+  margin-left: -100px;
+  top: 20px; }
+  .arkk .devices .phone img {
+    width: auto !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 5; }
+  .arkk .devices .phone .showcase {
+    background-color: #000;
+    position: absolute;
+    top: 3.5%;
+    bottom: 2%;
+    left: 6%;
+    right: 6%;
+    z-index: 4;
+    border-radius: 25px;
+    overflow: hidden; }
+    .arkk .devices .phone .showcase video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 10; }
+
+.arkk .devices .ipad {
+  position: relative;
+  display: inline-block; }
+  .arkk .devices .ipad img {
+    width: auto !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 2; }
+  .arkk .devices .ipad .showcase {
+    position: absolute;
+    top: 6.9%;
+    bottom: 6.6%;
+    left: 9.2%;
+    right: 9.4%;
+    z-index: 3;
+    overflow: hidden; }
+    .arkk .devices .ipad .showcase video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 10; }
+
+.arkk .text {
+  margin-bottom: 200px;
+  margin-top: 100px; }
+  .arkk .text .image {
+    width: 380px;
+    margin-right: 40px;
+    position: relative;
+    display: inline-block;
+    text-align: center; }
+    .arkk .text .image .iframe_banner {
+      position: relative !important;
+      z-index: 5;
+      margin-bottom: -90px;
+      border: 1px solid #aaa; }
+    .arkk .text .image img {
+      width: auto !important;
+      opacity: 1 !important;
+      position: absolute !important; }
+      .arkk .text .image img.large {
+        right: auto;
+        left: -30px !important;
+        top: -100px !important;
+        bottom: auto !important; }
+      .arkk .text .image img.small {
+        right: 0;
+        left: auto !important;
+        top: auto !important;
+        bottom: -240px !important; }
+
+.waterfront .labtop {
+  margin-bottom: 120px;
+  position: relative; }
+  .waterfront .labtop img {
+    position: relative !important;
+    width: auto !important;
+    opacity: 1 !important; }
+  .waterfront .labtop .showcase {
+    position: absolute;
+    top: 6.7%;
+    bottom: 11.1%;
+    left: 12.6%;
+    right: 12.6%;
+    overflow: hidden; }
+    .waterfront .labtop .showcase img {
+      position: relative;
+      top: 0 !important;
+      width: 100% !important; }
+
+.waterfront .text {
+  background-color: #111111;
+  margin-bottom: 50px;
+  text-align: left;
+  padding: 70px  100px; }
+  .waterfront .text .phone {
+    display: inline-block;
+    margin-right: 60px;
+    vertical-align: top;
+    position: relative;
+    margin-top: -110px; }
+    .waterfront .text .phone img {
+      position: relative !important;
+      width: auto !important;
+      z-index: 3;
+      opacity: 1 !important; }
+    .waterfront .text .phone .showcase {
+      position: absolute;
+      top: 4%;
+      bottom: 2%;
+      left: 4%;
+      right: 4%;
+      z-index: 2;
+      border-radius: 25px;
+      overflow: hidden; }
+      .waterfront .text .phone .showcase img {
+        position: relative !important;
+        top: 0 !important;
+        width: 100% !important; }
+  .waterfront .text .body {
+    display: inline-block;
+    vertical-align: top; }
+    .waterfront .text .body h2 {
+      color: #57a1a9;
+      margin-bottom: 30px !important;
+      margin-top: 0px !important; }
+    .waterfront .text .body p {
+      max-width: 550px; }
+    .waterfront .text .body .text_rubrik {
+      color: #fff;
+      font-weight: 600; }
+
+.waterfront .billeder {
+  background-color: #111111;
+  padding: 0px 70px;
+  margin-bottom: 120px;
+  text-align: left; }
+  .waterfront .billeder img {
+    width: auto !important;
+    opacity: 1 !important;
+    position: relative !important;
+    top: -35px !important;
+    box-shadow: 0px 0px 70px -20px #000;
+    z-index: 3; }
+    .waterfront .billeder img:last-of-type {
+      margin-left: -100px;
+      z-index: 2;
+      top: 50px !important; }
+
+@media screen and (max-width: 1214px) {
+  .case_headsection .text .image {
+    width: 300px; }
+    .case_headsection .text .image img.large {
+      left: -85px !important; } }
+
+@media screen and (max-width: 1139px) {
+  .case_headsection .text {
+    padding-left: 80px !important;
+    padding-right: 30px !important; }
+  .devices .phone {
+    margin-left: -221px !important; } }
+
+@media screen and (max-width: 1043px) {
+  .case_headsection .text .image {
+    display: block !important;
+    width: 100% !important; }
+    .case_headsection .text .image img.large {
+      left: 10% !important; }
+    .case_headsection .text .image img.small {
+      right: 15% !important; }
+  .case_headsection .text .body {
+    margin-top: 270px; } }
+
+@media screen and (max-width: 680px) {
+  .case_headsection .text {
+    padding: 70px 30px !important; }
+    .case_headsection .text .image {
+      display: block !important;
+      width: 100% !important; }
+      .case_headsection .text .image img.large {
+        left: 0% !important; }
+      .case_headsection .text .image img.small {
+        right: 0% !important; } }
+
+@media screen and (max-width: 530px) {
+  .case_headsection .text .image img.large {
+    left: -30px !important; }
+  .case_headsection .text .image img.small {
+    right: -30px !important; } }
+
 .footer_ani {
   position: relative;
   overflow: hidden;
@@ -1156,6 +1478,59 @@ body {
     top: 40%;
     bottom: 40%;
     background-color: #57a1a9;
+    transition: 1s;
+    transition: right .3s, left .2s .3s; }
+
+.ani_whothat::after {
+  content: 'Forside'; }
+
+.ani_projekter::after {
+  content: 'Projekter'; }
+
+.ani_bureauet::after {
+  content: 'Bureauet'; }
+
+.ani_kontakt::after {
+  content: 'Kontakt'; }
+
+.ani_login::after {
+  content: 'Kunde login';
+  white-space: nowrap; }
+
+.nav_ani {
+  position: relative;
+  overflow: hidden; }
+  .nav_ani:hover {
+    transition: .3s;
+    color: #222;
+    color: #57a1a9; }
+    .nav_ani:hover::after {
+      width: 100%;
+      transition-delay: .4s;
+      transition-duration: .5s; }
+    .nav_ani:hover::before {
+      left: 100%;
+      right: 0%; }
+  .nav_ani::after {
+    color: #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 0px;
+    overflow: hidden;
+    line-height: 3.2rem;
+    z-index: 3;
+    transition-duration: 1s; }
+  .nav_ani::before {
+    content: '';
+    position: absolute;
+    left: 0%;
+    right: 100%;
+    top: 40%;
+    bottom: 40%;
+    background-color: #57a1a9;
+    background-color: #fff;
     transition: 1s;
     transition: right .3s, left .2s .3s; }
 

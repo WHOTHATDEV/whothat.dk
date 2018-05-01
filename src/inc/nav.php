@@ -22,20 +22,23 @@
     <div class="inner_nav">
       <div class="con">
 
+        <div class="hov_exit">
 
-        <ul class="primery">
-          <a href="whothat"><li class="case_link" data-img="frontpage.png">Forside</li></a>
-          <a href="projekter"><li class="case_link" data-img="projekter.png">Projekter</li></a>
-          <a href="bureauet"><li class="case_link" data-img="bureauet.png">Bureauet</li></a>
-          <a href="kontakt"><li class="case_link" data-img="kontakt.png">Kontakt</li></a>
-          <a href="login"><li class="case_link" data-img="login.png">Kunde login</li></a>
-        </ul>
+          <ul class="primery">
+            <a href="whothat"><li><span class="case_link ani_whothat nav_ani" data-img="frontpage.png">Forside</span></li></a>
+            <a href="projekter"><li><span class="case_link ani_projekter nav_ani " data-img="projekter.png">Projekter</span></li></a>
+            <!-- <a href="projekter"><li class="case_link" data-img="projekter.png"><span class="ani_projekter nav_ani">Projekter</span></li></a> -->
+            <a href="bureauet"><li class="" ><span class="case_link ani_bureauet nav_ani " data-img="bureauet.png">Bureauet</span></li></a>
+            <a href="kontakt"><li class="" ><span class="case_link ani_kontakt nav_ani " data-img="kontakt.png">Kontakt</span></li></a>
+            <a href="login"><li class="" ><span class="case_link ani_login nav_ani " data-img="login.png">Kunde login</span></li></a>
+          </ul>
 
-        <ul class="cases">
-          <?php foreach ($cases as $key => $value): ?>
-          <a href="<?= $value['page'] ?>"><li class="case_link" data-img="<?= $value['img'] ?>" ><?= $key ?></li></a>
-        <?php endforeach; ?>
-        </ul>
+          <ul class="cases">
+            <?php foreach ($cases as $key => $value): ?>
+            <a href="<?= $value['page'] ?>"><li class="case_link" data-img="<?= $value['img'] ?>" ><?= $key ?></li></a>
+          <?php endforeach; ?>
+          </ul>
+        </div>
 
 
         <ul class="SoMe">
@@ -71,28 +74,5 @@
       <img src="" alt="" id="bg_image2">
     </div>
 
-    <!-- <div id="background"><div class="ldBar"></div><img src="" alt="" id="bg_image"></div> -->
-    <!-- <div class="menu-overlay">
-      <div class="content">
-        <ul class="primery">
-          <a href="whothat"><li class="case_link" data-img="office.jpg">Forside</li></a>
-          <a href="projekter"><li class="case_link" data-img="projekter.jpg">Projekter</li></a>
-          <a href="bureauet"><li class="case_link" data-img="bureauet.jpg">Bureauet</li></a>
-          <a href="kontakt"><li class="case_link" data-img="kontakt.jpg">Kontakt</li></a>
-          <a href="login"><li class="case_link" data-img="login.jpg">Kunde login</li></a>
-        </ul>
-
-        <ul class="cases">
-          <?php foreach ($cases as $key => $value): ?>
-            <a href="<?= $value['page'] ?>"><li class="case_link" data-img="<?= $value['img'] ?>" ><?= $key ?></li></a>
-          <?php endforeach; ?>
-        </ul>
-
-
-        <ul class="SoMe">
-
-        </ul>
-      </div>
-    </div> -->
   </div>
 </div>

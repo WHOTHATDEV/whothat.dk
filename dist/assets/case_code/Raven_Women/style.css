@@ -1,0 +1,164 @@
+body{
+  margin: 0;
+}
+
+#frame{
+  overflow: hidden;
+  height: 250px;
+  width: 300px;
+  position: relative;
+}
+
+#frame::before{
+  content: '';
+  background-color: rgba(255,255,255,0.6);
+  height: 1000px;
+  width: 700px;
+  position: absolute;
+  top: -300px;
+  left: 450px;
+  z-index: 1000;
+  -webkit-transform: translateX(0px) rotate(35deg);
+          transform: translateX(0px) rotate(35deg);
+  -webkit-transition: .23s ease-in-out;
+  transition: .23s ease-in-out
+}
+
+#frame:hover::before{
+  -webkit-transform: translateX(-1300px) rotate(25deg);
+          transform: translateX(-1300px) rotate(25deg);
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+
+
+
+
+
+/* slider */
+#slider{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.slide{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 300px;
+  right: 0;
+}
+
+.slide .img, .slide .txt, .slide .cta, .slide .fadein_cta, .slide .blink_cta {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.slide .txt, .slide .cta, .slide .blink_cta, .slide .fadein_cta{
+  z-index: 2;
+}
+
+
+
+.sprite{
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 4;
+}
+
+
+
+.slide.active{
+  left:0px;
+  -webkit-transition: left 0.7s ease;
+  transition: left 0.7s ease;
+}
+
+.firstplay{
+  left:0px !important;
+}
+
+.prev_slide{
+  left:-300px;
+}
+
+.next_click .prev_slide{
+  left:0 !important;
+}
+.prev_click .next_slide{
+  left:0 !important;
+}
+
+/* slider end */
+
+
+
+
+/* Pile */
+.arrow{
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  z-index: 10000;
+  -webkit-transform:  translateY(-50% ) rotateZ(45deg);
+          transform:  translateY(-50% ) rotateZ(45deg);
+  -webkit-filter: drop-shadow(0px 0px 5px #222);
+          filter: drop-shadow(0px 0px 5px #222);
+  -webkit-transition: .3s ease-in-out all ;
+  transition: .3s ease-in-out all ;
+}
+
+#frame:hover .arrow{
+  width: 18px;
+  height: 18px;
+  border-width: 4px;
+  -webkit-filter: drop-shadow(1px 1px 5px #000) drop-shadow(1px 1px 10px #000);
+          filter: drop-shadow(1px 1px 5px #000) drop-shadow(1px 1px 10px #000);
+}
+
+#frame:hover #prev{
+  left: 15px;
+}
+
+
+#frame:hover #next{
+  right: 15px;
+}
+
+#prev{
+  left: 8px;
+  border: 2px solid #fff;
+  border-right: none;
+  border-top: none;
+}
+
+#next{
+  right: 8px;
+  border: 2px solid #fff;
+  border-left: none;
+  border-bottom: none;
+}
+/* Pile slut */
+
+
+#overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 90;
+}
