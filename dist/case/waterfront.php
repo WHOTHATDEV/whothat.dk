@@ -2,11 +2,11 @@
 header("Content-Encoding: none");
 // variabler til metatags
 $page = 'Stockholm waterfron congres center'; // sidens navn
-include 'start.php' ?>
+include '../start.php' ?>
 
 
 <section id="header_section" class="case_headsection waterfront">
-  <img src="assets/images/waterfront.png" alt="">
+  <img src="<?=$sitepath?>assets/images/waterfront.png" alt="">
   <div class="wrapper" id="first_section">
     <h1>Stockholm Waterfront <br>
 Congress Centre</h1>
@@ -26,17 +26,17 @@ med interaktive grundplaner</h2>
 
 
   <div class="labtop">
-    <img src="assets/images/labtop.png" alt="">
+    <img src="<?=$sitepath?>assets/images/labtop.png" alt="">
     <div class="showcase">
-      <img src="assets/images/swcc_site.jpg" alt="" class="rellax" data-rellax-speed="10"  >
+      <img src="<?=$sitepath?>assets/images/swcc_site.jpg" alt="" class="rellax" data-rellax-speed="10"  >
     </div>
   </div>
 
   <div class="text">
     <div class="phone">
-      <img src="assets/images/iphone.png" alt="">
+      <img src="<?=$sitepath?>assets/images/iphone.png" alt="">
       <div class="showcase">
-        <img src="assets/images/swcc_mobilsite.jpg" alt="" class="rellax" data-rellax-speed="30" data-rellax-percentage=".005">
+        <img src="<?=$sitepath?>assets/images/swcc_mobilsite.jpg" alt="" class="rellax" data-rellax-speed="30" data-rellax-percentage=".005">
       </div>
     </div>
     <div class="body">
@@ -57,18 +57,18 @@ med interaktive grundplaner</h2>
 
 
   <div class="billeder">
-    <img src="assets/images/swcc_plan1.jpg" alt="stockholm waterfront plan tegning" class="rellax" data-rellax-speed="-1" data-rellax-percentage="0.5">
-    <img src="assets/images/swcc_plan2.jpg" alt="stockholm waterfront plan tegning" class="rellax" data-rellax-speed="-2" data-rellax-percentage="0.5">
+    <img src="<?=$sitepath?>assets/images/swcc_plan1.jpg" alt="stockholm waterfront plan tegning" class="rellax" data-rellax-speed="-1" data-rellax-percentage="0.5">
+    <img src="<?=$sitepath?>assets/images/swcc_plan2.jpg" alt="stockholm waterfront plan tegning" class="rellax" data-rellax-speed="-2" data-rellax-percentage="0.5">
   </div>
 
 
   <div class="partner_logo">
-    <img src="assets/images/SWCC_WHITE.png" alt="stockholm waterfront">
-    <img src="assets/images/marvelous.png" alt="marvelous">
+    <img src="<?=$sitepath?>assets/images/SWCC_WHITE.png" alt="stockholm waterfront">
+    <img src="<?=$sitepath?>assets/images/marvelous.png" alt="marvelous">
   </div>
 
   </div>
 </section>
 
 
- <?php include 'end.php' ?>
+ <?php include '../end.php' ?>

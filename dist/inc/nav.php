@@ -61,7 +61,7 @@
 
           <ul class="cases">
             <?php foreach ($cases as $key => $value): ?>
-            <a href="<?= $value['page'] ?>"><li class="case_link" data-img="<?= $value['img'] ?>" ><?= $key ?></li></a>
+            <a href="<?=$sitepath?>case/<?= $value['page'] ?>"><li class="case_link" data-img="<?= $value['img'] ?>" ><?= $key ?></li></a>
           <?php endforeach; ?>
           </ul>
         </div>

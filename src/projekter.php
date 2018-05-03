@@ -6,7 +6,7 @@ include 'start.php' ?>
 
 
 <section id="header_section" class="projekter">
-  <img src="assets/images/projekter.png" alt="">
+  <img src="<?=$sitepath?>assets/images/projekter.png" alt="">
 
   <div class="wrapper" id="first_section">
 
@@ -24,7 +24,7 @@ include 'start.php' ?>
     <div class="case_thumb full">
       <a href="#">
 
-        <img src="assets/images/full.jpg" alt="">
+        <img src="<?=$sitepath?>assets/images/full.jpg" alt="">
         <div class="txt">
           <div class="labels">
             Kunde
@@ -41,7 +41,7 @@ include 'start.php' ?>
     <div class="row">
       <div class="case_thumb half">
         <a href="#"></a>
-        <img src="assets/images/arkk_small.jpg" alt="">
+        <img src="<?=$sitepath?>assets/images/arkk_small.jpg" alt="">
         <div class="txt">
           <div class="labels">
             Kunde
@@ -57,7 +57,7 @@ include 'start.php' ?>
 
       <div class="case_thumb half">
         <a href="#"></a>
-        <img src="assets/images/arkk_small.jpg" alt="">
+        <img src="<?=$sitepath?>assets/images/arkk_small.jpg" alt="">
         <div class="txt">
           <div class="labels">
             Kunde
@@ -73,7 +73,7 @@ include 'start.php' ?>
 
     <div class="case_thumb full">
       <a href="#"></a>
-      <img src="assets/images/full.jpg" alt="">
+      <img src="<?=$sitepath?>assets/images/full.jpg" alt="">
       <div class="txt">
         <div class="labels">
           Kunde
@@ -88,7 +88,7 @@ include 'start.php' ?>
 
     <div class="case_thumb full">
       <a href="#"></a>
-      <img src="assets/images/full.jpg" alt="">
+      <img src="<?=$sitepath?>assets/images/full.jpg" alt="">
       <div class="txt">
         <div class="labels">
           Kunde
@@ -104,7 +104,7 @@ include 'start.php' ?>
     <div class="row">
       <div class="case_thumb tall">
         <a href="#"></a>
-        <img src="assets/images/ark_thumb.jpg" alt="">
+        <img src="<?=$sitepath?>assets/images/ark_thumb.jpg" alt="">
         <div class="txt">
           <div class="labels">
             Kunde
@@ -119,7 +119,7 @@ include 'start.php' ?>
 
       <div class="case_thumb tall">
         <a href="#"></a>
-        <img src="assets/images/ark_thumb.jpg" alt="">
+        <img src="<?=$sitepath?>assets/images/ark_thumb.jpg" alt="">
         <div class="txt">
           <div class="labels">
             Kunde
@@ -134,7 +134,7 @@ include 'start.php' ?>
 
       <div class="case_thumb tall">
         <a href="#"></a>
-        <img src="assets/images/ark_thumb.jpg" alt="">
+        <img src="<?=$sitepath?>assets/images/ark_thumb.jpg" alt="">
         <div class="txt">
           <div class="labels">
             Kunde

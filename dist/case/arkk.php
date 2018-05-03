@@ -2,11 +2,11 @@
 header("Content-Encoding: none");
 // variabler til metatags
 $page = 'Stockholm waterfron congres center'; // sidens navn
-include 'start.php' ?>
+include '../start.php' ?>
 
 
 <section id="header_section" class="case_headsection arkk">
-  <img src="assets/images/arkk.png" alt="">
+  <img src="<?=$sitepath?>assets/images/arkk.png" alt="">
   <div class="wrapper" id="first_section">
     <h1 class="init_reveal_fadeup">Arkk Copenhagen</h1>
     <h2 class="init_reveal_fadeup">Udvikling af digital bannerkampagne i forindelse med produktlancering.</h2>
@@ -26,9 +26,9 @@ include 'start.php' ?>
       <!-- <img src="assets/images/arkk_banner_bg.jpg" alt="arkk banner" class=""> -->
       <div class="row">
         <div class="banners">
-          <iframe src="assets/case_code/Raven_Men/index.html" width="300" height="250" scrolling="no" class="init_reveal_fadeup" ></iframe>
-          <iframe src="assets/case_code/Raven_Mesh_Soft_Army/index.html" width="300" height="250" scrolling="no" class="init_reveal_fadeup"></iframe>
-          <iframe src="assets/case_code/Raven_Women/index.html" width="300" height="250" scrolling="no" class="init_reveal_fadeup"></iframe>
+          <iframe src="<?=$sitepath?>assets/case_code/Raven_Men/index.html" width="300" height="250" scrolling="no" class="init_reveal_fadeup" ></iframe>
+          <iframe src="<?=$sitepath?>assets/case_code/Raven_Mesh_Soft_Army/index.html" width="300" height="250" scrolling="no" class="init_reveal_fadeup"></iframe>
+          <iframe src="<?=$sitepath?>assets/case_code/Raven_Women/index.html" width="300" height="250" scrolling="no" class="init_reveal_fadeup"></iframe>
         </div>
       </div>
     </div>
@@ -48,18 +48,18 @@ include 'start.php' ?>
   <div class="devices" >
 
     <div class="ipad rellax init_reveal_fadeup"   data-rellax-speed="0" data-rellax-percentage="0.5" data-rellax-zindex="5">
-      <img src="assets/images/ipad.png" alt="">
+      <img src="<?=$sitepath?>assets/images/ipad.png" alt="">
       <div class="showcase">
-        <video src="assets/videos/arkk_video_banner.mp4" autoplay loop>
+        <video src="<?=$sitepath?>assets/videos/arkk_video_banner.mp4" autoplay loop>
 
         </video>
       </div>
     </div>
 
     <div class="phone rellax init_reveal_fadeup"  data-rellax-speed="1" data-rellax-percentage="0.5" data-rellax-zindex="15">
-      <img src="assets/images/iphone.png" alt="">
+      <img src="<?=$sitepath?>assets/images/iphone.png" alt="">
       <div class="showcase">
-        <video src="assets/videos/ark_video_banner_mobile.mp4" autoplay loop>
+        <video src="<?=$sitepath?>assets/videos/ark_video_banner_mobile.mp4" autoplay loop>
 
         </video>
       </div>
@@ -74,16 +74,16 @@ include 'start.php' ?>
       <!-- <iframe src="assets/case_code/arkk_160x600/ind.html" width="160" height="600" class="iframe_banner large rellax" data-rellax-speed="-2" data-rellax-percentage="0.5"></iframe> -->
       <!-- <link rel="stylesheet" href="assets/case_code/arkk_160x600/style.min.css"> -->
       <div id="fra" class="iframe_banner large rellax" data-rellax-speed="-1" data-rellax-percentage="0.5">
-        <img class="layer start" id="c" src="assets/case_code/cta.png" alt="">
-        <img class="layer start" id="logo" src="assets/case_code/logo.png" alt="">
-        <img class="layer start" id="body" src="assets/case_code/body.png" alt="">
-        <img class="layer" src="assets/case_code/edge.png" alt="">
-        <img src="assets/case_code/sprite.jpg" id="sprite" alt="">
+        <img class="layer start" id="c" src="<?=$sitepath?>assets/case_code/cta.png" alt="">
+        <img class="layer start" id="logo" src="<?=$sitepath?>assets/case_code/logo.png" alt="">
+        <img class="layer start" id="body" src="<?=$sitepath?>assets/case_code/body.png" alt="">
+        <img class="layer" src="<?=$sitepath?>assets/case_code/edge.png" alt="">
+        <img src="<?=$sitepath?>assets/case_code/sprite.jpg" id="sprite" alt="">
         <div id="button"><div class="glair"></div></div>
       </div>
 
-      <img src="assets/images/arkk_sprite_1.jpg" alt="" class="large rellax" data-rellax-speed="2" data-rellax-percentage="0.5">
-      <img src="assets/images/arkk_sprite_2.jpg" alt="" class="small rellax" data-rellax-speed="1" data-rellax-percentage="0.5" >
+      <img src="<?=$sitepath?>assets/images/arkk_sprite_1.jpg" alt="" class="large rellax" data-rellax-speed="2" data-rellax-percentage="0.5">
+      <img src="<?=$sitepath?>assets/images/arkk_sprite_2.jpg" alt="" class="small rellax" data-rellax-speed="1" data-rellax-percentage="0.5" >
 
     </div>
     <div class="body">
@@ -101,7 +101,7 @@ include 'start.php' ?>
 
 
   <div class="partner_logo">
-    <img src="assets/images/arkk_logo.png" alt="arkk">
+    <img src="<?=$sitepath?>assets/images/arkk_logo.png" alt="arkk">
   </div>
 
   </div>
@@ -109,6 +109,6 @@ include 'start.php' ?>
 
 
 <?php
-  $scripts[] = "assets/case_code/script.js";
+  $scripts[] = "<?=$sitepath?>assets/case_code/script.js";
 
-   include 'end.php' ?>
+   include '../end.php' ?>

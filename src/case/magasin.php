@@ -24,7 +24,7 @@
 
            <!-- content -->
            <section id="header_section" class="magazin_header">
-             <img src="assets/images/b1.jpg" alt="">
+             <img src="<?=$sitepath?>assets/images/b1.jpg" alt="">
              <div class="wrapper">
 
                <h1>magazin case</h1>

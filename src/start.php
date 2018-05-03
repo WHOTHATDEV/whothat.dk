@@ -2,11 +2,11 @@
 <?php
 
 // include 'inc/cach.php';
-$sitepath = "http://localhost/xampp_projects/whothat.dk/dist/";
+$sitepath = "http://localhost/whothat.dk/whothat.dk/dist/";
 
 include 'inc/assets.php'; ?>
 <script type="text/javascript">
-  var  window.sitepath = <?= $sitepath ?>;
+  window.sitepath = "<?= $sitepath ?>";
 </script>
 
  <!DOCTYPE html>

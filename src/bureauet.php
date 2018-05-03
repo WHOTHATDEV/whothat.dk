@@ -6,7 +6,7 @@ include 'config/personale.php';
 include 'start.php' ?>
 
 <section id="header_section">
-  <img src="assets/images/bureauet.png" alt="">
+  <img src="<?=$sitepath?>assets/images/bureauet.png" alt="">
   <div class="wrapper" id="first_section">
 
     <h1>Hmm Whothat?</h1>
@@ -24,7 +24,7 @@ include 'start.php' ?>
   <div class="wide_wrapper">
 
     <div class="img scr_reveal_fadeup">
-      <img src="assets/images/lokaler.jpg" alt="">
+      <img src="<?=$sitepath?>assets/images/lokaler.jpg" alt="">
     </div>
     <div class="text">
       <h1>Digital dna</h1>
@@ -57,8 +57,8 @@ include 'start.php' ?>
         </div>
         <div class="img">
 
-        <video src="assets/videos/<?= $value['video'] ?>" class="video video_hide" muted preload autoplay playsinline></video>
-        <img src="assets/images/<?= $value['img'] ?>" alt="">
+        <video src="<?=$sitepath?>assets/videos/<?= $value['video'] ?>" class="video video_hide" muted preload autoplay playsinline></video>
+        <img src="<?=$sitepath?>assets/images/<?= $value['img'] ?>" alt="">
         <div class="gradient">
 
         </div>
