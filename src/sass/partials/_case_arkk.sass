@@ -1,0 +1,335 @@
+.arkk
+
+  .banner
+    position: relative
+    background-image: url('../assets/images/arkk_banner_bg.jpg')
+    background-size: cover
+    background-position: center
+
+    // img
+    //   width: 100% !important
+    //   position: static !important
+    //   opacity: 1 !important
+
+    .row
+      // position: absolute
+      // top: 0
+      // bottom: 0
+      // left: 0
+      // right: 0
+      display: flex
+      justify-content: center
+      align-items: center
+      padding: 150px 0
+
+
+
+      .banners
+
+        iframe
+          // box-shadow: 0px 0px 30px -10px #000
+          overflow: hidden
+          border: none
+          margin: 30px
+
+
+  .stripe_breaker
+    @extend .stripes_transparant
+    margin-top: 30px
+    padding: 12px
+    margin-bottom: 100px
+
+  .devices
+    margin-bottom: 200px
+
+    .phone
+      position: relative
+      display: inline-block
+      margin-left: -100px
+      top: 20px
+
+      img
+        width: auto !important
+        opacity: 1 !important
+        position: relative !important
+        z-index: 5
+
+      .showcase
+        background-color: #000
+        position: absolute
+        top: 3.5%
+        bottom: 2%
+        left: 6%
+        right: 6%
+        z-index: 4
+        border-radius: 25px
+        overflow: hidden
+
+        video
+          position: absolute
+          top: 0
+          left: 0
+          right: 0
+          bottom: 0
+          z-index: 10
+
+    .ipad
+      position: relative
+      display: inline-block
+      max-width: 100%
+
+      img
+        width: auto !important
+        opacity: 1 !important
+        position: relative !important
+        z-index: 2
+        max-width: 100%
+
+
+      .showcase
+        position: absolute
+        top: 6.9%
+        bottom: 6.6%
+        left: 9.2%
+        right: 9.4%
+        z-index: 3
+        overflow: hidden
+
+        video
+          position: absolute
+          top: 0
+          left: 0
+          right: 0
+          bottom: 0
+          z-index: 10
+          max-width: 100%
+
+  .text
+    margin-bottom: 200px
+    margin-top: 100px
+
+    .image
+      width: 380px
+      margin-right: 40px
+      position: relative
+      display: inline-block
+      text-align: center
+
+      .iframe_banner
+        position: relative !important
+        z-index: 5
+        margin-bottom: -90px
+        border: 1px solid #aaa
+
+      img
+        width: auto !important
+        opacity: 1 !important
+        position: absolute !important
+
+        &.large
+          right: auto
+          left: -30px !important
+          top: -100px !important
+          bottom: auto !important
+
+        &.small
+          right: 0
+          left: auto !important
+          top: auto !important
+          bottom: -240px !important
+
+
+
+
+  #fra
+    overflow: hidden
+    height: 600px
+    width: 160px
+    position: relative
+    display: inline-block
+    // margin-right: auto !important
+    // background-color: red
+
+    .layer
+      position:  absolute
+      display: none
+      bottom: -50px
+
+    #sprite
+      position: absolute
+      z-index: -1
+
+    #button
+      height: 35px
+      width: 126px
+      z-index: 200
+      position: absolute
+      bottom: 85px
+      right: 17px
+      overflow: hidden
+
+      .glair
+        background-color: #fff
+        height: 100px
+        width: 300px
+        display: none
+        transform: rotate(50deg)
+        position: absolute
+        left: -270px
+        transition: .6s ease
+        z-index: 240
+
+    &:hover
+      #button
+        .glair
+          left: 200px
+
+
+
+
+@media screen and (max-width:  1214px)
+  .arkk
+
+    .text
+      // background-color: red !important
+
+      .image
+        width: 300px
+        margin-bottom: 300px !important
+
+        img.large
+          left: -85px !important
+
+
+@media screen and (max-width:  1139px)
+
+  .arkk
+    .text
+      padding-left: 80px !important
+      padding-right: 30px !important
+
+
+    .banner
+      min-height: 300px
+
+      .row
+        padding: 70px 0
+
+        .banners
+
+          iframe
+            overflow: hidden
+            border: none
+            // padding: 30px
+            margin: 50px 0
+
+            &:first-of-type, &:last-of-type
+              display: none
+
+
+
+    .devices
+
+      .phone
+        margin-left: -221px !important
+
+
+
+
+
+
+
+@media screen and (max-width:  1043px)
+  .arkk
+
+    .text
+
+      .image
+        display: block !important
+        width: 100% !important
+
+
+        .iframe_banner
+
+        img
+
+
+          &.large
+            left: 10% !important
+
+          &.small
+            right: 15% !important
+
+
+
+
+
+
+
+@media screen and (max-width:  968px)
+  .arkk
+    .devices
+
+      .phone
+        display: none !important
+
+    .stripe_breaker
+      margin-bottom: 50px
+
+
+@media screen and (max-width:  680px)
+
+  .arkk
+
+    .text
+      padding: 70px 30px !important
+
+      .image
+        display: block !important
+        width: 100% !important
+
+        .iframe_banner
+
+
+        img
+
+
+          &.large
+            left: 0% !important
+
+          &.small
+            right: 0% !important
+
+    .devices
+      margin-bottom: 110px
+
+    .stripe_breaker
+      margin-bottom: 30px
+
+
+
+@media screen and (max-width:  530px)
+  .arkk
+
+    .text
+      // padding: 70px 30px !important
+
+      .image
+        // display: block !important
+        // width: 100% !important
+
+        .iframe_banner
+
+
+        img
+
+
+          &.large
+            left: -30px !important
+
+          &.small
+            right: -30px !important
+
+
+    .devices
+      margin-bottom: 80px

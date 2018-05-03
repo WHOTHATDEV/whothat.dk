@@ -4,6 +4,8 @@ showSlides(slideIndex);
 var ready = true;
 var spriteAni;
 
+$.mobile.loading().hide();
+
 function plusSlides(e, n, pos) {
   e.preventDefault();
   if (ready) {

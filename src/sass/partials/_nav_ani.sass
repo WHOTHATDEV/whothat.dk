@@ -8,7 +8,6 @@
 
   &:hover
     transition: .3s
-    color: #222
     color: $wt
     // font-size: 1.7rem
     // transform: scale(1.2)
@@ -33,7 +32,9 @@
     left: 0
     width: 0px
     overflow: hidden
+    // line-height: responsive 3rem 4rem
     line-height: 3.2rem
+    line-height: responsive 1.9rem 3.2rem
     // font-size: 1.7rem
     z-index: 3
     transition-duration: 1s
@@ -74,3 +75,11 @@
   &::after
     content: 'Kunde login'
     white-space: nowrap
+
+
+// @media screen and (max-width: 750px)
+  //
+  //
+  // .nav_ani
+  //   &::after
+  //     line-height: responsive 3rem 4rem

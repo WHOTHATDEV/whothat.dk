@@ -3,33 +3,31 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
-
-
+    <meta name="ad.size" content="width=300,height=250">
+    <script type="text/javascript">
+      var clickTag = "https://www.arkkcopenhagen.com/collections/clean-simple-sneakers";
+    </script>
   </head>
 
   <body>
-    <a href="">
-      <div id="frame" onmouseover="sound_on();" onmouseout="sound_off();" >
+    <a href="javascript:window.open(window.clickTag)">
+      <div id="frame">
         <div id="overlay"></div>
         <div class="arrow" id="prev" onclick="plusSlides(event, -1, 'prev')"></div>
         <div class="arrow" id="next" onclick="plusSlides(event, 1, 'next')"></div>
 
-        <div id="slider" >
-
-          <div class="slide firstplay active video" >
-            <video width="300" height="250" class="video" id="video" muted playsinline autoplay >
-              <source src="arkk_camo.mp4" type="video/mp4">
-            </video>
-          </div>
-
-          <div class="slide next_slide">
-            <img src="t1.png" alt="" class="txt first">
-            <img src="arkk_sprite.png" alt="" class="sprite">
-            <img src="shop_the_raven.png" alt="" class="cta">
+        <div id="slider">
+          <div class="slide firstplay active">
+            <img src="t11.png" alt="" class="txt first">
+            <img src="t12.png" alt="" class="txt second">
+            <img src="t13.png" alt="" class="txt last">
+            <img src="sprite_slide1.png" alt="" class="sprite">
+            <img src="cta_1_pre.png" alt="" class="txt fadein_cta">
+            <img src="cta1.png" alt="" class="txt blink_cta">
             <img src="s1.jpg" alt="" class="img">
           </div>
 
-          <div class="slide offslide">
+          <div class="slide next_slide">
             <img src="t2.png" alt="" class="txt first">
             <img src="arkk_sprite.png" alt="" class="sprite">
             <img src="shop_the_raven.png" alt="" class="cta">
@@ -45,6 +43,7 @@
 
           </div>
         </div>
+
       </div>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>

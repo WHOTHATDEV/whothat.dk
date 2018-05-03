@@ -23,7 +23,7 @@ include 'start.php' ?>
 
   <div class="wide_wrapper">
 
-    <div class="img">
+    <div class="img scr_reveal_fadeup">
       <img src="assets/images/lokaler.jpg" alt="">
     </div>
     <div class="text">

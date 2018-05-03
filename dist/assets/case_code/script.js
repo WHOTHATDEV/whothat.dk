@@ -3,11 +3,11 @@ $(document).ready(function(){
 
   var i = 1;
 
-    function run_add(){
+    function run_a(){
 
     $('#logo').delay(500).fadeIn(300).animate({bottom: '0px'}, {queue: false, duration: 1500});
     $('#body').delay(1500).fadeIn(300).animate({bottom: '0px'}, {queue: false, duration: 2500});
-    $('#cta, .glair').delay(3000).fadeIn(300).animate({bottom: '0px'}, {queue: false, duration: 2000});
+    $('#c, .glair').delay(3000).fadeIn(300).animate({bottom: '0px'}, {queue: false, duration: 2000});
     setTimeout(function () {
 
     }, 5000);
@@ -37,7 +37,7 @@ $(document).ready(function(){
       $('#logo').hide().animate({bottom: '-50px'}, {queue: false, duration: 0});
       $('#body').hide().animate({bottom: '-50px'}, {queue: false, duration: 0});
       $('#cta, .glair').hide().animate({bottom: '-50px'}, {queue: false, duration: 0});
-      run_add();
+      run_a();
       i++;
     }else {
 
@@ -48,5 +48,5 @@ $(document).ready(function(){
 
     }
   }, 9800);
-  run_add();
+  run_a();
 });

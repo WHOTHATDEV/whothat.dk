@@ -1,0 +1,223 @@
+
+
+.waterfront
+
+
+  .labtop
+    margin-bottom: 120px
+    position: relative
+
+    img
+      position: relative !important
+      width: auto !important
+      opacity: 1 !important
+      max-width: 100%
+
+    .showcase
+      position: absolute
+      top: 6.7%
+      bottom: 11.1%
+      left: 11.6%
+      right: 11.6%
+      // background-color: red
+      overflow: hidden
+
+      img
+        position: relative
+        top: 0 !important
+        width: 100% !important
+
+
+
+
+  .text
+    background-color: $light_bg
+    margin-bottom: 50px
+    text-align: left
+    padding: 70px  100px
+
+
+    .phone
+      display: inline-block
+      margin-right: 60px
+      vertical-align: top
+      position: relative
+      margin-top: -110px
+      margin-bottom: 20px
+
+      img
+        position: relative !important
+        width: auto !important
+        // height: auto !important
+        z-index: 3
+        opacity: 1 !important
+
+      .showcase
+        // background-color: red
+        position: absolute
+        top: 4%
+        bottom: 2%
+        left: 4%
+        right: 4%
+        z-index: 2
+        border-radius: 25px
+        overflow: hidden
+
+        img
+          position: relative !important
+          top: 0 !important
+          width: 100% !important
+
+
+
+
+    .body
+      display: inline-block
+      vertical-align: top
+
+
+      h2
+        color: $wt
+        margin-bottom: 30px !important
+        margin-top: 0px !important
+
+      p
+        max-width: 550px
+
+
+      .text_rubrik
+        color: #fff
+        font-weight: 600
+
+
+
+
+
+
+
+  .billeder
+    background-color: $light_bg
+    padding: 0px 70px
+    margin-bottom: 200px
+    text-align: left
+
+    img
+      width: auto !important
+      opacity: 1 !important
+      position: relative !important
+      top: -35px !important
+      box-shadow: 0px 0px 70px -20px #000
+      z-index: 3
+      max-width: 70%
+
+      &:last-of-type
+        margin-left: -100px
+        z-index: 2
+        top: 50px !important
+
+@media screen and (max-width: 1185px)
+  .waterfront
+
+    .billeder
+      padding: 0px 0px
+
+
+      img
+
+        &:last-of-type
+
+
+
+@media screen and (max-width: 1103px)
+  .waterfront
+
+    .text
+
+      .body
+        max-width: 400px !important
+
+
+    .billeder
+      position: relative !important
+
+
+      img
+
+        &:last-of-type
+          position: absolute !important
+          right: 0 !important
+          left: auto !important
+
+
+
+@media screen and (max-width: 955px)
+  .waterfront
+
+    .text
+      text-align: center
+
+      .body
+        max-width: 600px !important
+        text-align: left
+
+
+      .phone
+        display: inline-block
+        margin-right: 0px
+        vertical-align: top
+        position: relative
+        margin-top: -110px
+        margin-bottom: 40px
+        max-width: 100%
+
+
+        img
+          position: relative !important
+          width: auto !important
+          // height: auto !important
+          z-index: 3
+          opacity: 1 !important
+          max-width: 100%
+
+        .showcase
+          // background-color: red
+          position: absolute
+          top: 4%
+          bottom: 2%
+          left: 4%
+          right: 4%
+          z-index: 2
+          border-radius: 25px
+          overflow: hidden
+
+          img
+            position: relative !important
+            top: 0 !important
+            width: 100% !important
+
+
+    .billeder
+      margin-bottom: 200px
+
+      img
+
+        &:last-of-type
+          margin-top: 130px
+
+
+
+
+@media screen and (max-width: 600px)
+
+  .waterfront
+
+    .text
+      padding: 70px 40px !important
+
+    .billeder
+      // margin-bottom: 500px
+
+      img
+
+        &:last-of-type
+          margin-top: 50px

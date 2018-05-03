@@ -3,15 +3,35 @@
 var cheat = '';
 
 function init_page() {
+  /*
+  ####### ToC: ######
+    - Parallax init
+    - Nav hover handeling
+    - Instafeed fetch
+    - Typed.js init
+    - Video player function
+    - Reveals
+    - Ikon hover effekt
+    */
+  // parallax innit
+  var r = document.getElementsByClassName('rellax');
+
+  if (r.length != 0) {
+    var rellax = new Rellax('.rellax');
+  } // reveal init
   // ______________Nav hover  handler______________
+
+
   var frame = 1;
+  $('#bg').fadeOut(0);
   $('.case_link').hover(function () {
     if (!window.istouch) {
-      var imageUrl = "assets/images/" + $(this).data('img');
-      $('#bg').fadeIn(600);
+      var imageUrl = "assets/images/" + $(this).data('img'); // $('#bg').fadeIn(600);
+      // console.log('true stuff');
 
       if (frame == 1) {
         window.cur_ani = setTimeout(function () {
+          $('#bg').fadeIn(600);
           $('#bg_image').attr("src", imageUrl);
           $('#bg_image').fadeIn(600);
           $('#bg_image2').fadeOut(600);
@@ -19,6 +39,7 @@ function init_page() {
         }, 300);
       } else {
         window.cur_ani = setTimeout(function () {
+          $('#bg').fadeIn(600);
           $('#bg_image2').attr("src", imageUrl);
           $('#bg_image2').fadeIn(600);
           $('#bg_image').fadeOut(600);
@@ -32,13 +53,13 @@ function init_page() {
   });
   $('.hov_exit').hover(function () {}, function () {
     if (!window.istouch) {
-      $('#bg').fadeOut(200);
+      $('#bg').fadeOut(600);
       setTimeout(function () {
         $('#bg_image').attr("src", '');
         $('#bg_image2').attr("src", '');
       }, 300); // frame = 1;
     }
-  }); // Nav hover  handler end
+  }); // Nav hover handler end
   // ______________insta feed______________
 
   var excluded = ['1709866722856281871', '1548434707375523010'];
@@ -101,6 +122,12 @@ function init_page() {
       $(this).find('.blockgin_out').addClass(visible ? 'slidein' : '');
       $(this).find('.green_filter').addClass(visible ? 'slidein' : '');
     }); // Profil reveals end
+    // ______________Profil reveals______________
+
+    $('.scr_reveal_fadeup').each(function () {
+      var visible = $(this).visible();
+      $(this).addClass(visible ? 'slidein' : '');
+    }); // Profil reveals end
     // ______________Ikon nonhover effekt______________
 
     if (window.istouch) {
@@ -110,10 +137,7 @@ function init_page() {
       });
     } // Ikon nonhover effekt end
 
-  }); // $('.profil').each(function(){
-  //   var visible = $(this).visible();
-  //   $(this).toggleClass('run_ani', visible);
-  // });
+  });
 } // Init function end
 // on erady function
 
@@ -125,57 +149,58 @@ $(function () {
 
   var transEffect = Barba.BaseTransition.extend({
     start: function start() {
-      var _this = this;
-
       if (window.istouch) {
-        var imageUrl = "1assets/images/" + window.trans_img;
+        var imageUrl = "assets/images/" + window.trans_img;
         $('#bg').fadeIn(200);
         $('#bg_image').attr("src", imageUrl);
         $('#bg_image').fadeIn(200); // alert(imageUrl);
       }
 
-      this.newContainerLoading.then(function (val) {
-        return _this.fadein($(_this.newContainer));
-      });
-      $('.ldBar').addClass('load');
-    },
-    fadein: function fadein(nc) {
       window.scrollTo(0, 0);
-      nc.hide();
-      var t = this;
-      $(".menu").removeClass("open"); // remove_sizes
-
+      $(".menu").removeClass("open");
+      $(".inner_nav").fadeOut(500);
+      $('.primery').removeClass('open');
+      $('.cases').removeClass('open');
+      $('.SoMe').removeClass('open');
+      $('body').removeClass("noscrool");
       $('.n_nav').css({
         'width': '',
         'height': ''
       });
-      $(".inner_nav").fadeOut(500);
-      $('body').removeClass("noscrool");
-      $('.primery').removeClass('open');
-      $('.cases').removeClass('open');
-      $('.SoMe').removeClass('open');
-      $('.ldBar').addClass('load'); // loadbar animation init (NOT WORKING)
-
-      $(this.oldContainer).fadeOut(0).promise().done(function () {
-        nc.css('visibility', 'visible');
-        nc.fadeIn(300, function () {
-          $('#bg').fadeOut(300);
-          setTimeout(function () {
-            $('#bg_image').attr("src", '');
-            $('.ldBar').removeClass('load');
-          }, 400);
-          init_page();
-          t.done();
+      $(this.oldContainer).fadeOut(0);
+      var vm = this;
+      setTimeout(function () {
+        vm.newContainerLoading.then(function (val) {
+          return vm.fadein($(vm.newContainer));
         });
-      });
+      }, 500);
+      $('.ldBar').addClass('load');
+    },
+    fadein: function fadein(nc) {
+      nc.hide();
+      var t = this; // remove_sizes
+
+      $('.ldBar').addClass('load'); // loadbar animation init (NOT WORKING)
+      // $(this.oldContainer).fadeOut(0).promise().done(() => {
+
+      nc.css('visibility', 'visible');
+      $('#bg').fadeOut(1600);
+      nc.fadeIn(600, function () {
+        setTimeout(function () {
+          $('#bg_image').attr("src", '');
+          $('.ldBar').removeClass('load');
+        }, 4000);
+        init_page();
+        t.done();
+      }); // });
     }
   });
   var Nonnav = Barba.BaseTransition.extend({
     start: function start() {
-      var _this2 = this;
+      var _this = this;
 
       this.newContainerLoading.then(function (val) {
-        return _this2.fadein($(_this2.newContainer));
+        return _this.fadein($(_this.newContainer));
       });
       $('.ldBar').addClass('load');
     },
@@ -297,14 +322,16 @@ function preloader() {
     var img3 = new Image();
     var img4 = new Image();
     var img5 = new Image();
-    var img6 = new Image(); // mangler casebilleder
+    var img6 = new Image();
+    var img7 = new Image(); // mangler casebilleder
 
     img1.src = "assets/images/projekter.png";
     img2.src = "assets/images/bureauet.png";
     img3.src = "assets/images/login.png";
     img4.src = "assets/images/frontpage.png";
     img5.src = "assets/images/bureauet.png";
-    img6.src = "assets/images/waterfront.png"; // mangler casebilleder
+    img6.src = "assets/images/waterfront.png";
+    img7.src = "assets/images/arkk.png"; // mangler casebilleder
   }
 }
 

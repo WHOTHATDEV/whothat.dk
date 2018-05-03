@@ -28,7 +28,7 @@ med interaktive grundplaner</h2>
   <div class="labtop">
     <img src="assets/images/labtop.png" alt="">
     <div class="showcase">
-      <img src="assets/images/swcc_site.jpg" alt="">
+      <img src="assets/images/swcc_site.jpg" alt="" class="rellax" data-rellax-speed="10"  >
     </div>
   </div>
 
@@ -36,7 +36,7 @@ med interaktive grundplaner</h2>
     <div class="phone">
       <img src="assets/images/iphone.png" alt="">
       <div class="showcase">
-        <img src="assets/images/swcc_mobilsite.jpg" alt="">
+        <img src="assets/images/swcc_mobilsite.jpg" alt="" class="rellax" data-rellax-speed="30" data-rellax-percentage=".005">
       </div>
     </div>
     <div class="body">
@@ -57,8 +57,8 @@ med interaktive grundplaner</h2>
 
 
   <div class="billeder">
-    <img src="assets/images/swcc_plan1.jpg" alt="stockholm waterfront plan tegning">
-    <img src="assets/images/swcc_plan2.jpg" alt="stockholm waterfront plan tegning">
+    <img src="assets/images/swcc_plan1.jpg" alt="stockholm waterfront plan tegning" class="rellax" data-rellax-speed="-1" data-rellax-percentage="0.5">
+    <img src="assets/images/swcc_plan2.jpg" alt="stockholm waterfront plan tegning" class="rellax" data-rellax-speed="-2" data-rellax-percentage="0.5">
   </div>
 
 

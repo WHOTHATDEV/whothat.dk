@@ -23,39 +23,13 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-visible/1.2.0/jquery.visible.js"></script>
 
-<script src="<?= $sitepath ?>js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.6.2/rellax.js"></script>
 
-<script type="text/javascript">
-// console.log(XMLHttpRequest.prototype.);
-// var xhr = new XMLHttpRequest();
-// xhr.open("GET", XMLHttpRequest.prototype.send.url, true);
-// xhr.responseType = "text";
-// xhr.onprogress = function(e) {
-//     if (e.lengthComputable) {
-//         // progressBar.max = e.total;
-//         // progressBar.value = e.loaded;
-//     }
-// };
-// xhr.onloadstart = function(e) {
-//     // progressBar.value = 0;
-// };
-// xhr.onloadend = function(e) {
-//     // progressBar.value = e.loaded;
-// };
-// xhr.send(null);
+<script src="js/script.js"></script>
 
-
-// XMLHttpRequest.prototype.realSend = XMLHttpRequest.prototype.send;
-// XMLHttpRequest.prototype.send = function(value) {
-//   this.addEventListener("progress", function(evt){
-//
-//     if (evt.currentTarget.readyState == 4) {
-//       // $('.pBar').addClass('load');
-//     }
-//   }, false);
-//   this.realSend(value);
-// };
-</script>
+<?php foreach ($scripts as $value): ?>
+  <script type="text/javascript" src="<?= $value ?>"></script>
+<?php endforeach; ?>
 </body>
 </html>
 

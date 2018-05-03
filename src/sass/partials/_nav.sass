@@ -166,6 +166,7 @@
       transition: .8s .3s ease-in-out
       transition-delay: .5s
 
+
       a
         display: block
         opacity: 0
@@ -173,7 +174,7 @@
 
         li
           transition: .15s ease-out
-          padding: 0px 60px
+          padding: 0px 60px 0 0
 
         &:first-of-type
           li
@@ -201,7 +202,7 @@
           a
             &:hover
               li
-                color: #fff
+                // color: #fff
 
     .cases
       font-size: responsive 1rem 1.5rem
@@ -303,6 +304,7 @@
   max-width: 100vw
   margin: 0 auto
   z-index: 9
+  // visibility: hidden
 
   img
     filter: grayscale(100%)
@@ -320,6 +322,7 @@
     .n_nav
       height: 100px
       width: 100px
+      transition: .4s ease-in-out
       animation-name: menu_pulse
       animation-duration: 1s
       animation-play-state: running
@@ -362,7 +365,7 @@
 
 
 #bg
-  display: none
+  // display: none
 
 
 
@@ -376,17 +379,12 @@
 
 @media screen and (max-width: 800px)
 
-  .inner_nav .con .primery
-    padding-right: 40px
-
-@media screen and (max-width: 750px)
-
   .inner_nav
     .con
       .primery
         border: none !important
         text-align: center !important
-        padding-right: 60px
+        padding-right: 0px
 
       .cases
         display: none !important

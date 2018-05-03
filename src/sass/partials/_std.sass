@@ -130,6 +130,20 @@ section
 
 
 
+
+.scr_reveal_fadeup, .init_reveal_fadeup
+  // display: none !important
+  visibility: hidden
+  opacity: 0
+  transform: translateY(50px)
+
+  &.slidein
+    transition: 1s ease-in-out
+    opacity: 1
+    visibility: visible !important
+    transform: translateY(0px)
+
+
 @media screen and (max-width: 900px)
 
   // h1
