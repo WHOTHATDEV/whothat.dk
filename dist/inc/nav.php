@@ -23,35 +23,41 @@
       <div class="con">
 
         <div class="hov_exit">
+          <div class="p_wrapper">
 
-          <ul class="primery">
-              <a href="whothat" class="">
-                <li>
-                  <span class="case_link ani_whothat nav_ani" data-img="frontpage.png">Forside</span>
-                </li>
-              </a>
-              <a href="projekter" class="">
-                <li>
-                  <span class="case_link ani_projekter nav_ani " data-img="projekter.png">Projekter</span>
-                </li>
-              </a>
-              <a href="bureauet" class="">
-                <li class="" >
-                  <span class="case_link ani_bureauet nav_ani " data-img="bureauet.png">Bureauet</span>
-                </li>
-              </a>
-              <a href="kontakt" class="">
-                <li class="" >
-                  <span class="case_link ani_kontakt nav_ani " data-img="kontakt.png">Kontakt</span>
-                </li>
-              </a>
-              <a href="login" class="">
-                <li class="" >
-                  <span class="case_link ani_login nav_ani " data-img="login.png">Kunde login</span>
-                </li>
-              </a>
-          </ul>
+            <ul class="primery">
+                <a href="whothat" class="">
+                  <li>
+                    <span class="case_link ani_whothat nav_ani" data-img="frontpage.png">Forside</span>
+                  </li>
+                </a>
+                <br>
+                <a href="projekter" class="">
+                  <li>
+                    <span class="case_link ani_projekter nav_ani " data-img="projekter.png">Projekter</span>
+                  </li>
+                </a>
+                <br>
+                <a href="bureauet" class="">
+                  <li class="" >
+                    <span class="case_link ani_bureauet nav_ani " data-img="bureauet.png">Bureauet</span>
+                  </li>
+                </a>
+                <br>
+                <a href="kontakt" class="">
+                  <li class="" >
+                    <span class="case_link ani_kontakt nav_ani " data-img="kontakt.png">Kontakt</span>
+                  </li>
+                </a>
+                <br>
+                <a href="login" class="">
+                  <li class="" >
+                    <span class="case_link ani_login nav_ani " data-img="login.png">Kunde login</span>
+                  </li>
+                </a>
+            </ul>
 
+          </div>
 
           <ul class="cases">
             <?php foreach ($cases as $key => $value): ?>
