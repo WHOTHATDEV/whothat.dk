@@ -343,11 +343,17 @@ body {
     max-width: 1200px;
     display: block;
     text-align: center; }
+    .inner_nav .con .p_wrapper {
+      display: inline-block;
+      padding-right: 60px;
+      border-right: #fff 2px solid;
+      max-height: 0; }
+      .inner_nav .con .p_wrapper.open {
+        max-height: 400px; }
     .inner_nav .con .primery {
       text-align: right;
       font-size: responsive 1.5rem 2.5rem;
       font-range: 500px 1200px;
-      border-right: #fff 2px solid;
       padding: 0;
       line-height: responsive 3rem 4rem;
       display: inline-block;
@@ -356,12 +362,13 @@ body {
       transition: .8s .3s ease-in-out;
       transition-delay: .5s; }
       .inner_nav .con .primery a {
-        display: block;
+        display: inline-block;
         opacity: 0;
         transition: .2s ease-in-out; }
         .inner_nav .con .primery a li {
           transition: .15s ease-out;
-          padding: 0px 60px 0 0; }
+          padding: 0px 0px 0 0;
+          display: inline-block; }
         .inner_nav .con .primery a:first-of-type li {
           padding-top: 10px; }
         .inner_nav .con .primery a:last-of-type li {

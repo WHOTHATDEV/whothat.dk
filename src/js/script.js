@@ -38,28 +38,25 @@ function init_page(){
           // console.log('true stuff');
 
 
+          clearTimeout(window.cur_ani);
           if (frame == 1) {
-
             window.cur_ani = setTimeout(function () {
               $('#bg').fadeIn(600);
-
               $('#bg_image').attr("src",imageUrl);
               $('#bg_image').fadeIn(600);
               $('#bg_image2').fadeOut(600);
+              frame = 2;
+            }, 300);
 
-            frame = 2;
-          }, 300);
           }else {
 
             window.cur_ani = setTimeout(function () {
               $('#bg').fadeIn(600);
-
-            $('#bg_image2').attr("src",imageUrl);
-            $('#bg_image2').fadeIn(600);
-            $('#bg_image').fadeOut(600);
-
-            frame = 1;
-          }, 300);
+              $('#bg_image2').attr("src",imageUrl);
+              $('#bg_image2').fadeIn(600);
+              $('#bg_image').fadeOut(600);
+              frame = 1;
+            }, 300);
           }
 
     }
@@ -83,31 +80,31 @@ function init_page(){
 
 
   // ______________insta feed______________
-  var excluded = ['1709866722856281871', '1548434707375523010'];
+    var excluded = ['1709866722856281871', '1548434707375523010'];
 
-  $.ajax({
-    url: "https://www.instagram.com/explore/locations/1014271099/whothat/?__a=1",
-    success : function(result){
+    $.ajax({
+      url: "https://www.instagram.com/explore/locations/1014271099/whothat/?__a=1",
+      success : function(result){
 
-      console.log(result);
+        console.log(result);
 
-      var ex = 0;
+        var ex = 0;
 
-      for (var i = 0; i < (result.graphql.location.edge_location_to_media.edges.length); i++) {
-        // result.location.media.nodes[i].thumbnail_src
-        // append
+        for (var i = 0; i < (result.graphql.location.edge_location_to_media.edges.length); i++) {
+          // result.location.media.nodes[i].thumbnail_src
+          // append
 
-        if (i >= (12+ex)) { break;}
-        if (excluded.indexOf(result.graphql.location.edge_location_to_media.edges[i].node.id) > -1) { ex++; continue; }
+          if (i >= (12+ex)) { break;}
+          if (excluded.indexOf(result.graphql.location.edge_location_to_media.edges[i].node.id) > -1) { ex++; continue; }
 
-        $("#instafeed").append("<a href='https://www.instagram.com/p/" + result.graphql.location.edge_location_to_media.edges[i].node.shortcode + "' target='_blank' class='insta_thumb'><div class='f'><div class='ol'></div><img src='" + result.graphql.location.edge_location_to_media.edges[i].node.thumbnail_src + "'></div></a>");
-
-
-      }
-      console.log(result);
+          $("#instafeed").append("<a href='https://www.instagram.com/p/" + result.graphql.location.edge_location_to_media.edges[i].node.shortcode + "' target='_blank' class='insta_thumb'><div class='f'><div class='ol'></div><img src='" + result.graphql.location.edge_location_to_media.edges[i].node.thumbnail_src + "'></div></a>");
 
 
-    }});
+        }
+        console.log(result);
+
+
+      }});
   // insta feed end
 
 
@@ -116,9 +113,7 @@ function init_page(){
 
     var cities = [ 'Slaggerly Hills', 'Slan Diego', 'Slan Fransisco', 'Slantiago', 'Slão Paulo', 'Sunshine City', 'Slycity', 'Slago slago' ];
 
-
     cities = _.shuffle(cities);
-
 
     var instance = new TypeIt('.type', {
         strings: cities,
@@ -129,35 +124,31 @@ function init_page(){
           cursorChar: '|',
           nextStringDelay: [500, 1500]
     });
-
-
   }
   // kontaktside typed.js effekt på subheading end
+
 
 
   // ______________Video hover______________
   $('.video').on('ended',function(){
     // $('.video').css("visibility", 'hidden');
-  this.play();
+    this.play();
   });
 
 
   $(".img").mouseover(
-  function(){
-    $(this).children('video')[0].play();
-    // $('.video').css("visibility", 'visible');
-  }
+    function(){
+      $(this).children('video')[0].play();
+      // $('.video').css("visibility", 'visible');
+    }
   );
 
   $(".img").mouseleave(
-  function(){
-    $(this).children('video')[0].pause();
-    // $('.video').css("visibility", 'hidden');
-  }
+    function(){
+      $(this).children('video')[0].pause();
+      // $('.video').css("visibility", 'hidden');
+    }
   );
-
-
-
 
 
 
@@ -211,7 +202,10 @@ $(function() {
   });
 
 
-  // page transistion
+
+
+
+// _______________ PAGE TRANSITIONS
   var transEffect = Barba.BaseTransition.extend({
     start: function() {
       if (window.istouch) {
@@ -226,6 +220,7 @@ $(function() {
       $(".menu").removeClass("open");
       $(".inner_nav").fadeOut(500);
       $('.primery').removeClass('open');
+      $('.p_wrapper').removeClass('open');
       $('.cases').removeClass('open');
       $('.SoMe').removeClass('open');
       $('body').removeClass("noscrool");
@@ -245,20 +240,18 @@ $(function() {
       nc.hide();
       var t = this;
       // remove_sizes
-      $('.ldBar').addClass('load');  // loadbar animation init (NOT WORKING)
+      // $('.ldBar').addClass('load');  // loadbar animation init (NOT WORKING)
       // $(this.oldContainer).fadeOut(0).promise().done(() => {
-        nc.css('visibility', 'visible');
-        $('#bg').fadeOut(1600);
-        nc.fadeIn(600, function(){
+      nc.css('visibility', 'visible');
+      $('#bg').fadeOut(300);
+      nc.fadeIn(300, function(){
 
 
           setTimeout(function () {
             $('#bg_image').attr("src", '');
             $('.ldBar').removeClass('load');
           }, 4000);
-
           init_page();
-
           t.done();
         });
       // });
@@ -333,6 +326,7 @@ Barba.Dispatcher.on('linkClicked', function(el, e) {
       $('.n_nav').css({'width' : result , 'height' : result  });
 
       $('.primery').addClass('open');
+      $('.p_wrapper').addClass('open');
       $('.cases').addClass('open');
       $('.SoMe').addClass('open');
     }else {
@@ -341,6 +335,7 @@ Barba.Dispatcher.on('linkClicked', function(el, e) {
       $(".inner_nav").fadeOut(500);
       $('#bg').fadeOut(100);
       $('.primery').removeClass('open');
+      $('.p_wrapper').removeClass('open');
       $('.cases').removeClass('open');
       $('.SoMe').removeClass('open');
 
@@ -354,7 +349,6 @@ Barba.Dispatcher.on('linkClicked', function(el, e) {
 
 
 
-
 init_page();
 
 
@@ -362,7 +356,7 @@ init_page();
 
 
 
-    // cheat function
+// _______________ CHEAT CODES
     window.onkeypress = function(e){
       cheat += e.key;
       if (cheat.length > 5) {
@@ -399,20 +393,11 @@ init_page();
 
 
     };
-
-
-
-
-
-
-
-
-
 });
 
 
 
-
+// _______________ PRELOAD
 function preloader() {
 	if (document.images) {
 		var img1 = new Image();
@@ -424,7 +409,6 @@ function preloader() {
     var img7 = new Image();
 
     // mangler casebilleder
-
 
 		img1.src = "assets/images/projekter.png";
 		img2.src = "assets/images/bureauet.png";

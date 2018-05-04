@@ -29,6 +29,8 @@ function init_page() {
       var imageUrl = "assets/images/" + $(this).data('img'); // $('#bg').fadeIn(600);
       // console.log('true stuff');
 
+      clearTimeout(window.cur_ani);
+
       if (frame == 1) {
         window.cur_ani = setTimeout(function () {
           $('#bg').fadeIn(600);
@@ -145,7 +147,7 @@ function init_page() {
 $(function () {
   $('body').on('touchstart', function (e) {
     window.istouch = true;
-  }); // page transistion
+  }); // _______________ PAGE TRANSITIONS
 
   var transEffect = Barba.BaseTransition.extend({
     start: function start() {
@@ -160,6 +162,7 @@ $(function () {
       $(".menu").removeClass("open");
       $(".inner_nav").fadeOut(500);
       $('.primery').removeClass('open');
+      $('.p_wrapper').removeClass('open');
       $('.cases').removeClass('open');
       $('.SoMe').removeClass('open');
       $('body').removeClass("noscrool");
@@ -179,13 +182,12 @@ $(function () {
     fadein: function fadein(nc) {
       nc.hide();
       var t = this; // remove_sizes
-
-      $('.ldBar').addClass('load'); // loadbar animation init (NOT WORKING)
+      // $('.ldBar').addClass('load');  // loadbar animation init (NOT WORKING)
       // $(this.oldContainer).fadeOut(0).promise().done(() => {
 
       nc.css('visibility', 'visible');
-      $('#bg').fadeOut(1600);
-      nc.fadeIn(600, function () {
+      $('#bg').fadeOut(300);
+      nc.fadeIn(300, function () {
         setTimeout(function () {
           $('#bg_image').attr("src", '');
           $('.ldBar').removeClass('load');
@@ -260,6 +262,7 @@ $(function () {
         'height': result
       });
       $('.primery').addClass('open');
+      $('.p_wrapper').addClass('open');
       $('.cases').addClass('open');
       $('.SoMe').addClass('open');
     } else {
@@ -271,12 +274,13 @@ $(function () {
       $(".inner_nav").fadeOut(500);
       $('#bg').fadeOut(100);
       $('.primery').removeClass('open');
+      $('.p_wrapper').removeClass('open');
       $('.cases').removeClass('open');
       $('.SoMe').removeClass('open'); //   $('#bg_image').attr("src", '');
     } // $('#main').toggleClass('frost');
 
   });
-  init_page(); // cheat function
+  init_page(); // _______________ CHEAT CODES
 
   window.onkeypress = function (e) {
     cheat += e.key;
@@ -313,7 +317,7 @@ $(function () {
       alert('spring til side');
     }
   };
-});
+}); // _______________ PRELOAD
 
 function preloader() {
   if (document.images) {

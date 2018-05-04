@@ -151,13 +151,19 @@
     display: block
     text-align: center
 
+    .p_wrapper
+      display: inline-block
+      padding-right: 60px
+      border-right: #fff 2px solid
+      max-height: 0
+
+      &.open
+        max-height: 400px
 
     .primery
       text-align: right
       font-size: responsive 1.5rem 2.5rem
       font-range: 500px 1200px
-      border-right: #fff 2px solid
-      // padding: 10px 60px
       padding: 0
       line-height: responsive 3rem 4rem
       display: inline-block
@@ -166,15 +172,15 @@
       transition: .8s .3s ease-in-out
       transition-delay: .5s
 
-
       a
-        display: block
+        display: inline-block
         opacity: 0
         transition: .2s ease-in-out
 
         li
           transition: .15s ease-out
-          padding: 0px 60px 0 0
+          padding: 0px 0px 0 0
+          display: inline-block
 
         &:first-of-type
           li
