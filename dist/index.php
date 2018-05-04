@@ -6,7 +6,7 @@ include 'start.php' ?>
 
        <!-- content -->
        <section id="header_section" class="forside_header">
-         <img src="assets/images/frontpage.png" alt="">
+         <img src="<?=$sitepath?>assets/images/frontpage.png" alt="">
          <div class="ontop">
            <div class="wrapper">
 
@@ -18,8 +18,8 @@ include 'start.php' ?>
        <section id="forside_cases">
          <div class="wrapper">
            <div class="case_thumb tall">
-             <a href="magasin">
-               <img src="assets/images/mag_thumb.jpg" alt="">
+             <a href="<?=$sitepath?>case/magasin">
+               <img src="<?=$sitepath?>assets/images/mag_thumb.jpg" alt="">
              <div class="txt">
                <div class="labels">
                  Kunde
@@ -35,8 +35,8 @@ include 'start.php' ?>
              </a>
            </div>
          <div class="case_thumb tall">
-           <a href="arkk">
-             <img src="assets/images/ark_thumb.jpg" alt="">
+           <a href="<?=$sitepath?>case/arkk">
+             <img src="<?=$sitepath?>assets/images/ark_thumb.jpg" alt="">
            <div class="txt">
              <div class="labels">
                Kunde
@@ -53,8 +53,8 @@ include 'start.php' ?>
           </a>
          </div>
          <div class="case_thumb tall">
-           <a href="waterfront">
-           <img src="assets/images/water_thumb.jpg" alt="">
+           <a href="<?=$sitepath?>case/waterfront">
+           <img src="<?=$sitepath?>assets/images/water_thumb.jpg" alt="">
            <div class="txt">
              <div class="labels">
                Kunde
@@ -95,7 +95,7 @@ include 'start.php' ?>
        <section id="partner_logoer">
          <div class="wrapper">
            <?php foreach ($partner_logos as $key => $value): ?>
-             <img src="<?= $value ?>" alt="">
+             <img src="<?=$sitepath?><?= $value ?>" alt="">
            <?php endforeach; ?>
          </div>
        </section>

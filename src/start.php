@@ -6,7 +6,7 @@ $sitepath = "http://localhost/xampp_projects/whothat.dk/dist/";
 
 include 'inc/assets.php'; ?>
 <script type="text/javascript">
-  var  window.sitepath = <?= $sitepath ?>;
+  window.sitepath = <?= $sitepath ?>;
 </script>
 
  <!DOCTYPE html>

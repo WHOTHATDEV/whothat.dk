@@ -5,7 +5,7 @@ $page = ''; // sidens navn
 include 'start.php' ?>
 
 <section id="header_section" class="kontakt_page">
-  <img src="assets/images/kontakt.png" alt="">
+  <img src="<?=$sitepath?>assets/images/kontakt.png" alt="">
   <div class="dot"></div>
   <div class="wrapper" id="first_section">
     <h1>Kig forbi</h1>

@@ -31,8 +31,7 @@ function init_page(){
   $('#bg').fadeOut(0);
     $('.case_link').hover(function(){
       if (!window.istouch) {
-
-          var imageUrl = "assets/images/" + $(this).data('img');
+          var imageUrl = window.sitepath + "assets/images/" + $(this).data('img');
 
           // $('#bg').fadeIn(600);
           // console.log('true stuff');
@@ -209,7 +208,7 @@ $(function() {
   var transEffect = Barba.BaseTransition.extend({
     start: function() {
       if (window.istouch) {
-        var imageUrl = "assets/images/" + window.trans_img;
+        var imageUrl = window.sitepath + "assets/images/" + window.trans_img;
         $('#bg').fadeIn(200);
         $('#bg_image').attr("src",imageUrl);
         $('#bg_image').fadeIn(200);
@@ -410,13 +409,13 @@ function preloader() {
 
     // mangler casebilleder
 
-		img1.src = "assets/images/projekter.png";
-		img2.src = "assets/images/bureauet.png";
-		img3.src = "assets/images/login.png";
-    img4.src = "assets/images/frontpage.png";
-		img5.src = "assets/images/bureauet.png";
-    img6.src = "assets/images/waterfront.png";
-    img7.src = "assets/images/arkk.png";
+		img1.src = window.sitepath + "assets/images/projekter.png";
+		img2.src = window.sitepath + "assets/images/bureauet.png";
+		img3.src = window.sitepath + "assets/images/login.png";
+    img4.src = window.sitepath + "assets/images/frontpage.png";
+		img5.src = window.sitepath + "assets/images/bureauet.png";
+    img6.src = window.sitepath + "assets/images/waterfront.png";
+    img7.src = window.sitepath + "assets/images/arkk.png";
 
     // mangler casebilleder
 	}

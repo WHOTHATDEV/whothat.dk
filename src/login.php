@@ -5,7 +5,7 @@ include 'start.php' ?>
 
 
 <section id="header_section">
-  <img src="assets/images/login.png" alt="">
+  <img src="<?=$sitepath?>assets/images/login.png" alt="">
   <div class="wrapper" id="first_section">
     <h1>Kundeområde</h1>
     <h2>Få overblik over aktuelle kampagner
@@ -16,10 +16,10 @@ og contentplanlægning</h2>
 <section class="wrapper login">
   <form class="" action="index.html" method="post">
     <div class="inp">
-      <span><img src="assets/icons/profil.png" alt=""> </span><input type="text" name="user" value="">
+      <span><img src="<?=$sitepath?>assets/icons/profil.png" alt=""> </span><input type="text" name="user" value="">
     </div>
     <div class="inp">
-      <span><img src="assets/icons/lock.png" alt=""></span><input type="password" name="pw" value="">
+      <span><img src="<?=$sitepath?>assets/icons/lock.png" alt=""></span><input type="password" name="pw" value="">
     </div>
     <button type="button" name="button">Log ind</button>
   </form>

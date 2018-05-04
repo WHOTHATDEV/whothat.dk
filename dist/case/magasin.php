@@ -3,17 +3,17 @@
   // variabler til metatags
   $page = ''; // sidens navn
 
-  include 'inc/assets.php';
+  include '../inc/assets.php';
 
  ?>
 
  <!DOCTYPE html>
  <html lang="en" dir="ltr">
-   <?php include 'inc/head.php'; ?>
+   <?php include '../inc/head.php'; ?>
    <body>
 
      <!-- menu -->
-     <?php include 'inc/nav.php'; ?>
+     <?php include '../inc/nav.php'; ?>
      <!-- menu end -->
      <div class="viewport" id="main">
 
@@ -24,7 +24,7 @@
 
            <!-- content -->
            <section id="header_section" class="magazin_header">
-             <img src="assets/images/b1.jpg" alt="">
+             <img src="<?=$sitepath?>assets/images/b1.jpg" alt="">
              <div class="wrapper">
 
                <h1>magazin case</h1>
@@ -54,7 +54,7 @@
 
 
          <!-- footer  -->
-         <?php include 'inc/footer.php'; ?>
+         <?php include '../inc/footer.php'; ?>
          <!-- footer  end -->
 
 
