@@ -1,0 +1,172 @@
+
+
+.vivaldi
+
+
+
+  .main_image
+    margin-bottom: 100px
+
+    img
+      opacity: 1 !important
+      position: static !important
+
+
+  .story
+    text-align: right
+    position: relative
+    margin-bottom: 100px
+
+    .text
+      border-bottom: 20px solid $wt
+      position: relative
+      // top: 0
+      // left: 0
+      // right: 0
+
+      h2
+        // margin-right: 370px
+        color: $wt
+
+      p
+        margin-right: 350px
+
+        &.text_rubrik
+          font-weight: 600
+          color: #fff
+
+
+    img
+      opacity: 1 !important
+      position: absolute !important
+      width: auto !important
+      // margin-bottom: -150px
+      padding-top: 70px
+      // display: inline-block
+      bottom: -100px !important
+      right: 0px !important
+      left: auto !important
+      top: auto !important
+      max-width: 70vw
+
+
+  .stripe_breaker
+    @extend .stripes_transparant
+    height: 60px
+
+
+
+
+  .stats
+    text-align: center
+    margin-top: 160px
+    lost-utility: clearfix
+    margin-bottom: 100px
+
+    h2
+      color: $wt
+
+    .stat
+      font-family: $enc
+      lost-column: 1/3 0
+      margin-bottom: 50px
+
+      span
+        font-size: 4rem
+        display: block
+        font-weight: 900
+        // float: right
+        // vertical-align: top
+
+
+  .video
+    margin-top: 20px
+    margin-bottom: 60px
+
+    p
+      color: #a9a9a9
+      font-family: $enc
+      font-size: .9rem
+      padding: 70px 100px
+
+
+  .partner_logo
+    margin-top: 70px
+
+
+@media screen and (max-width: 900px)
+  .vivaldi
+    .stats
+      h2
+      .stat
+        lost-column: 1/1 0 !important
+
+    .story
+      .text
+        h2
+
+        p
+          position: relative
+          margin: 0 !important
+          margin-bottom: 20px !important
+
+          &:last-of-type
+            margin-bottom: 65vw !important
+
+      img
+        bottom: -12vw !important
+
+
+    .video
+      p
+
+        padding: 50px 70px
+
+
+@media screen and (max-width: 900px)
+
+  .vivaldi
+    .main_image
+      margin-bottom: 60px
+
+    .story
+      .text
+        padding: 30px !important
+
+    .stats
+      margin-top: 100px
+      margin-bottom: 70px
+
+
+@media screen and (max-width: 700px)
+
+  .vivaldi
+    .main_image
+      margin-bottom: 50px
+
+    .stats
+      margin-top: 80px
+      margin-bottom: 50px
+
+    .video
+      p
+        padding: 40px 50px
+
+@media screen and (max-width: 500px)
+
+  .vivaldi
+    .main_image
+      margin-bottom: 40px
+
+
+    .stats
+      margin-top: 60px
+      margin-bottom: 40px
+
+      .stat
+        span
+          font-size: 3rem
+
+    .video
+      p
+        padding: 20px 30px

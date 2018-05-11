@@ -1,0 +1,466 @@
+#bureauet
+
+#dna
+  background-color: $light_bg
+
+  .img
+    display: inline-block
+    vertical-align: top
+    margin: -20px 0 -40px 0
+    max-width: 60vw
+    overflow: hidden
+
+    img
+      max-width: 100vw
+
+  .text
+    display: inline-block
+    width: 450px
+    max-width: 25vw
+    padding: 5vw
+    vertical-align: top
+
+    h1
+      font-size: responsive 3rem 5rem
+      line-height: responsive 3rem 5rem
+      margin-top: 0
+      white-space: nowrap
+      margin-bottom: 5vw
+    // margin: -120px 0
+
+
+#team
+  text-align: center
+  margin-top: 250px
+  padding-bottom: 330px
+
+  .aktive
+    margin-top: 250px
+    // padding: 50px
+
+  .profil
+    margin-left: 50px
+    margin-right: 50px
+    width: 400px
+    margin-bottom: 140px
+    text-align: right
+    position: relative
+
+    &:nth-last-of-type(odd)
+      float: right
+      margin-top: -390px
+      // margin-right: 70px
+
+    .green_filter
+      position: absolute
+      top: 0
+      bottom: 0%
+      left: 0
+      right: 0
+      background-color: $wt
+      z-index: 3
+      opacity: .8
+      transition: .4s .4s ease-in
+
+      &.slidein
+        bottom: 100% !important
+
+    .blockgin_out
+      position: absolute
+      top: 0
+      bottom: 0%
+      left: 0
+      right: 0
+      background-color: $dark_bg
+      z-index: 4
+      transition: .4s ease-in
+
+      &.slidein
+        bottom: 100% !important
+
+
+    .title
+      position: absolute
+      bottom: 100%
+      right: 100%
+      width: 100px
+      // text-align: right
+      // width: 70px
+      // height: 20px
+      border-bottom: 1px solid #fff
+      white-space: nowrap
+      // display: inline-block
+      transform: rotateZ(-90deg)
+      transform-origin: right bottom
+      // vertical-align: top
+      // position: relative
+      margin-right: 12px
+
+      h4
+        font-size: .6rem
+        font-family: $enc
+        text-transform: uppercase
+        font-weight: 600
+        letter-spacing: .2rem
+        line-height: .7rem
+        margin: 0
+        position: absolute
+        right: 0
+        bottom: 10px
+        margin-right: -2px
+
+    .sog_job
+      height: 555px
+      // background-color: red
+      @extend .stripes_transparant
+      text-align: center
+      padding: 30px
+      box-sizing: border-box
+
+      h3
+        font-size: 2.5rem
+        font-weight: 400
+        margin-bottom: 80px
+
+      .content
+        font-size: 1.15rem
+        line-height: 2rem
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 80%
+        transform: translate(-50%, -50%)
+
+    .img
+      width: 100%
+      position: relative
+      overflow: hidden
+      display: inline-block
+      vertical-align: top
+
+      img
+        position: relative
+        width: 100%
+        z-index: 1
+        transition: .3s
+        display: block
+
+      video
+        width: 100%
+        z-index: 0
+        position: absolute
+        top: 0
+        bottom: 0
+        right: 0
+        left: 0
+
+      .gradient
+        transition: .3s
+        opacity: 0
+        background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1))
+        position: absolute
+        bottom: 0px
+        right: 0px
+        left: 0px
+        top: 50%
+        z-index: 2
+
+
+      footer
+        position: absolute
+        bottom: 0px
+        right: 0px
+        left: 0px
+        top: 50%
+        z-index: 2
+        padding: 15px
+        background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.8))
+        overflow: hidden
+
+        .title_card
+          text-align: center
+          overflow: hidden
+          position: absolute
+          bottom: 15px
+          left: 0
+          right: 0
+          top: 0
+
+          .t
+            padding-bottom: 5px
+            position: absolute
+            left: 0
+            right: 0
+            transition: .4s
+            bottom: -55px
+
+            .somerow
+              height: 30px
+              margin-top: 30px
+
+            a
+              padding: 0 10px
+              svg
+                transition: .3s ease-out
+                height: 30px
+                path
+                  fill: #fff
+
+              &:hover
+                svg
+                  transform: scale(1.1)
+                  path
+                    fill: $wt
+
+          h3
+            font-size: 2.7rem
+            margin: 0
+            font-weight: 400
+            // line-height: 2rem
+            margin-bottom: -15px
+            margin-top: 70px
+            // line-height: 3.3rem
+
+          h4
+            font-family: $enc
+            color: $wt
+            font-weight: 600
+            font-size: .9rem
+            margin: 0
+
+          h6
+            font-family: $enc
+            font-size: responsive .7rem .9rem
+            color: $wt
+            font-weight: 600
+            margin: 0
+            margin-top: 5px
+            margin-bottom: 10px
+
+
+      &:hover, &.run_vid
+
+        img
+          opacity: 0
+          transform: scale(1.2)
+
+        .gradient
+          opacity: 1
+
+        footer
+
+
+          .title_card
+
+            .t
+              bottom: 0px
+
+
+
+@media screen and (max-width: 1101px)
+
+  #team
+    margin-top: 150px
+
+    .aktive
+      margin-top: 150px
+
+
+    .profil
+      width: 350px
+
+
+      h3
+        font-size: 2.2rem !important
+        margin: 0
+        font-weight: 400
+        line-height: 2.5rem
+        margin-bottom: 5px !important
+
+      .sog_job
+        height: 450px!important
+
+        .content
+          font-size: 1rem
+
+          h3
+            margin-bottom: 30px
+
+
+
+@media screen and (max-width: 970px)
+
+  #team
+    margin-top: 150px
+
+    .aktive
+      margin-top: 150px
+
+
+    .profil
+      width: 325px
+
+
+
+      h3
+        font-size: 2.2rem !important
+        margin: 0
+        font-weight: 400
+        line-height: 2.5rem
+
+      .sog_job
+        height: 450px!important
+
+        .content
+          font-size: 1rem
+
+          h3
+            margin-bottom: 30px
+
+
+
+
+
+
+@media screen and (max-width: 880px)
+  #team
+
+    .aktive
+
+
+    .profil
+      width: 300px
+    //   max-width: 100%
+    //   margin: 0 auto
+    //   margin-bottom: 140px
+    //   text-align: right
+    //   position: relative
+
+    //
+    //   &:nth-last-of-type(odd)
+    //     float: none
+    //     margin-top: 0px
+    //     margin-right: auto
+    //
+    //   .img
+        // width: 450px
+        // max-width: 75%
+
+
+@media screen and (max-width: 800px)
+  #team
+
+    .aktive
+
+    .profil
+      width: 400px
+      max-width: 80%
+      margin: 80px auto
+
+      &:nth-last-of-type(odd)
+        float: none
+        margin-top: 0px
+        margin-right: auto
+    //
+    //   max-width: 100%
+    //   margin: 0 auto
+    //   margin-bottom: 140px
+    //   text-align: right
+    //   position: relative
+    //   .img
+        // width: 450px
+        // max-width: 75%
+
+
+
+@media screen and (max-width: 760px)
+  #dna
+
+    .img
+      display: block
+      max-width: 95vw
+      transform: translateY(-20px)
+
+
+    .text
+      display: block
+      box-sizing: border-box
+      margin-top: 30px
+      width: 600px
+      max-width: 95vw
+
+  #team
+    margin-top: 100px
+
+    .aktive
+
+      .profil
+
+        .img
+
+          footer
+
+            .title_card
+
+              .t
+
+                .somerow
+
+                  a
+                    padding:  0 5px
+
+
+
+
+
+
+// @media screen and (max-width: 420px)
+//   #team
+//
+//     .aktive
+//       margin-top: 100px
+//
+//
+//     .profil
+//       width: 534px
+//       max-width: 100%
+//       margin: 0 auto
+//       margin-bottom: 140px
+//       text-align: right
+//       position: relative
+//       left: -12%
+//
+//       &:nth-last-of-type(odd)
+//         float: none
+//         margin-top: 0px
+//         margin-right: auto
+//
+//       .img
+//
+//
+//         h3
+//           font-size: 1.5rem !important
+  // #team
+  //   margin-top: 10vw
+  //
+  //   .profil
+  //     lost-column: 1/3 3 30px
+  //
+  //
+  //   a.sog
+  //     lost-column: 1/1 !important
+  //     padding: 25% 0px
+  //
+
+
+
+// @media screen and (max-width: 460px)
+//
+//   #team
+//
+//     .profil
+//       lost-column: 1/1 1 30px
+//
+//     a.sog
+//       lost-column: 1/1 !important
+//       padding: 75% 0px

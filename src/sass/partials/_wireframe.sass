@@ -12,6 +12,7 @@ body
   -ms-overflow-style: none
   overflow: -moz-scrollbars-none
   @extend .stripes
+  overflow-y: scroll
   overflow-x: hidden
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
@@ -21,6 +22,9 @@ body
 
   &::-webkit-scrollbar
     width: 0 !important
+
+  .barba-container
+    min-height: 100vh
 
   .viewport
     max-width: $viewport

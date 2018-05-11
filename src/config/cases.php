@@ -8,9 +8,33 @@
       'page' => 'waterfront',
       'img' => 'waterfront.png'
     ],
-    'Arkk' => [
+    'Arkk Copenhagen' => [
       'page' => 'arkk',
        'img' => 'arkk.png'
+    ],
+    // 'Raadhuskroen' => [
+    //   'page' => 'raadhuskroen',
+    //   'img' => 'raadhuskroen.png'
+    // ],
+    // 'Netto' => [
+    //   'page' => 'netto',
+    //   'img' => 'netto.png'
+    // ],
+    // 'Zoo' => [
+    //   'page' => 'Zoo',
+    //   'img' => 'zoo.png'
+    // ],
+    // 'Fedtjob.dk' => [
+    //   'page' => 'fedtjob',
+    //   'img' => 'fedtjob.png'
+    // ],
+    // 'Næstved Storcenter' => [
+    //   'page' => 'ns',
+    //   'img' => 'ns.png'
+    // ],
+    'Vivaldi Catering' => [
+      'page' => 'vivaldi',
+       'img' => 'vivaldi.png'
     ]
   ];
 

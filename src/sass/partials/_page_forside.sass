@@ -1,0 +1,247 @@
+
+.forside_header#header_section
+  img
+    opacity: 1 !important
+
+
+
+#forside_cases_mobil
+  display: none
+
+#forside_cases
+  lost-utility: clearfix
+  padding-bottom: 170px
+
+
+#ikoner
+  lost-utility: clearfix
+  background-color: $light_bg
+  padding-top: 100px
+
+  .ikon
+    lost-column: 1/3
+    text-align: center
+    margin-bottom: 150px
+
+    svg
+      height: 75px
+      fill: #fff
+
+    &:hover, &.run_ani
+
+      h4
+        color: $wt
+
+      p
+        color: #fff
+
+
+#partner_logoer
+  text-align: center
+  padding: 150px 0
+
+  img
+    padding: 21px
+    vertical-align: middle
+
+
+#insta
+  padding: 100px 0 150px 0
+  background-color: $light_bg
+
+  #instafeed
+    lost-utility: clearfix
+
+    .insta_thumb
+      lost-column: 1/6 6 30px
+      padding-bottom: 30px
+
+      // pointer-events: none
+
+      &:hover
+
+        div.f
+          pointer-events: none
+
+          div.ol
+            opacity: .8
+            top: 0% !important
+            bottom: 100%
+            transition: .3s, bottom .3s .3s
+
+
+        img
+          opacity: 1 !important
+          filter: none !important
+          transform: scale(1.1)
+          transition: .3s ease-in-out
+
+
+      div.f
+        position: relative
+        overflow: hidden
+
+
+        div.ol
+          background-color: $wt
+          position: absolute
+          top: 100%
+          bottom: 0
+          left: 0
+          right: 0
+          transition: .3s
+          z-index: 20
+          font-family: $enc
+          // line-height: 300px
+          // vertical-align: bottom
+          text-align: center
+          color: #fff
+          overflow: hidden
+          transition: 0s , bottom 0s
+
+
+
+
+      img
+        width: 100%
+        display: block
+        transition: .3s ease-out
+
+    &:hover
+      .insta_thumb
+        div.f
+          // background-color: $dark_wt
+          // background-color: #000
+
+          img
+            opacity: .4
+            filter: grayscale(100%)
+
+
+                //
+                //
+                //         // background-color: $wt
+                //         // position: absolute
+                //         // top: 0
+                //         // bottom: 0
+                //         // left: 0
+                //         // right: 0
+                //
+                //
+                //
+                //       &:hover
+                //         opacity: 1
+                //         filter: none
+
+
+
+// animation
+#txtloop
+  height: 30px !important
+  margin-bottom: 50px
+  // height: calc(5rem + 40px)
+  // line-height: calc(5rem + 50px)
+
+  #wheel
+    // transform: translateY(-2.6rem)
+    transition: .5s ease-in-out
+
+
+
+    span
+      opacity: 0
+      vertical-align: middle
+      display: block
+      // line-height: 2.5rem
+      height: 60px
+      // margin: 0 auto 50px auto
+      transition: .3s ease-in
+
+
+
+
+@media screen and (max-width: 900px)
+
+  #ikoner
+    padding-top: 70px !important
+
+    .ikon
+      lost-column: 1/2
+      margin-bottom: 100px !important
+
+
+  #partner_logoer
+    padding: 100px 0
+
+  #insta
+    padding: 70px 0 50px 0 !important
+
+    #instafeed
+
+      .insta_thumb
+        lost-column: 1/4 4 30px
+
+  #forside_cases
+    display: none
+
+
+  #forside_cases_mobil
+    display: block
+
+
+
+@media screen and (max-width: 700px)
+
+
+  #ikoner
+    padding-top: 50px !important
+
+    .ikon
+      margin-bottom: 80px !important
+
+  #partner_logoer
+    padding: 70px 0
+
+  #insta
+    padding: 50px 0 40px 0 !important
+
+    #instafeed
+
+      .insta_thumb
+        lost-column: 1/3 3 30px
+
+
+
+
+@media screen and (max-width: 530px)
+
+  #ikoner
+
+    .ikon
+      lost-column: 1/1
+      margin-bottom: 50px !important
+
+  #insta
+
+    #instafeed
+
+      .insta_thumb
+        lost-column: 1/2 2 30px
+
+
+  #partner_logoer
+    padding: 50px 0
+
+    img
+      // padding-bottom: 25px
+      // vertical-align: middle
+      // transform: scale(.65)
+
+
+@media screen and (max-width: 370px)
+  #partner_logoer
+    padding: 50px 0
+
+    img
+      display: block
+      margin: 10px auto

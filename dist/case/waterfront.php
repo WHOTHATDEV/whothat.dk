@@ -2,33 +2,38 @@
 header("Content-Encoding: none");
 // variabler til metatags
 $page = 'Stockholm waterfron congres center'; // sidens navn
+$shareimage = 'shareimages_case_water.png'; // share image
+$pagedescription = '';
+
 include '../start.php' ?>
 
 
 <section id="header_section" class="case_headsection waterfront">
-  <img src="<?=$sitepath?>assets/images/waterfront.png" alt="">
-  <div class="wrapper" id="first_section">
-    <h1>Stockholm Waterfront <br>
+  <img src="<?=$sitepath?>assets/images/waterfront.png" alt="" class="page_img">
+  <div class="wrapper case_header" id="first_section">
+    <div class="center_header">
+    <h1 class="init_reveal_fadeup" style="transition-delay: 200ms;">Stockholm Waterfront <br>
 Congress Centre</h1>
-    <h2>Udvikling af multilingualt website
+    <h2 class="init_reveal_fadeup" style="transition-delay: 400ms;">Udvikling af multilingualt website
 med interaktive grundplaner</h2>
+    </div>
   </div>
 
-  <div class="hashtags">
-    <span>#webudvikling</span>
-    <span>#multilanguage</span>
-    <span>#interaktivitet</span>
-    <span>#wordpress</span>
+  <div class="hashtags ">
+    <span class="init_reveal_fadeup" style="transition-delay: 600ms;">#webudvikling</span>
+    <span class="init_reveal_fadeup" style="transition-delay: 700ms;">#multilanguage</span>
+    <span class="init_reveal_fadeup" style="transition-delay: 800ms;">#interaktivitet</span>
+    <span class="init_reveal_fadeup" style="transition-delay: 900ms;">#wordpress</span>
   </div>
 
   <div class="wrapper">
 
 
 
-  <div class="labtop">
+  <div class="labtop init_reveal_fadeup" style="transition-delay: 1100ms;">
     <img src="<?=$sitepath?>assets/images/labtop.png" alt="">
     <div class="showcase">
-      <img src="<?=$sitepath?>assets/images/swcc_site.jpg" alt="" class="rellax" data-rellax-speed="10"  >
+      <img src="<?=$sitepath?>assets/images/swcc_site.jpg" alt="" class="rellax" data-rellax-speed="10"  id="water_desktop_page">
     </div>
   </div>
 
@@ -50,10 +55,13 @@ med interaktive grundplaner</h2>
 
   </div>
 
-  <div class="live_link">
-    Se website live
+  <a href="http://www.stockholmwaterfront.com/" target="_blank
+  ">
+    <div class="live_link">
+      Se website live
 
-  </div>
+    </div>
+  </a>
 
 
   <div class="billeder">

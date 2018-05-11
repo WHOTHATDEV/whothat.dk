@@ -1,9 +1,21 @@
+<div id="load_screen">
+  <div class="load_area">
+
+    <h2>Henter fed hjemmeside</h2>
+    <div class="bar">
+      <div id="progres">
+
+      </div>
+    </div>
+    <h3 id="counter_number">0</h3>
+  </div>
+</div>
 <div class="navigation">
   <div id="nav_controler" class="viewport">
 
 
     <!-- <a href="whothat"><img src="assets/images/whothat.png" alt="" class="logo"> </a> -->
-        <a href="whothat" class="page_logo"><?php include 'assets/images/whothat.svg'; ?> </a>
+        <a href="<?= $sitepath ?>whothat" class="page_logo"><?php include dirname(__FILE__) . '/../assets/images/whothat.svg'; ?> </a>
 
     <div class="ldBar"></div>
     <div class="menu">
@@ -26,31 +38,31 @@
           <div class="p_wrapper">
 
             <ul class="primery">
-                <a href="whothat" class="">
+                <a href="<?= $sitepath ?>whothat" class="">
                   <li>
                     <span class="case_link ani_whothat nav_ani" data-img="frontpage.png">Forside</span>
                   </li>
                 </a>
                 <br>
-                <a href="projekter" class="">
+                <a href="<?= $sitepath ?>projekter" class="">
                   <li>
                     <span class="case_link ani_projekter nav_ani " data-img="projekter.png">Projekter</span>
                   </li>
                 </a>
                 <br>
-                <a href="bureauet" class="">
+                <a href="<?= $sitepath ?>bureauet" class="">
                   <li class="" >
                     <span class="case_link ani_bureauet nav_ani " data-img="bureauet.png">Bureauet</span>
                   </li>
                 </a>
                 <br>
-                <a href="kontakt" class="">
+                <a href="<?= $sitepath ?>kontakt" class="">
                   <li class="" >
                     <span class="case_link ani_kontakt nav_ani " data-img="kontakt.png">Kontakt</span>
                   </li>
                 </a>
                 <br>
-                <a href="login" class="">
+                <a href="<?= $sitepath ?>login" class="">
                   <li class="" >
                     <span class="case_link ani_login nav_ani " data-img="login.png">Kunde login</span>
                   </li>
@@ -72,22 +84,22 @@
 
           <li>
             <a href="#">
-              <?php include 'assets/icons/fb.svg'; ?>
+              <?php include dirname(__FILE__) . '/../assets/icons/fb.svg'; ?>
             </a>
           </li>
           <li>
             <a href="#">
-              <?php include 'assets/icons/insta.svg'; ?>
+              <?php include dirname(__FILE__) . '/../assets/icons/insta.svg'; ?>
             </a>
           </li>
           <li>
             <a href="#">
-              <?php include 'assets/icons/in.svg'; ?>
+              <?php include dirname(__FILE__) . '/../assets/icons/in.svg'; ?>
             </a>
           </li>
           <li>
             <a href="#">
-              <?php include 'assets/icons/v.svg'; ?>
+              <?php include dirname(__FILE__) . '/../assets/icons/v.svg'; ?>
             </a>
           </li>
           </div>

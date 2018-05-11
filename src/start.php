@@ -3,16 +3,21 @@
 
 // include 'inc/cach.php';
 $sitepath = "http://localhost/xampp_projects/whothat.dk/dist/";
+$sitepath = "http://clients.whothat.dk/whothat.dk/";
+
+
+http://clients.whothat.dk/whothat.dk/
+$scripts = array();
 
 include 'inc/assets.php'; ?>
-<script type="text/javascript">
-  window.sitepath = <?= $sitepath ?>;
-</script>
 
  <!DOCTYPE html>
  <html lang="en" dir="ltr">
    <?php include  'inc/head.php'; ?>
    <body>
+     <script type="text/javascript">
+     window.sitepath = "<?= $sitepath ?>";
+     </script>
 
      <!-- menu -->
      <?php include 'inc/nav.php'; ?>

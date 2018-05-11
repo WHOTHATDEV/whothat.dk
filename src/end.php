@@ -25,7 +25,9 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.6.2/rellax.js"></script>
 
-<script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/countup@1.8.2/dist/countUp.min.js"></script>
+
+<script src="<?= $sitepath ?>js/script.js"></script>
 
 <?php foreach ($scripts as $value): ?>
   <script type="text/javascript" src="<?= $value ?>"></script>

@@ -1,25 +1,29 @@
 <?php
 // variabler til metatags
-$page = ''; // sidens navn
+$page = 'Bureauet'; // sidens navn
+$shareimage = 'shareimages_bureauet.png'; // share image
+$pagedescription = '';
 
 include 'config/personale.php';
 include 'start.php' ?>
 
 <section id="header_section">
-  <img src="<?=$sitepath?>assets/images/bureauet.png" alt="">
+  <img src="<?=$sitepath?>assets/images/bureauet.png" alt="" class="page_img">
   <div class="wrapper" id="first_section">
 
-    <h1>Hmm Whothat?</h1>
-    <h2>Fra ordlyden i et Facebookopslag
+    <h1 class="init_reveal_fadeup" style="transition-delay: 200ms;">Hmm Whothat?</h1>
+    <h2 class="init_reveal_fadeup" style="transition-delay: 400ms;">Fra ordlyden i et Facebookopslag
       til store komplekse udviklingsopgaver.</h2>
   </div>
 </section>
 
-<section class="wrapper rubrik">
-  <h4>WHOTHAT er et kreativt bureau med <span>ekspertise i det digitale</span> og en særlig forkærlighed til <span>sociale medier</span>. Vi har samlet kræfter og kompetencer inden for særligt webudvikling, online annoncering og de sociale platforme.</h4>
+<section class="wrapper rubrik init_reveal_fadeup" style="transition-delay: 700ms;">
+
+<h4>WHOTHAT er et kreativt bureau med <span>ekspertise i det digitale</span> og en særlig forkærlighed til <span>sociale medier.</span> I skulle næsten prøve at se os - vi er knivskarpe til webudvikling, online annoncering og de sociale platforme.</h4>
+
 </section>
 
-<section class="fullwidth" id="dna">
+<section class="fullwidth init_reveal_fadeup" id="dna" style="transition-delay: 900ms;">
 
   <div class="wide_wrapper">
 
@@ -57,8 +61,8 @@ include 'start.php' ?>
         </div>
         <div class="img">
 
-        <video src="<?=$sitepath?>assets/videos/<?= $value['video'] ?>" class="video video_hide" muted preload autoplay playsinline></video>
-        <img src="<?=$sitepath?>assets/images/<?= $value['img'] ?>" alt="">
+        <video src="<?=$sitepath?>assets/videos/<?= $value['video'] ?>" class="video video_hide" defaultMuted muted preload autoplay playsinline></video>
+        <img src="<?=$sitepath?>assets/images/<?= $value['img'] ?>" alt="<?= $value['titel'] ?>">
         <div class="gradient">
 
         </div>

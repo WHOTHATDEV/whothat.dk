@@ -1,18 +1,139 @@
 var cheat = '';
+window.preload = 0;
+
+
+
 
 
 function init_page(){
-  /*
-  ####### ToC: ######
-    - Parallax init
-    - Nav hover handeling
-    - Instafeed fetch
-    - Typed.js init
-    - Video player function
-    - Reveals
-    - Ikon hover effekt
 
-  */
+
+
+  // linke  defuser
+  $('a').click(function(){
+    if (window.location.href == $(this).attr("href")) {
+      event.preventDefault();
+
+      $(".menu").removeClass("open");
+      $(".inner_nav").fadeOut(500);
+      $('.primery').removeClass('open');
+      $('.p_wrapper').removeClass('open');
+      $('.cases').removeClass('open');
+      $('.SoMe').removeClass('open');
+      $('body').removeClass("noscrool");
+      $('.n_nav').css({'width' : '' , 'height' : ''  });
+      // luk menu
+    }
+  });
+
+
+
+
+
+
+  // reveal init
+  var waitttime = 0;
+  var initial = document.getElementsByClassName('init_reveal_fadeup');
+  for (var i = 0; i < initial.length; i++) {
+         initial[i].classList.add('slidein');
+  }
+
+  // $('.init_reveal_fadeup').each(function(){
+  //   var $vm = $(this);
+  //     $vm.addClass('slidein');
+  // });
+
+
+
+
+
+
+
+// forside text loop
+if (document.getElementById('txtloop')) {
+  var spans = document.getElementById('wheel').children;
+
+  var current_rem = 0;
+  var i = 0;
+
+  function loop(){
+
+    document.getElementById('wheel').style.transform = "translateY(-" + current_rem + "px)";
+    current_rem += 60;
+
+    spans[i+1].style.opacity = 1;
+    spans[i].style.opacity = 0;
+    //
+    // $promt = $('.promt');
+    // $promt[i].fadeOut(300);
+
+    var node = document.createElement("SPAN");
+    var textnode = document.createTextNode(spans[i].innerHTML);
+    node.appendChild(textnode);
+    document.getElementById('wheel').appendChild(node);
+    i++;
+  }
+
+  loop();
+
+
+  var txt_loop = setInterval(function () {
+
+  // if (document.hasFocus()) {
+    if (!document.getElementById('txtloop')) {
+      clearInterval(txt_loop);
+        // break;
+      }
+
+      loop();
+    // }
+  }, 3000);
+}
+
+
+
+
+
+
+// iframe preload replacment
+if (document.getElementById('iframes')) {
+  var row = document.getElementById('iframes')
+
+  var of = row.children;
+  // swap elements
+  of[0].parentNode.replaceChild(window.frame1, of[0]);
+  of[1].parentNode.replaceChild(window.frame2, of[1]);
+  of[2].parentNode.replaceChild(window.frame3, of[2]);
+}
+
+
+
+
+
+
+
+  // waterfront paralax adjustment
+  if (document.getElementById('water_desktop_page')) {
+    var water_desktop = document.getElementById('water_desktop_page');
+
+    var new_val = 10;
+    if ($( window ).height() < 600) {
+      new_val = 3;
+    }else if ($( window ).height() < 900) {
+      new_val = 5;
+    }else if ($( window ).height() < 1200) {
+      new_val = 7;
+    }else if ($( window ).height() < 1400) {
+      new_val = 8;
+    }
+    water_desktop.setAttribute('data-rellax-speed', new_val);
+
+  }
+
+
+
+
+
 
   // parallax innit
   var r = document.getElementsByClassName('rellax');
@@ -21,7 +142,7 @@ function init_page(){
   }
 
 
-  // reveal init
+
 
 
 
@@ -34,8 +155,6 @@ function init_page(){
           var imageUrl = window.sitepath + "assets/images/" + $(this).data('img');
 
           // $('#bg').fadeIn(600);
-          // console.log('true stuff');
-
 
           clearTimeout(window.cur_ani);
           if (frame == 1) {
@@ -78,6 +197,10 @@ function init_page(){
   // Nav hover handler end
 
 
+
+
+
+
   // ______________insta feed______________
     var excluded = ['1709866722856281871', '1548434707375523010'];
 
@@ -97,17 +220,17 @@ function init_page(){
           if (excluded.indexOf(result.graphql.location.edge_location_to_media.edges[i].node.id) > -1) { ex++; continue; }
 
           $("#instafeed").append("<a href='https://www.instagram.com/p/" + result.graphql.location.edge_location_to_media.edges[i].node.shortcode + "' target='_blank' class='insta_thumb'><div class='f'><div class='ol'></div><img src='" + result.graphql.location.edge_location_to_media.edges[i].node.thumbnail_src + "'></div></a>");
-
-
         }
-        console.log(result);
-
-
       }});
   // insta feed end
 
 
-  // ______________kontaktside typed.js effekt på subheading______________
+
+
+
+
+
+  // ______________TYPED.JS EFFEKT
   if ($(".type")[0]){
 
     var cities = [ 'Slaggerly Hills', 'Slan Diego', 'Slan Fransisco', 'Slantiago', 'Slão Paulo', 'Sunshine City', 'Slycity', 'Slago slago' ];
@@ -128,47 +251,78 @@ function init_page(){
 
 
 
-  // ______________Video hover______________
-  $('.video').on('ended',function(){
-    // $('.video').css("visibility", 'hidden');
-    this.play();
-  });
+
+// TODO: fix autoplay on touch
+
+  // ______________VIDEO FUNCTIONS
+  if(document.getElementsByClassName('video').length > 0){
+
+    if ('.video') {
+      $('.video').on('ended',function(){
+        // $('.video').css("visibility", 'hidden');
+        this.play();
+      });
 
 
-  $(".img").mouseover(
-    function(){
-      $(this).children('video')[0].play();
-      // $('.video').css("visibility", 'visible');
+      $('.img').on('touchstart', function(e){
+        // window.istouch = true;
+        // console.log('touchdown');
+        $(this).children('video')[0].play();
+      });
+
+      $(".img").mouseover(
+        function(){
+          $(this).children('video')[0].play();
+          // $('.video').css("visibility", 'visible');
+        }
+      );
+
+      $(".img").mouseleave(
+        function(){
+          $(this).children('video')[0].pause();
+          // $('.video').css("visibility", 'hidden');
+        }
+      );
     }
-  );
-
-  $(".img").mouseleave(
-    function(){
-      $(this).children('video')[0].pause();
-      // $('.video').css("visibility", 'hidden');
-    }
-  );
+  }
 
 
 
+
+
+// _____________ SCROLL FUNCTIONS
   document.addEventListener("scroll", function(){
     // ______________Profil reveals______________
       $('.profil').each(function(){
-        var visible = $(this).visible();
+
+        if ($( window ).height() < 600) {
+          var visible = $(this).visible(true);
+        }else {
+          var visible = $(this).visible();
+        }
+
+
+
         $(this).find('.blockgin_out').addClass( visible ? 'slidein' : '' );
         $(this).find('.green_filter').addClass( visible ? 'slidein' : '' );
+        visible = false;
       });
       // Profil reveals end
 
 
 
-      // ______________Profil reveals______________
+      // ______________Element reveals______________
         $('.scr_reveal_fadeup').each(function(){
           var visible = $(this).visible();
           $(this).addClass( visible ? 'slidein' : '' );
 
         });
-        // Profil reveals end
+        $('.scr_reveal_fadeup_large').each(function(){
+          var visible = $(this).visible(true);
+          $(this).addClass( visible ? 'slidein' : '' );
+
+        });
+
 
 
       // ______________Ikon nonhover effekt______________
@@ -179,9 +333,7 @@ function init_page(){
       });
     }
     // Ikon nonhover effekt end
-
   });
-
 }  // Init function end
 
 
@@ -192,8 +344,8 @@ function init_page(){
 
 
 
-// on erady function
-$(function() {
+
+
 
 
   $('body').on('touchstart', function(e){
@@ -245,12 +397,13 @@ $(function() {
       $('#bg').fadeOut(300);
       nc.fadeIn(300, function(){
 
+        init_page();
+
 
           setTimeout(function () {
             $('#bg_image').attr("src", '');
             $('.ldBar').removeClass('load');
           }, 4000);
-          init_page();
           t.done();
         });
       // });
@@ -285,7 +438,7 @@ $(function() {
 
 Barba.Dispatcher.on('linkClicked', function(el, e) {
     // ShowOverlay(e.clientX, e.clientY);
-    console.log(e);
+
     if (e.target.classList[0] == 'case_link') {
       window.trans = 'a';
       window.trans_img = e.target.dataset.img;
@@ -295,7 +448,7 @@ Barba.Dispatcher.on('linkClicked', function(el, e) {
   });
 
   Barba.Pjax.getTransition = function(){
-    console.log(window.trans);
+
     if (window.trans == 'a') {
       return transEffect;
     }else {
@@ -305,7 +458,15 @@ Barba.Dispatcher.on('linkClicked', function(el, e) {
 
   Barba.Pjax.start();
 
-  // page transistion end
+  // page transistion end ___________________
+
+
+
+
+
+
+
+
 
   $(".menu-link").click(function(e) {
     e.preventDefault();
@@ -321,7 +482,7 @@ Barba.Dispatcher.on('linkClicked', function(el, e) {
       var raduis_squared = (window_height * window_height) + (window_width * window_width);
       var square_root = Math.sqrt(raduis_squared);
       var diameter = square_root * 2;
-      var result = diameter + 'px';
+      var result = (diameter + 50) + 'px';
       $('.n_nav').css({'width' : result , 'height' : result  });
 
       $('.primery').addClass('open');
@@ -344,11 +505,77 @@ Barba.Dispatcher.on('linkClicked', function(el, e) {
   });
 
 
+  var container = document.createElement("div");
+  container.style.overflow = "hidden";
+  container.style.position = "fixed";
+  document.body.appendChild(container);
+
+  var framePreload = function (url, delay) {
+    var frame = document.createElement("iframe");
+    frame.src = url;
+    frame.style.width = "300px";
+    frame.style.height = "250px";
+    frame.scrolling = 'no';
+    frame.className = "init_reveal_fadeup";
+    frame.style.transitionDelay = delay + "ms;";
+
+    container.appendChild(frame);
+    return frame;
+  };
+
+  window.frame1 = framePreload(window.sitepath + "assets/case_code/Raven_Men/index.html", 1300);
+  window.frame2 = framePreload(window.sitepath + "assets/case_code/Raven_Mesh_Soft_Army/index.html", 1500);
+  window.frame3 = framePreload(window.sitepath + "assets/case_code/Raven_Women/index.html", 1700);
+
+
+
+// whene animatin done
 
 
 
 
-init_page();
+(function(){
+  addLoadEvent(preloader);
+
+  var numAnim = new CountUp("counter_number", 0, 7);
+  if (!numAnim.error) {
+    numAnim.start();
+  } else {
+    console.error(numAnim.error);
+  }
+  var loader = setInterval(function () {
+
+    numAnim.update(window.preload);
+
+    // set right
+
+    var prec = Math.floor(window.preload) * 1.7;
+    prec = prec + 'px';
+    // $('.progres').css({'width': "prec"});
+    // $('.progres').css({'width', prec});
+    $('#progres').css({'width': prec});
+
+
+    if (window.preload >= 100) {
+      clearInterval(loader);
+      setTimeout(function () {
+        $('#load_screen').fadeOut(600);
+        setTimeout(function () {
+          // alert('test');
+          init_page();
+        }, 600);
+      }, 1500);
+    // fadeout
+    }
+  }, 10);
+  // load everything and remove loader screen
+  // return a load percentage
+  // init page
+
+
+})();
+
+
 
 
 
@@ -392,30 +619,43 @@ init_page();
 
 
     };
-});
+// });
 
 
 
 // _______________ PRELOAD
 function preloader() {
+  var img = [];
+
 	if (document.images) {
-		var img1 = new Image();
-		var img2 = new Image();
-		var img3 = new Image();
-    var img4 = new Image();
-    var img5 = new Image();
-    var img6 = new Image();
-    var img7 = new Image();
+		 img[0] = new Image();
+		 img[1] = new Image();
+		 img[2] = new Image();
+     img[3] = new Image();
+     img[4] = new Image();
+     img[5] = new Image();
+     img[6] = new Image();
 
     // mangler casebilleder
 
-		img1.src = window.sitepath + "assets/images/projekter.png";
-		img2.src = window.sitepath + "assets/images/bureauet.png";
-		img3.src = window.sitepath + "assets/images/login.png";
-    img4.src = window.sitepath + "assets/images/frontpage.png";
-		img5.src = window.sitepath + "assets/images/bureauet.png";
-    img6.src = window.sitepath + "assets/images/waterfront.png";
-    img7.src = window.sitepath + "assets/images/arkk.png";
+    var fraction = 100 / img.length;
+    window.preload = 0;
+    for (var i = 0; i < img.length; i++) {
+
+
+      img[i].onload = function() {
+        window.preload += fraction;
+        // console.log(window.preload);
+      }
+    };
+
+		img[0].src = window.sitepath + "assets/images/projekter.png";
+		img[1].src = window.sitepath + "assets/images/bureauet.png";
+		img[2].src = window.sitepath + "assets/images/login.png";
+    img[3].src = window.sitepath + "assets/images/frontpage.png";
+		img[4].src = window.sitepath + "assets/images/bureauet.png";
+    img[5].src = window.sitepath + "assets/images/waterfront.png";
+    img[6].src = window.sitepath + "assets/images/arkk.png";
 
     // mangler casebilleder
 	}
@@ -434,4 +674,3 @@ function addLoadEvent(func) {
 		}
 	}
 }
-addLoadEvent(preloader);

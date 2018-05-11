@@ -2,39 +2,46 @@
 header("Content-Encoding: none");
 // variabler til metatags
 $page = 'Stockholm waterfron congres center'; // sidens navn
+$shareimage = 'shareimages_case_arkk.png'; // share image
+$pagedescription = '';
+
 include '../start.php' ?>
 
 
 <section id="header_section" class="case_headsection arkk">
-  <img src="<?=$sitepath?>assets/images/arkk.png" alt="">
-  <div class="wrapper" id="first_section">
-    <h1 class="init_reveal_fadeup">Arkk Copenhagen</h1>
-    <h2 class="init_reveal_fadeup">Udvikling af digital bannerkampagne i forindelse med produktlancering.</h2>
+  <img class="page_img" src="<?=$sitepath?>assets/images/arkk.png" alt="" class="page_img">
+  <div class="wrapper case_header" id="first_section">
+    <div class="center_header">
+      <h1 class="init_reveal_fadeup" style="transition-delay: 200ms;">Arkk Copenhagen</h1>
+      <h2 class="init_reveal_fadeup" style="transition-delay: 400ms;">Udvikling af digital bannerkampagne i forindelse med produktlancering.</h2>
+    </div>
   </div>
 
-  <div class="hashtags init_reveal_fadeup">
-    <span>#html5</span>
-    <span>#banner</span>
-    <span>#video</span>
-    <span>#superfedesko</span>
+  <div class="hashtags">
+    <span class="init_reveal_fadeup" style="transition-delay: 600ms;">#html5</span>
+    <span class="init_reveal_fadeup" style="transition-delay: 700ms;">#banner</span>
+    <span class="init_reveal_fadeup" style="transition-delay: 800ms;">#video</span>
+    <span class="init_reveal_fadeup" style="transition-delay: 900ms;">#superfedesko</span>
   </div>
 
   <div class="wrapper">
 
 
-    <div class="banner init_reveal_fadeup">
-      <!-- <img src="assets/images/arkk_banner_bg.jpg" alt="arkk banner" class=""> -->
+    <div class="banner init_reveal_fadeup" style="transition-delay: 1100ms;">
       <div class="row">
-        <div class="banners">
-          <iframe src="<?=$sitepath?>assets/case_code/Raven_Men/index.html" width="300" height="250" scrolling="no" class="init_reveal_fadeup" ></iframe>
-          <iframe src="<?=$sitepath?>assets/case_code/Raven_Mesh_Soft_Army/index.html" width="300" height="250" scrolling="no" class="init_reveal_fadeup"></iframe>
-          <iframe src="<?=$sitepath?>assets/case_code/Raven_Women/index.html" width="300" height="250" scrolling="no" class="init_reveal_fadeup"></iframe>
+        <div class="banners" id="iframes">
+          <!-- <iframe src="<?=$sitepath?>assets/case_code/Raven_Men/index.html" width="300" height="250" scrolling="no" class="init_reveal_fadeup" style="transition-delay: 1300ms;"></iframe> -->
+          <iframe src="" width="300" height="250" scrolling="no" class="init_reveal_fadeup" style="transition-delay: 1300ms;"></iframe>
+          <!-- <iframe src="<?=$sitepath?>assets/case_code/Raven_Mesh_Soft_Army/index.html" width="300" height="250" scrolling="no" class="init_reveal_fadeup" style="transition-delay: 1500ms;" ></iframe> -->
+          <iframe src="" width="300" height="250" scrolling="no" class="init_reveal_fadeup" style="transition-delay: 1500ms;" ></iframe>
+          <!-- <iframe src="<?=$sitepath?>assets/case_code/Raven_Women/index.html" width="300" height="250" scrolling="no" class="init_reveal_fadeup" style="transition-delay: 1700ms;"></iframe> -->
+          <iframe src="" width="300" height="250" scrolling="no" class="init_reveal_fadeup" style="transition-delay: 1700ms;"></iframe>
         </div>
       </div>
     </div>
 
 
-    <div class="stripe_breaker init_reveal_fadeup">
+    <div class="stripe_breaker init_reveal_fadeup" style="transition-delay: 1800ms;">
 
     </div>
 
@@ -47,19 +54,21 @@ include '../start.php' ?>
 
   <div class="devices" >
 
-    <div class="ipad rellax init_reveal_fadeup"   data-rellax-speed="0" data-rellax-percentage="0.5" data-rellax-zindex="5">
+    <div class="ipad rellax init_reveal_fadeup" style="transition-delay: 2000ms;"   data-rellax-speed="0" data-rellax-percentage="0.5" data-rellax-zindex="5">
       <img src="<?=$sitepath?>assets/images/ipad.png" alt="">
       <div class="showcase">
-        <video src="<?=$sitepath?>assets/videos/arkk_video_banner.mp4" autoplay loop>
+        <img src="<?=$sitepath?>assets/videos/arkk_video_banner.gif" alt="">
+        <!-- <video src="<?=$sitepath?>assets/videos/arkk_video_banner.mp4" autoplay preload loop playsinline>
 
-        </video>
+        </video> -->
       </div>
     </div>
 
-    <div class="phone rellax init_reveal_fadeup"  data-rellax-speed="1" data-rellax-percentage="0.5" data-rellax-zindex="15">
+    <div class="phone rellax scr_reveal_fadeup" data-rellax-speed="1" data-rellax-percentage="0.5" data-rellax-zindex="15">
       <img src="<?=$sitepath?>assets/images/iphone.png" alt="">
       <div class="showcase">
-        <video src="<?=$sitepath?>assets/videos/ark_video_banner_mobile.mp4" autoplay loop>
+        <img src="<?=$sitepath?>assets/videos/ark_video_banner_mobile.gif" alt="">
+        <!-- <video src="<?=$sitepath?>assets/videos/ark_video_banner_mobile.mp4" autoplay preload loop playsinline> -->
 
         </video>
       </div>
@@ -109,6 +118,6 @@ include '../start.php' ?>
 
 
 <?php
-  $scripts[] = "<?=$sitepath?>assets/case_code/script.js";
+  $scripts[] = "../assets/case_code/script.js";
 
    include '../end.php' ?>

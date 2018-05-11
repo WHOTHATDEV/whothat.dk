@@ -1,25 +1,36 @@
 <?php
 // variabler til metatags
 $page = ''; // sidens navn
+$shareimage = 'shareimages_forside.png'; // share image
+$pagedescription = '';
 
 include 'start.php' ?>
 
        <!-- content -->
        <section id="header_section" class="forside_header">
-         <img src="<?=$sitepath?>assets/images/frontpage.png" alt="">
+         <img src="<?=$sitepath?>assets/images/frontpage.png" alt="" class="page_img">
          <div class="ontop">
            <div class="wrapper">
 
-             <h1>Et kreativt bureau</h1>
-             <h2>...der tør tænke ud af boksen.</h2>
+             <h1 class="init_reveal_fadeup" style="transition-delay: 200ms;">Et kreativt bureau</h1>
+             <h2 class="init_reveal_fadeup" id="txtloop" style="transition-delay: 500ms;">
+               <div id="wheel">
+                 <span class="promt">Der er f€%ing sjove at lege med…</span>
+                 <span class="promt">Der blander storbytanker med provinsielle priser.</span>
+                 <span class="promt">Der holder kreativ fest hver dag - og alle er inviteret.</span>
+                 <span class="promt">Der forvandler salgsstrategier til emojis på sociale medier.</span>
+                 <span class="promt">Med masser af svung i - skulle vi hilse og sige…</span>
+               </div>
+              </h2>
            </div>
          </div>
        </section>
+
        <section id="forside_cases">
          <div class="wrapper">
-           <div class="case_thumb tall">
-             <a href="<?=$sitepath?>case/magasin">
-               <img src="<?=$sitepath?>assets/images/mag_thumb.jpg" alt="">
+           <div class="case_thumb tall init_reveal_fadeup" style="transition-delay: 600ms;">
+             <a href="<?=$sitepath?>case/vivaldi">
+               <img src="<?=$sitepath?>assets/images/vivaldi_thumb.jpg" alt="">
              <div class="txt">
                <div class="labels">
                  Kunde
@@ -27,16 +38,16 @@ include 'start.php' ?>
                  Projekt
                </div>
                <div class="">
-                 Magasin du Nord
+                 Vivaldi Catering
                  <br>
-                 Mere weekend i hverdagen
+                 Social Media Content
                </div>
                </div>
              </a>
            </div>
-         <div class="case_thumb tall">
+         <div class="case_thumb tall init_reveal_fadeup" style="transition-delay: 700ms;">
            <a href="<?=$sitepath?>case/arkk">
-             <img src="<?=$sitepath?>assets/images/ark_thumb.jpg" alt="">
+             <img src="<?=$sitepath?>assets/images/arkk_thumb.jpg" alt="">
            <div class="txt">
              <div class="labels">
                Kunde
@@ -52,9 +63,9 @@ include 'start.php' ?>
            </div>
           </a>
          </div>
-         <div class="case_thumb tall">
+         <div class="case_thumb tall init_reveal_fadeup" style="transition-delay: 800ms;">
            <a href="<?=$sitepath?>case/waterfront">
-           <img src="<?=$sitepath?>assets/images/water_thumb.jpg" alt="">
+           <img src="<?=$sitepath?>assets/images/swcc_thumb.jpg" alt="">
            <div class="txt">
              <div class="labels">
                Kunde
@@ -71,6 +82,65 @@ include 'start.php' ?>
          </div>
        </div>
        </section>
+
+
+       <section id="forside_cases_mobil">
+         <div class="wrapper">
+           <div class="case_thumb small init_reveal_fadeup" style="transition-delay: 600ms;">
+             <a href="<?=$sitepath?>case/vivaldi">
+               <img src="<?=$sitepath?>assets/images/vivaldi_small.jpg" alt="">
+             <div class="txt">
+               <div class="labels">
+                 Kunde
+                 <br>
+                 Projekt
+               </div>
+               <div class="">
+                 Vivaldi Catering
+                 <br>
+                 Social Media Content
+               </div>
+               </div>
+             </a>
+           </div>
+         <div class="case_thumb small init_reveal_fadeup" style="transition-delay: 700ms;">
+           <a href="<?=$sitepath?>case/arkk">
+             <img src="<?=$sitepath?>assets/images/arkk_small.jpg" alt="">
+           <div class="txt">
+             <div class="labels">
+               Kunde
+               <br>
+               Projekt
+             </div>
+             <div class="">
+               Arkk Copenhagen
+               <br>
+               Online banner kampagne
+             </div>
+
+           </div>
+          </a>
+         </div>
+         <div class="case_thumb small init_reveal_fadeup" style="transition-delay: 800ms;">
+           <a href="<?=$sitepath?>case/waterfront">
+           <img src="<?=$sitepath?>assets/images/swcc_small.jpg" alt="">
+           <div class="txt">
+             <div class="labels">
+               Kunde
+               <br>
+               Projekt
+             </div>
+             <div class="">
+               Stockholm Waterfront, Marvelous
+               <br>
+               Udvikling af website
+             </div>
+           </div>
+           </a>
+         </div>
+       </div>
+       </section>
+
        <section id="ikoner">
         <div class="wrapper">
 

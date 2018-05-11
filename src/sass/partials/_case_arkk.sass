@@ -65,7 +65,7 @@
         border-radius: 25px
         overflow: hidden
 
-        video
+        video, img
           position: absolute
           top: 0
           left: 0
@@ -95,14 +95,16 @@
         z-index: 3
         overflow: hidden
 
-        video
-          position: absolute
-          top: 0
-          left: 0
-          right: 0
-          bottom: 0
-          z-index: 10
-          max-width: 100%
+        img
+          position: absolute !important
+          top: 0px !important
+          left: 0 !important
+          // right: 0
+          bottom: 0 !important
+          z-index: 10 !important
+          // max-width: 100%
+          min-width: 100% !important
+          background-color: red
 
   .text
     margin-bottom: 200px

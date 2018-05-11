@@ -2,15 +2,25 @@
 
 
 .case_headsection
+  padding-bottom: 150px !important
 
-  h1
-    line-height: responsive 6rem 6.5rem !important
-    margin-top: 50px !important
-    margin-bottom: 40px!important
+  .case_header
+    height: 460px !important
+    display: flex
+    justify-content: center
+    align-items: center
 
-  h2
-    font-size: responsive 1.7rem 2.2rem
-    margin-bottom: 60px !important
+    .center_header
+      // background-color: red
+
+      h1
+        line-height: responsive 6rem 6.5rem !important
+        margin-top: 50px !important
+        margin-bottom: 40px!important
+
+      h2
+        font-size: responsive 1.7rem 2.2rem
+        margin-bottom: 60px !important
 
   .hashtags
     font-family: $enc
@@ -101,3 +111,20 @@
       .text_rubrik
         color: #fff
         font-weight: 600
+
+
+
+
+
+@media screen and (max-width: 800px)
+  .case_headsection
+
+    .case_header
+      height: 360px !important
+
+
+@media screen and (max-width: 500px)
+  .case_headsection
+
+    .case_header
+      height: 270px !important

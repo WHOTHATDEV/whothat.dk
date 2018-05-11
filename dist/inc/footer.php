@@ -4,7 +4,7 @@
     <div class="wrapper">
       <div class="vert_center">
 
-        <img src="assets/images/footerlogo.png" alt="" class="logo">
+        <img src="<?= $sitepath ?>assets/images/footerlogo.png" alt="" class="logo">
 
         <ul class="primery">
           <a href="whothat"><li><span class="ani_whothat footer_ani">Forside</span></li></a>
@@ -15,10 +15,10 @@
         </ul>
 
         <ul class="SoMe">
-          <a href="https://www.facebook.com/whothatdenmark/"><li><?php include 'assets/icons/fb.svg'; ?></li></a>
-          <a href="https://www.linkedin.com/company/whothat/"><li><?php include 'assets/icons/in.svg'; ?></li></a>
-          <a href="https://www.instagram.com/explore/locations/1014271099/whothat/"><li><?php include 'assets/icons/insta.svg'; ?></li></a>
-          <a href="https://vimeo.com/user51045781"><li><?php include 'assets/icons/v.svg'; ?></li></a>
+          <a href="https://www.facebook.com/whothatdenmark/"><li><?php include dirname(__FILE__) . '/../assets/icons/fb.svg'; ?></li></a>
+          <a href="https://www.linkedin.com/company/whothat/"><li><?php include dirname(__FILE__) . '/../assets/icons/in.svg'; ?></li></a>
+          <a href="https://www.instagram.com/explore/locations/1014271099/whothat/"><li><?php include dirname(__FILE__) . '/../assets/icons/insta.svg'; ?></li></a>
+          <a href="https://vimeo.com/user51045781"><li><?php include dirname(__FILE__) . '/../assets/icons/v.svg'; ?></li></a>
         </ul>
         <ul class="adr">
           <li><?= $adr ?></li>

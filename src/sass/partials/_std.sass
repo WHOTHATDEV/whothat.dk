@@ -76,6 +76,9 @@ p
 .half
   lost-column: 1/2 2 45px
 
+.small
+
+
 
 .rubrik
   text-align: center
@@ -131,17 +134,26 @@ section
 
 
 
-.scr_reveal_fadeup, .init_reveal_fadeup
+.scr_reveal_fadeup, .init_reveal_fadeup, .scr_reveal_fadeup_large
   // display: none !important
-  visibility: hidden
-  opacity: 0
-  transform: translateY(50px)
+  visibility: hidden !important
+  opacity: 0 !important
+  transform: translateY(30px)
 
   &.slidein
-    transition: 1s ease-in-out
-    opacity: 1
+    transition: 1s ease-out
+    opacity: 1 !important
     visibility: visible !important
     transform: translateY(0px)
+
+
+    // loop
+
+@keyframes glide_up
+  from
+    transform: translateY(-160px)
+  to
+    transform: translateY(-350px)
 
 
 @media screen and (max-width: 900px)
@@ -152,17 +164,12 @@ section
   h2
     margin-top: 10px
 
-  .tall
-    lost-column: 1/1 1 0px
-    margin-bottom: 40px
-    height: 200px
 
-  .case_thumb.tall
 
 
     &:hover
       img
-        transform: translateY(-200px)
+        // transform: translateY(-200px)
 
 
 
@@ -171,6 +178,7 @@ section
     margin-bottom: 10vh !important
 
 @media screen and (max-width: 700px)
+
 
   .half
     lost-column: 1/1 1 0px
@@ -182,3 +190,27 @@ section
   //   &:hover
   //     img
   //       transform: translateY(-200px)
+
+
+
+
+
+
+
+
+@media screen and (max-width: 700px)
+  .case_thumb
+    background: none
+
+    img
+      opacity: 100
+      margin-top: 0 !important
+      filter: grayscale(0%)
+      width: 100%
+      transition: .5s ease-in-out, transform .7s ease-out
+      display: block
+
+    .txt
+      position: static
+      padding: 10px
+      line-height: 1rem
