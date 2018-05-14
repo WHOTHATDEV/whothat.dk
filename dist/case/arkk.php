@@ -14,7 +14,7 @@ include '../start.php' ?>
   <div class="wrapper case_header" id="first_section">
     <div class="center_header">
       <h1 class="init_reveal_fadeup" style="transition-delay: 200ms;">Arkk Copenhagen</h1>
-      <h2 class="init_reveal_fadeup" style="transition-delay: 400ms;">Udvikling af digital bannerkampagne i forindelse med produktlancering.</h2>
+      <h2 class="init_reveal_fadeup" style="transition-delay: 400ms;">Udvikling af digital bannerkampagne i forbindelse med produktlancering.</h2>
     </div>
   </div>
 

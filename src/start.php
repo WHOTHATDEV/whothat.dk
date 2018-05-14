@@ -6,6 +6,7 @@ header("Cache-Control: max-age=2592000");
 // include 'inc/cach.php';
 $sitepath = "http://localhost/xampp_projects/whothat.dk/dist/";
 $sitepath = "http://clients.whothat.dk/whothat.dk/";
+$sitepath = "http://www.whothat.dk/";
 
 
 

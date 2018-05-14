@@ -923,6 +923,9 @@ body {
   margin-top: 250px;
   padding-bottom: 150px !important; }
 
+#bureauet {
+  overflow-x: hidden; }
+
 #dna {
   background-color: #111111;
   lost-utility: clearfix;
@@ -1250,6 +1253,15 @@ body {
   #header_section.kontakt_page h1 {
     margin-top: 23vw !important;
     margin-bottom: 10px !important; } }
+
+@media screen and (max-width: 600px) {
+  .dot {
+    background-color: #57a1a9;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 31vw; } }
 
 @media screen and (min-width: 2560px) {
   .dot {

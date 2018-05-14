@@ -55,7 +55,7 @@ include 'start.php' ?>
 
 <section class="wrapper" id="team">
   <h1>Sig hej til os</h1>
-  <h2>...et super dedikeret team af kreative og vanvittigt søde menneser.</h2>
+  <h2>...et super dedikeret team af kreative og vanvittigt søde mennesker.</h2>
   <div class="aktive">
 
 

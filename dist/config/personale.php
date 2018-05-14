@@ -27,7 +27,7 @@ $medarbejder = [
   ],
   [
     'navn' => 'Fatih Karaman',
-    'titel' => 'Udvilker',
+    'titel' => 'Udvikler',
     'email' => 'fk@whothat.dk',
     'img' => 'f.jpg',
     'video' =>'c_fatih.mp4',
@@ -37,7 +37,7 @@ $medarbejder = [
   ],
   [
     'navn' => 'Benjamin Leonhardt',
-    'titel' => 'Udvilker',
+    'titel' => 'Udvikler',
     'email' => 'bl@whothat.dk',
     'img' => 'b.jpg',
     'video' =>'c_benjamin.mp4',
@@ -48,7 +48,7 @@ $medarbejder = [
   ],
   [
     'navn' => 'Majlinda Lutfiu',
-    'titel' => 'Projektleder',
+    'titel' => 'Social Media Manager',
     'email' => 'ml@whothat.dk',
     'img' => 'm.jpg',
     'video' =>'c_majlinda.mp4',
@@ -92,7 +92,7 @@ $medarbejder = [
   ],
   [
     'navn' => 'William Ejsing',
-    'titel' => 'Test forfatter',
+    'titel' => 'Tekstforfatter',
     'email' => 'we@whothat.dk',
     'img' => 'w.jpg',
     'video' =>'c_william.mp4',
