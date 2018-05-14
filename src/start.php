@@ -11,10 +11,10 @@ $sitepath = "http://www.whothat.dk/";
 
 
 
-$page = 'WHOTHAT'; // sidens navn
-$shareimage = 'shareimages_forside.png'; // share image
-$pagedescription = '';
-$keywords = '';
+// $page = 'WHOTHAT'; // sidens navn
+// $shareimage = 'shareimages_forside.png'; // share image
+// $pagedescription = '';
+// $keywords = '';
 
 http://clients.whothat.dk/whothat.dk/
 $scripts = array();

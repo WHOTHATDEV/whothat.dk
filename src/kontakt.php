@@ -6,7 +6,8 @@ $shareimage = 'shareimages_kontakt.png'; // share image
 $pagedescription = 'Vi kan altid afsætte tid til en snak om digitale muligheder. Vi ligger I solens Slandiago eller bare Slagelse om man vil.';
 $keywords = 'WHOTHAT, Kreativt bureau, Reklamebureau, Slagelse, Vestsjælland, Sjælland, Kaffemøde, Møde, kontakt';
 
-include 'start.php' ?>
+include 'start.php' 
+?>
 
 <section id="header_section" class="kontakt_page">
   <img src="<?=$sitepath?>assets/images/kontakt.png" alt="sjælland" class="page_img">

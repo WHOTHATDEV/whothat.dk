@@ -83,22 +83,22 @@
           <div class="wrap">
 
           <li>
-            <a href="#">
+            <a href="https://www.facebook.com/whothatdenmark/">
               <?php include dirname(__FILE__) . '/../assets/icons/fb.svg'; ?>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="https://www.instagram.com/explore/locations/1014271099/whothat/">
               <?php include dirname(__FILE__) . '/../assets/icons/insta.svg'; ?>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="https://www.linkedin.com/company/whothat/">
               <?php include dirname(__FILE__) . '/../assets/icons/in.svg'; ?>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="https://vimeo.com/user51045781">
               <?php include dirname(__FILE__) . '/../assets/icons/v.svg'; ?>
             </a>
           </li>

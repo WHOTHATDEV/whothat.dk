@@ -5,7 +5,8 @@ $shareimage = 'shareimages_login.png'; // share image
 $pagedescription = 'Vi giver mulighed for at vores kunder kan monitorere og ændre i gangværende kampagner og apps, samt få overblik over projekter og content.';
 
 
-include 'start.php' ?>
+include 'start.php' 
+?>
 
 
 <section id="header_section">
