@@ -1,15 +1,16 @@
 <?php
 header("Content-Encoding: none");
 // variabler til metatags
-$page = 'Stockholm waterfron congres center'; // sidens navn
+$page = 'Vivaldi Catering | WHOTHAT'; // sidens navn
 $shareimage = 'vivaldi_shareimage.jpg'; // share image
-$pagedescription = '';
+$pagedescription = 'Se Vivaldi Catering case beskrivelse her - Storytelling og catering på social media.';
+$keywords = '';
 
 include '../start.php' ?>
 
 
 <section id="header_section" class="case_headsection vivaldi">
-  <img src="<?=$sitepath?>assets/images/vivaldi.png" alt="" class="page_img">
+  <img src="<?=$sitepath?>assets/images/vivaldi.png" alt="vivaldi catering" class="page_img">
   <div class="wrapper case_header" id="first_section">
     <div class="center_header">
     <h1 class="init_reveal_fadeup" style="transition-delay: 200ms;">Vivaldi Catering</h1>
@@ -28,7 +29,7 @@ include '../start.php' ?>
   <div class="wrapper">
 
     <div class="main_image init_reveal_fadeup" style="transition-delay: 1200ms;">
-      <img src="<?=$sitepath?>assets/images/kage.jpg" alt="">
+      <img src="<?=$sitepath?>assets/images/kage.jpg" alt="kage buffet">
     </div>
 
 
@@ -39,7 +40,7 @@ include '../start.php' ?>
         <p>Strategien var at “tale” til målgruppens indre cookiemonster og lade det bløde content og de vanvittige kage- og madbilleder være fundamentet. Medarbejderne skulle desuden have en ny central rolle - fra at stå i køkkenet og røre i gryderne, fik de nu plads i rampelyset og blev “afsender” på den content der var knyttet til deres arbejdsområde.</p>
         <p>Vivaldis kager har især dannet grobund for tilstedeværelsen på Facebook - alt fra kagebilleder til kagevideoer har formået at fastholde målgruppens interessere - og kombineret med menneskerne bag er fællesskabet og engagementet vokset - endda uden at vi fremstår pushy og opmærksomhedskrævende.</p>
       </div>
-      <img src="<?=$sitepath?>assets/images/cake.png" alt="" class="scr_reveal_fadeup">
+      <img src="<?=$sitepath?>assets/images/cake.png" alt="kager" class="scr_reveal_fadeup">
     </div>
 
     <div class="stats">

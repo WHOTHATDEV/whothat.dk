@@ -1,14 +1,15 @@
 <?php
 // variabler til metatags
-$page = 'Bureauet'; // sidens navn
+$page = ' Om bureauet | WHOTHAT'; // sidens navn
 $shareimage = 'shareimages_bureauet.png'; // share image
-$pagedescription = '';
+$pagedescription = 'WHOTHAT er et kreativt bureau med ekspertise i det digitale og en særlig forkærlighed til sociale medier. ';
+$keywords = 'Kreativt bureau, reklamebureau, online, annoncering, webudvikling, sociale medier';
 
 include 'config/personale.php';
 include 'start.php' ?>
 
 <section id="header_section">
-  <img src="<?=$sitepath?>assets/images/bureauet.png" alt="" class="page_img">
+  <img src="<?=$sitepath?>assets/images/bureauet.png" alt="bureauet" class="page_img">
   <div class="wrapper" id="first_section">
 
     <h1 class="init_reveal_fadeup" style="transition-delay: 200ms;">Hmm Whothat?</h1>
@@ -25,16 +26,28 @@ include 'start.php' ?>
 
 <section class="fullwidth init_reveal_fadeup" id="dna" style="transition-delay: 900ms;">
 
-  <div class="wide_wrapper">
+  <div class="wrapper">
 
-    <div class="img scr_reveal_fadeup">
-      <img src="<?=$sitepath?>assets/images/lokaler.jpg" alt="">
+    <!-- <div class="img scr_reveal_fadeup">
+      <img src="<?=$sitepath?>assets/images/lokaler.jpg" alt="digital dna">
+    </div> -->
+    <div class="text_headline">
+      <h1>Digital dna</h1>
     </div>
     <div class="text">
-      <h1>Digital dna</h1>
-      <p class="indledning">Her en tekst om vores filosofi. hvornår vi startede og vores primære kompetencer. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      <!-- <p class="indledning">Her en tekst om vores filosofi. hvornår vi startede og vores primære kompetencer. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </p>
-      <p>Quisque elementum, orci in efficitur lobortis, justo est fringilla sapien, tincidunt molestie nisi magna vel nibh. Donec fermentum pulvinar cursus. Aliquam eget quam eget leo euismod dapibus sit amet ut felis. Nam rutrum pulvinar nisl, eget elementum sem ornare faucibus. Suspendisse a vehicula turpis. Integer posuere congue magna, eu varius nunc facilisis sed.</p>
+      <p>Quisque elementum, orci in efficitur lobortis, justo est fringilla sapien, tincidunt molestie nisi magna vel nibh. Donec fermentum pulvinar cursus. Aliquam eget quam eget leo euismod dapibus sit amet ut felis. Nam rutrum pulvinar nisl, eget elementum sem ornare faucibus. Suspendisse a vehicula turpis. Integer posuere congue magna, eu varius nunc facilisis sed.</p> -->
+
+
+
+      <p>
+      Det var en blanding af flere års erfaring fra de københavnske kreative reklame- og produktionsbureauer, hjemstavnskærlighed og kreative ambitioner, der lagde fundamentet til WHOTHAT. I sommeren 2015 slog vi de første pløkker i jorden, åbnede op og er siden vokset fra 2 til 9 mand, i takt med at både kunder og opgaver bliver større og større.</p>
+
+      <p>Kontoret emmer af digital ja-hat og en “uden overligger” agtig stemning - meget millennials agtigt. Filosofien er enkel - Alt er muligt uanset om det er et website der skal bygges, en målgruppe der skal rammes, en social platform der skal erobres eller noget helt syvende.</p>
+
+      <p>Digital markedsføring kan være et virvar af muligheder, platforme og kanaler og tit er kunsten at fravælge mere end at tilvælge. Det gør også at vores kompetencer breder sig ud i kreativ sparring, webudvikling, HTML5-bannere, annoncering, tekstforfatning og contentproduktion. Derudover har vi in-house video- og fotoproduktion så vi nemt og hurtigt kan lave indhold af højeste kvalitet.</p>
+
     </div>
   </div>
 
@@ -62,7 +75,7 @@ include 'start.php' ?>
         <div class="img">
 
         <video src="<?=$sitepath?>assets/videos/<?= $value['video'] ?>" class="video video_hide" defaultMuted muted preload autoplay playsinline></video>
-        <img src="<?=$sitepath?>assets/images/<?= $value['img'] ?>" alt="<?= $value['titel'] ?>">
+        <img src="<?=$sitepath?>assets/images/<?= $value['img'] ?>" alt="<?= $value['navn'] ?>">
         <div class="gradient">
 
         </div>

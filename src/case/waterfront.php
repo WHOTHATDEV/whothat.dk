@@ -1,15 +1,16 @@
 <?php
 header("Content-Encoding: none");
 // variabler til metatags
-$page = 'Stockholm waterfron congres center'; // sidens navn
+$page = 'Stockholm Waterfront Congress Centre | WHOTHAT'; // sidens navn
 $shareimage = 'shareimages_case_water.png'; // share image
-$pagedescription = '';
+$pagedescription = 'Se Stockholm Waterfront case beskrivelse her - Udvikling af multilingualt website med interaktive grundplaner.';
+$keywords = '';
 
 include '../start.php' ?>
 
 
 <section id="header_section" class="case_headsection waterfront">
-  <img src="<?=$sitepath?>assets/images/waterfront.png" alt="" class="page_img">
+  <img src="<?=$sitepath?>assets/images/waterfront.png" alt="Stockholm waterfront" class="page_img">
   <div class="wrapper case_header" id="first_section">
     <div class="center_header">
     <h1 class="init_reveal_fadeup" style="transition-delay: 200ms;">Stockholm Waterfront <br>
@@ -31,17 +32,17 @@ med interaktive grundplaner</h2>
 
 
   <div class="labtop init_reveal_fadeup" style="transition-delay: 1100ms;">
-    <img src="<?=$sitepath?>assets/images/labtop.png" alt="">
+    <img src="<?=$sitepath?>assets/images/labtop.png" alt="labtop">
     <div class="showcase">
-      <img src="<?=$sitepath?>assets/images/swcc_site.jpg" alt="" class="rellax" data-rellax-speed="10"  id="water_desktop_page">
+      <img src="<?=$sitepath?>assets/images/swcc_site.jpg" alt="website" class="rellax" data-rellax-speed="10"  id="water_desktop_page">
     </div>
   </div>
 
   <div class="text">
     <div class="phone">
-      <img src="<?=$sitepath?>assets/images/iphone.png" alt="">
+      <img src="<?=$sitepath?>assets/images/iphone.png" alt="iphone">
       <div class="showcase">
-        <img src="<?=$sitepath?>assets/images/swcc_mobilsite.jpg" alt="" class="rellax" data-rellax-speed="30" data-rellax-percentage=".005">
+        <img src="<?=$sitepath?>assets/images/swcc_mobilsite.jpg" alt="responsive website" class="rellax" data-rellax-speed="30" data-rellax-percentage=".005">
       </div>
     </div>
     <div class="body">

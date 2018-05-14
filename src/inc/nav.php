@@ -108,8 +108,8 @@
       </div>
     </div>
     <div id="bg">
-      <img src="" alt="" id="bg_image">
-      <img src="" alt="" id="bg_image2">
+      <img src="" alt="transition image" id="bg_image">
+      <img src="" alt="transition image" id="bg_image2">
     </div>
 
   </div>

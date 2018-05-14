@@ -1,14 +1,15 @@
 <?php
 header("Content-Encoding: none");
 // variabler til metatags
-$page = 'Kontakt'; // sidens navn
+$page = 'Kig forbi | WHOTHAT'; // sidens navn
 $shareimage = 'shareimages_kontakt.png'; // share image
-$pagedescription = '';
+$pagedescription = 'Vi kan altid afsætte tid til en snak om digitale muligheder. Vi ligger I solens Slandiago eller bare Slagelse om man vil.';
+$keywords = 'WHOTHAT, Kreativt bureau, Reklamebureau, Slagelse, Vestsjælland, Sjælland, Kaffemøde, Møde, kontakt';
 
 include 'start.php' ?>
 
 <section id="header_section" class="kontakt_page">
-  <img src="<?=$sitepath?>assets/images/kontakt.png" alt="" class="page_img">
+  <img src="<?=$sitepath?>assets/images/kontakt.png" alt="sjælland" class="page_img">
   <div class="dot"></div>
   <div class="wrapper" id="first_section">
     <h1 class="init_reveal_fadeup" style="transition-delay: 200ms;">Kig forbi</h1>

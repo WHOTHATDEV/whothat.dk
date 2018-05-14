@@ -1,15 +1,16 @@
 <?php
 // variabler til metatags
-$page = 'Projekter'; // sidens navn
+$page = 'Se vores projekter | WHOTHAT'; // sidens navn
 $shareimage = 'shareimages_projekter.png'; // share image
-$pagedescription = '';
+$pagedescription = 'WHOTHAT er et kreativt bureau med ekspertise i det digitale og en særlig forkærlighed til sociale medier.';
+$keywords = 'WHOTHAT, cases, referencer, projekter, Arkk, Copenhagen, Vivaldi Catering, SWCC, Stockholm Waterfront';
 
 include 'start.php' ?>
 
 
 
 <section id="header_section" class="projekter">
-  <img src="<?=$sitepath?>assets/images/projekter.png" alt="" class="page_img">
+  <img src="<?=$sitepath?>assets/images/projekter.png" alt="projekter" class="page_img">
 
   <div class="wrapper" id="first_section">
 
@@ -27,7 +28,7 @@ include 'start.php' ?>
     <div class="case_thumb full init_reveal_fadeup" style="transition-delay: 700ms;">
       <a href="<?=$sitepath?>case/waterfront">
 
-        <img src="<?=$sitepath?>assets/images/swcc_full.jpg" alt="">
+        <div class="container"><img src="<?=$sitepath?>assets/images/swcc_full.jpg" alt="stockholm waterfront"></div>
         <div class="txt">
           <div class="labels">
             Kunde
@@ -62,7 +63,7 @@ include 'start.php' ?>
 
       <div class="case_thumb half">
         <a href="#"></a>
-        <img src="<?=$sitepath?>assets/images/arkk_small.jpg" alt="">
+        <div class="container"><img src="<?=$sitepath?>assets/images/arkk_small.jpg" alt=""></div>
         <div class="txt">
           <div class="labels">
             Kunde
@@ -78,7 +79,7 @@ include 'start.php' ?>
 
     <div class="case_thumb full">
       <a href="<?=$sitepath?>case/arkk">
-      <img src="<?=$sitepath?>assets/images/arkk_full.jpg" alt="">
+      <div class="container"><img src="<?=$sitepath?>assets/images/arkk_full.jpg" alt="arkk"></div>
       <div class="txt">
         <div class="labels">
           Kunde
@@ -96,7 +97,7 @@ include 'start.php' ?>
 
     <div class="case_thumb full">
       <a href="<?=$sitepath?>case/vivaldi">
-      <img src="<?=$sitepath?>assets/images/vivaldi_full.jpg" alt="">
+      <div class="container"><img src="<?=$sitepath?>assets/images/vivaldi_full.jpg" alt="vivalid"></div>
       <div class="txt">
         <div class="labels">
           Kunde
@@ -115,7 +116,7 @@ include 'start.php' ?>
     <div class="row">
       <!-- <div class="case_thumb tall">
         <a href="#"></a>
-        <img src="<?=$sitepath?>assets/images/ark_thumb.jpg" alt="">
+        <div class="container"><img src="<?=$sitepath?>assets/images/ark_thumb.jpg" alt=""></div>
         <div class="txt">
           <div class="labels">
             Kunde
@@ -130,7 +131,7 @@ include 'start.php' ?>
 
       <div class="case_thumb tall">
         <a href="#"></a>
-        <img src="<?=$sitepath?>assets/images/ark_thumb.jpg" alt="">
+        <div class="container"><img src="<?=$sitepath?>assets/images/ark_thumb.jpg" alt=""></div>
         <div class="txt">
           <div class="labels">
             Kunde
@@ -145,7 +146,7 @@ include 'start.php' ?>
 
       <div class="case_thumb tall">
         <a href="#"></a>
-        <img src="<?=$sitepath?>assets/images/ark_thumb.jpg" alt="">
+        <div class="container"><img src="<?=$sitepath?>assets/images/ark_thumb.jpg" alt=""></div>
         <div class="txt">
           <div class="labels">
             Kunde

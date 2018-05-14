@@ -12,6 +12,7 @@ var cssnano = require('cssnano'); // Minifies css-files
 var plumber = require('gulp-plumber'); // Handels err for gulp-watch
 var gutil = require( 'gulp-util' );
 var ftp = require( 'vinyl-ftp' );
+var minifyjs = require('gulp-js-minify');
 
 
 
@@ -69,6 +70,7 @@ gulp.task('js', function(){
     .pipe(babel({
       presets: ['babel-preset-env']
     }))
+    // .pipe(minifyjs())
     .pipe(gulp.dest(dist + 'js'));
 });
 

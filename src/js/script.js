@@ -252,7 +252,6 @@ if (document.getElementById('iframes')) {
 
 
 
-// TODO: fix autoplay on touch
 
   // ______________VIDEO FUNCTIONS
   if(document.getElementsByClassName('video').length > 0){
@@ -537,15 +536,20 @@ Barba.Dispatcher.on('linkClicked', function(el, e) {
 (function(){
   addLoadEvent(preloader);
 
-  var numAnim = new CountUp("counter_number", 0, 7);
-  if (!numAnim.error) {
-    numAnim.start();
-  } else {
-    console.error(numAnim.error);
-  }
+  // var numAnim = new CountUp("counter_number", 0, 7);
+  // if (!numAnim.error) {
+  //   numAnim.start();
+  // } else {
+  //   console.error(numAnim.error);
+  // }
   var loader = setInterval(function () {
 
-    numAnim.update(window.preload);
+    var p = $('#progres').width();
+
+
+    $('#counter_number').html(Math.floor((p / 170) * 100));
+
+    // numAnim.update(window.preload);
 
     // set right
 
@@ -556,7 +560,7 @@ Barba.Dispatcher.on('linkClicked', function(el, e) {
     $('#progres').css({'width': prec});
 
 
-    if (window.preload >= 100) {
+    if (p >= 170) {
       clearInterval(loader);
       setTimeout(function () {
         $('#load_screen').fadeOut(600);
@@ -564,7 +568,7 @@ Barba.Dispatcher.on('linkClicked', function(el, e) {
           // alert('test');
           init_page();
         }, 600);
-      }, 1500);
+      }, 200);
     // fadeout
     }
   }, 10);
@@ -635,6 +639,7 @@ function preloader() {
      img[4] = new Image();
      img[5] = new Image();
      img[6] = new Image();
+     img[7] = new Image();
 
     // mangler casebilleder
 
@@ -656,6 +661,7 @@ function preloader() {
 		img[4].src = window.sitepath + "assets/images/bureauet.png";
     img[5].src = window.sitepath + "assets/images/waterfront.png";
     img[6].src = window.sitepath + "assets/images/arkk.png";
+    img[7].src = window.sitepath + "assets/images/vivaldi.png";
 
     // mangler casebilleder
 	}

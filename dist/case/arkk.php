@@ -1,15 +1,16 @@
 <?php
 header("Content-Encoding: none");
 // variabler til metatags
-$page = 'Stockholm waterfron congres center'; // sidens navn
+$page = 'Arkk Copenhagen | WHOTHAT'; // sidens navn
 $shareimage = 'shareimages_case_arkk.png'; // share image
-$pagedescription = '';
+$pagedescription = 'Se Arkk case beskrivelse her - Udvikling af digital bannerkampagne i forindelse med produktlancering.';
+$keywords = '';
 
 include '../start.php' ?>
 
 
 <section id="header_section" class="case_headsection arkk">
-  <img class="page_img" src="<?=$sitepath?>assets/images/arkk.png" alt="" class="page_img">
+  <img class="page_img" src="<?=$sitepath?>assets/images/arkk.png" alt="arkk compenhagen" class="page_img">
   <div class="wrapper case_header" id="first_section">
     <div class="center_header">
       <h1 class="init_reveal_fadeup" style="transition-delay: 200ms;">Arkk Copenhagen</h1>
@@ -55,20 +56,16 @@ include '../start.php' ?>
   <div class="devices" >
 
     <div class="ipad rellax init_reveal_fadeup" style="transition-delay: 2000ms;"   data-rellax-speed="0" data-rellax-percentage="0.5" data-rellax-zindex="5">
-      <img src="<?=$sitepath?>assets/images/ipad.png" alt="">
+      <img src="<?=$sitepath?>assets/images/ipad.png" alt="ipad">
       <div class="showcase">
-        <img src="<?=$sitepath?>assets/videos/arkk_video_banner.gif" alt="">
-        <!-- <video src="<?=$sitepath?>assets/videos/arkk_video_banner.mp4" autoplay preload loop playsinline>
-
-        </video> -->
+        <img src="<?=$sitepath?>assets/videos/arkk_video_banner.gif" alt="video banner add">
       </div>
     </div>
 
     <div class="phone rellax scr_reveal_fadeup" data-rellax-speed="1" data-rellax-percentage="0.5" data-rellax-zindex="15">
-      <img src="<?=$sitepath?>assets/images/iphone.png" alt="">
+      <img src="<?=$sitepath?>assets/images/iphone.png" alt="iphone">
       <div class="showcase">
-        <img src="<?=$sitepath?>assets/videos/ark_video_banner_mobile.gif" alt="">
-        <!-- <video src="<?=$sitepath?>assets/videos/ark_video_banner_mobile.mp4" autoplay preload loop playsinline> -->
+        <img src="<?=$sitepath?>assets/videos/ark_video_banner_mobile.gif" alt="video banner add">
 
         </video>
       </div>
@@ -79,20 +76,18 @@ include '../start.php' ?>
   <div class="text">
     <div class="image">
 
-      <!-- <img src="assets/images/arkk_bannner.jpg" alt=""> -->
-      <!-- <iframe src="assets/case_code/arkk_160x600/ind.html" width="160" height="600" class="iframe_banner large rellax" data-rellax-speed="-2" data-rellax-percentage="0.5"></iframe> -->
-      <!-- <link rel="stylesheet" href="assets/case_code/arkk_160x600/style.min.css"> -->
+
       <div id="fra" class="iframe_banner large rellax" data-rellax-speed="-1" data-rellax-percentage="0.5">
-        <img class="layer start" id="c" src="<?=$sitepath?>assets/case_code/cta.png" alt="">
-        <img class="layer start" id="logo" src="<?=$sitepath?>assets/case_code/logo.png" alt="">
-        <img class="layer start" id="body" src="<?=$sitepath?>assets/case_code/body.png" alt="">
-        <img class="layer" src="<?=$sitepath?>assets/case_code/edge.png" alt="">
-        <img src="<?=$sitepath?>assets/case_code/sprite.jpg" id="sprite" alt="">
+        <img class="layer start" id="c" src="<?=$sitepath?>assets/case_code/cta.png" alt="buy button">
+        <img class="layer start" id="logo" src="<?=$sitepath?>assets/case_code/logo.png" alt="call to action">
+        <img class="layer start" id="body" src="<?=$sitepath?>assets/case_code/body.png" alt="text">
+        <img class="layer" src="<?=$sitepath?>assets/case_code/edge.png" alt="border">
+        <img src="<?=$sitepath?>assets/case_code/sprite.jpg" id="sprite" alt="spritesheet">
         <div id="button"><div class="glair"></div></div>
       </div>
 
-      <img src="<?=$sitepath?>assets/images/arkk_sprite_1.jpg" alt="" class="large rellax" data-rellax-speed="2" data-rellax-percentage="0.5">
-      <img src="<?=$sitepath?>assets/images/arkk_sprite_2.jpg" alt="" class="small rellax" data-rellax-speed="1" data-rellax-percentage="0.5" >
+      <img src="<?=$sitepath?>assets/images/arkk_sprite_1.jpg" alt="spritesheet" class="large rellax" data-rellax-speed="2" data-rellax-percentage="0.5">
+      <img src="<?=$sitepath?>assets/images/arkk_sprite_2.jpg" alt="spritesheet" class="small rellax" data-rellax-speed="1" data-rellax-percentage="0.5" >
 
     </div>
     <div class="body">
@@ -110,7 +105,7 @@ include '../start.php' ?>
 
 
   <div class="partner_logo">
-    <img src="<?=$sitepath?>assets/images/arkk_logo.png" alt="arkk">
+    <img src="<?=$sitepath?>assets/images/arkk_logo.png" alt="arkk copenhagen">
   </div>
 
   </div>

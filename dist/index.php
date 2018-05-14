@@ -1,24 +1,32 @@
 <?php
 // variabler til metatags
-$page = ''; // sidens navn
+$page = 'WHOTHAT Kreativt Bureau'; // sidens navn
 $shareimage = 'shareimages_forside.png'; // share image
-$pagedescription = '';
-
+$pagedescription = 'Digitalt kreativt bureau i Slagelse der er hjælper med alt fra ordlyden i et Facebookopslag til store komplekse udviklingsopgaver.';
+$keywords = 'WHOTHAT, Reklamebureau, Kreativt, bureau, marketing, digital, website, webdesign, adwords, slagelse, annoncering, Sjælland, html5 banner, content, sociale medier';
 include 'start.php' ?>
 
        <!-- content -->
        <section id="header_section" class="forside_header">
-         <img src="<?=$sitepath?>assets/images/frontpage.png" alt="" class="page_img">
+         <img src="<?=$sitepath?>assets/images/frontpage.png" alt="whothat" class="page_img">
          <div class="ontop">
            <div class="wrapper">
 
              <h1 class="init_reveal_fadeup" style="transition-delay: 200ms;">Et kreativt bureau</h1>
              <h2 class="init_reveal_fadeup" id="txtloop" style="transition-delay: 500ms;">
                <div id="wheel">
-                 <span class="promt">Der er f€%ing sjove at lege med…</span>
-                 <span class="promt">Der blander storbytanker med provinsielle priser.</span>
-                 <span class="promt">Der holder kreativ fest hver dag - og alle er inviteret.</span>
+                 <span class="promt">Der altid inviterer med ned i sandkassen.</span>
+                 <span class="promt">Der har rimelig godt styr på de der sociale medier.</span>
                  <span class="promt">Der forvandler salgsstrategier til emojis på sociale medier.</span>
+                 <span class="promt">Der ikke bruger beskidte tricks som bindinger og licensløsninger.</span>
+                 <span class="promt">Der trods adressen i udkantsdanmark tør tænke stort!</span>
+                 <span class="promt">Der har savet overliggeren af så der kan tænkes stort og nyt.</span>
+                 <span class="promt">Der blander storbytanker med provinsielle priser.</span>
+                  <span class="promt">Der både byder små lokale og store internationale virksomheder op til dans.</span>
+                  <span class="promt">Der gerne misser et par timers nattesøvn for det perfekte resultat.</span>
+                  <span class="promt">Der ikke møder op med det trivielle bureausæt; slips og powerpoint.</span>
+                 <span class="promt">Der holder kreativ fest hver dag - og alle er inviteret.</span>
+                 <span class="promt">Der er f€%ing sjove at lege med…</span>
                  <span class="promt">Med masser af svung i - skulle vi hilse og sige…</span>
                </div>
               </h2>
@@ -30,7 +38,9 @@ include 'start.php' ?>
          <div class="wrapper">
            <div class="case_thumb tall init_reveal_fadeup" style="transition-delay: 600ms;">
              <a href="<?=$sitepath?>case/vivaldi">
-               <img src="<?=$sitepath?>assets/images/vivaldi_thumb.jpg" alt="">
+               <div class="container">
+                 <img src="<?=$sitepath?>assets/images/vivaldi_thumb.jpg" alt="vivaldi">
+               </div>
              <div class="txt">
                <div class="labels">
                  Kunde
@@ -47,7 +57,9 @@ include 'start.php' ?>
            </div>
          <div class="case_thumb tall init_reveal_fadeup" style="transition-delay: 700ms;">
            <a href="<?=$sitepath?>case/arkk">
-             <img src="<?=$sitepath?>assets/images/arkk_thumb.jpg" alt="">
+             <div class="container">
+               <img src="<?=$sitepath?>assets/images/arkk_thumb.jpg" alt="arkk">
+             </div>
            <div class="txt">
              <div class="labels">
                Kunde
@@ -65,7 +77,8 @@ include 'start.php' ?>
          </div>
          <div class="case_thumb tall init_reveal_fadeup" style="transition-delay: 800ms;">
            <a href="<?=$sitepath?>case/waterfront">
-           <img src="<?=$sitepath?>assets/images/swcc_thumb.jpg" alt="">
+             <div class="container">
+           <img src="<?=$sitepath?>assets/images/swcc_thumb.jpg" alt="stockholm waterfront"></div>
            <div class="txt">
              <div class="labels">
                Kunde
@@ -88,7 +101,9 @@ include 'start.php' ?>
          <div class="wrapper">
            <div class="case_thumb small init_reveal_fadeup" style="transition-delay: 600ms;">
              <a href="<?=$sitepath?>case/vivaldi">
-               <img src="<?=$sitepath?>assets/images/vivaldi_small.jpg" alt="">
+
+                 <img src="<?=$sitepath?>assets/images/vivaldi_small.jpg" alt="vivalid">
+
              <div class="txt">
                <div class="labels">
                  Kunde
@@ -105,7 +120,7 @@ include 'start.php' ?>
            </div>
          <div class="case_thumb small init_reveal_fadeup" style="transition-delay: 700ms;">
            <a href="<?=$sitepath?>case/arkk">
-             <img src="<?=$sitepath?>assets/images/arkk_small.jpg" alt="">
+             <img src="<?=$sitepath?>assets/images/arkk_small.jpg" alt="arkk">
            <div class="txt">
              <div class="labels">
                Kunde
@@ -123,7 +138,7 @@ include 'start.php' ?>
          </div>
          <div class="case_thumb small init_reveal_fadeup" style="transition-delay: 800ms;">
            <a href="<?=$sitepath?>case/waterfront">
-           <img src="<?=$sitepath?>assets/images/swcc_small.jpg" alt="">
+           <img src="<?=$sitepath?>assets/images/swcc_small.jpg" alt="stockholm">
            <div class="txt">
              <div class="labels">
                Kunde
@@ -165,7 +180,7 @@ include 'start.php' ?>
        <section id="partner_logoer">
          <div class="wrapper">
            <?php foreach ($partner_logos as $key => $value): ?>
-             <img src="<?=$sitepath?><?= $value ?>" alt="">
+             <img src="<?=$sitepath?><?= $value ?>" alt="instafeed">
            <?php endforeach; ?>
          </div>
        </section>

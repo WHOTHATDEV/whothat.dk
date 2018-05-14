@@ -27,6 +27,7 @@
     "cssnano": "^3.10.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^8.0.0-beta.2",
+    "gulp-js-minify": "0.0.3",
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^7.0.1",
     "gulp-sass": "^3.1.0",
@@ -35,5 +36,8 @@
     "postcss-cssnext": "^3.1.0",
     "rucksack-css": "^1.0.2",
     "vinyl-ftp": "^0.6.1"
+  },
+  "dependencies": {
+    "gulp-compress": "0.0.9"
   }
 }

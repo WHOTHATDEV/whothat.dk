@@ -1,0 +1,25 @@
+User-agent: Googlebot
+Disallow: /assets/
+Disallow: /config/
+Disallow: /css/
+Disallow: /inc/
+Disallow: /js/
+Disallow: /sass/
+
+User-Agent: Slurp
+Disallow: /assets/
+Disallow: /config/
+Disallow: /css/
+Disallow: /inc/
+Disallow: /js/
+Disallow: /sass/
+
+User-Agent: bingbot
+Disallow: /assets/
+Disallow: /config/
+Disallow: /css/
+Disallow: /inc/
+Disallow: /js/
+Disallow: /sass/
+
+sitemap: http://www.whothat.dk/sitemap.xml
