@@ -3,7 +3,7 @@
 
 $page = 'WHOTHAT Kreativt Bureau'; // sidens navn
 $shareimage = 'shareimages_forside.png'; // share image
-$pagedescription = 'Digitalt kreativt bureau i Slagelse der er hjælper med alt fra ordlyden i et Facebookopslag til store komplekse udviklingsopgaver.';
+$pagedescription = 'Digitalt kreativt bureau i Slagelse der hjælper med alt fra ordlyden i et Facebookopslag til store komplekse udviklingsopgaver.';
 $keywords = 'WHOTHAT, Reklamebureau, Kreativt, bureau, marketing, digital, website, webdesign, adwords, slagelse, annoncering, Sjælland, html5 banner, content, sociale medier';
 include 'start.php'
 ?>

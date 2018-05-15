@@ -107,6 +107,9 @@ p {
 .half {
   lost-column: 1/2 2 45px; }
 
+.small img {
+  width: 100%; }
+
 .rubrik {
   text-align: center;
   margin-bottom: 250px !important; }

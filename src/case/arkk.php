@@ -1,5 +1,5 @@
 <?php
-header("Content-Encoding: none");
+// header("Content-Encoding: none");
 // variabler til metatags
 $page = 'Arkk Copenhagen | WHOTHAT'; // sidens navn
 $shareimage = 'shareimages_case_arkk.png'; // share image
@@ -113,6 +113,6 @@ include '../start.php' ?>
 
 
 <?php
-  $scripts[] = "../assets/case_code/script.js";
+  // $scripts[] = "../assets/case_code/script.js";
 
    include '../end.php' ?>

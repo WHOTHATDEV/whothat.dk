@@ -1,5 +1,5 @@
 <?php
-header("Content-Encoding: none");
+// header("Content-Encoding: none");
 // variabler til metatags
 $page = 'Stockholm Waterfront Congress Centre | WHOTHAT'; // sidens navn
 $shareimage = 'shareimages_case_water.png'; // share image

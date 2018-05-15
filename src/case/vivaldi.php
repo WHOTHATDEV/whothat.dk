@@ -1,5 +1,5 @@
 <?php
-header("Content-Encoding: none");
+// header("Content-Encoding: none");
 // variabler til metatags
 $page = 'Vivaldi Catering | WHOTHAT'; // sidens navn
 $shareimage = 'vivaldi_shareimage.jpg'; // share image

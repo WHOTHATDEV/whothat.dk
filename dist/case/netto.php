@@ -1,5 +1,5 @@
 <?php
-header("Content-Encoding: none");
+// header("Content-Encoding: none");
 // variabler til metatags
 $page = 'Netto'; // sidens navn
 $shareimage = 'shareimages_case_netto.png'; // share image
